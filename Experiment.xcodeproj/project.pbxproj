@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12CB8F7A2619F9E700C6A367 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F782619F9E700C6A367 /* MainMenu.swift */; };
+		12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F792619F9E700C6A367 /* MainMenuRow.swift */; };
+		12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */; };
 		F26357A523D0861C00C8F30C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26357A423D0861C00C8F30C /* AppDelegate.swift */; };
 		F26357A723D0861C00C8F30C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26357A623D0861C00C8F30C /* SceneDelegate.swift */; };
 		F26357A923D0861C00C8F30C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26357A823D0861C00C8F30C /* ContentView.swift */; };
@@ -36,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12CB8F782619F9E700C6A367 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
+		12CB8F792619F9E700C6A367 /* MainMenuRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuRow.swift; sourceTree = "<group>"; };
+		12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsGradientsView.swift; sourceTree = "<group>"; };
 		F26357A123D0861C00C8F30C /* Experiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Experiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26357A423D0861C00C8F30C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F26357A623D0861C00C8F30C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +84,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		12CB8F772619F9E700C6A367 /* MainMenu */ = {
+			isa = PBXGroup;
+			children = (
+				12CB8F782619F9E700C6A367 /* MainMenu.swift */,
+				12CB8F792619F9E700C6A367 /* MainMenuRow.swift */,
+			);
+			path = MainMenu;
+			sourceTree = "<group>";
+		};
+		12CB8F7F2619F9FC00C6A367 /* Tutoriels AppCoda */ = {
+			isa = PBXGroup;
+			children = (
+				12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */,
+			);
+			path = "Tutoriels AppCoda";
+			sourceTree = "<group>";
+		};
 		F263579823D0861C00C8F30C = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +124,8 @@
 		F26357A323D0861C00C8F30C /* Experiment */ = {
 			isa = PBXGroup;
 			children = (
+				12CB8F7F2619F9FC00C6A367 /* Tutoriels AppCoda */,
+				12CB8F772619F9E700C6A367 /* MainMenu */,
 				F26357D423D0881F00C8F30C /* First */,
 				F26357A423D0861C00C8F30C /* AppDelegate.swift */,
 				F26357A623D0861C00C8F30C /* SceneDelegate.swift */,
@@ -278,9 +303,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12CB8F7A2619F9E700C6A367 /* MainMenu.swift in Sources */,
 				F26357A523D0861C00C8F30C /* AppDelegate.swift in Sources */,
 				F26357D623D0883600C8F30C /* FirstView.swift in Sources */,
 				F26357A723D0861C00C8F30C /* SceneDelegate.swift in Sources */,
+				12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */,
+				12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */,
 				F26357A923D0861C00C8F30C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,14 +476,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Experiment/Preview Content\"";
-				DEVELOPMENT_TEAM = T4J7JTDT5C;
+				DEVELOPMENT_TEAM = 6BD2U6KWR8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Experiment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.norelus.Experiment;
+				PRODUCT_BUNDLE_IDENTIFIER = norelus.Experiments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -468,14 +497,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Experiment/Preview Content\"";
-				DEVELOPMENT_TEAM = T4J7JTDT5C;
+				DEVELOPMENT_TEAM = 6BD2U6KWR8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Experiment/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.norelus.Experiment;
+				PRODUCT_BUNDLE_IDENTIFIER = norelus.Experiments;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
