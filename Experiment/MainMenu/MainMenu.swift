@@ -56,7 +56,7 @@ struct MainMenu: View {
                 MainMenuRow(title: "Piquage de couleur", destination: ColorPiqueur())
                 MainMenuRow(title: "Player video (device only)", destination: PlayerView())
             })*/
-        }.navigationBarTitle(Text("SwiftUI Examples"))
+        }.navigationBarTitle(Text("Expérimentations"))
     }
 }
 

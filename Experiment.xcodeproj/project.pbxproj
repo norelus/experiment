@@ -101,6 +101,14 @@
 			path = "Tutoriels AppCoda";
 			sourceTree = "<group>";
 		};
+		12CB8F872619FC7F00C6A367 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F26357AA23D0861D00C8F30C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		F263579823D0861C00C8F30C = {
 			isa = PBXGroup;
 			children = (
@@ -124,13 +132,13 @@
 		F26357A323D0861C00C8F30C /* Experiment */ = {
 			isa = PBXGroup;
 			children = (
+				12CB8F872619FC7F00C6A367 /* Resources */,
 				12CB8F7F2619F9FC00C6A367 /* Tutoriels AppCoda */,
 				12CB8F772619F9E700C6A367 /* MainMenu */,
 				F26357D423D0881F00C8F30C /* First */,
 				F26357A423D0861C00C8F30C /* AppDelegate.swift */,
 				F26357A623D0861C00C8F30C /* SceneDelegate.swift */,
 				F26357A823D0861C00C8F30C /* ContentView.swift */,
-				F26357AA23D0861D00C8F30C /* Assets.xcassets */,
 				F26357AF23D0861D00C8F30C /* LaunchScreen.storyboard */,
 				F26357B223D0861D00C8F30C /* Info.plist */,
 				F26357AC23D0861D00C8F30C /* Preview Content */,

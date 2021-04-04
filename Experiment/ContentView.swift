@@ -9,28 +9,34 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selection = 0
- 
+    
+    let navBarTextColor = UIColor(white: 0.95, alpha: 1.0)
+    let navBarBackgroundColor = UIColor(named:"navbar_background")
+    
+    @Environment(\.horizontalSizeClass) var horizontalSizeClass
+    
+    init() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = navBarBackgroundColor
+        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: navBarTextColor]
+        appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: navBarTextColor]
+        
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+    }
+    
     var body: some View {
-        TabView(selection: $selection){
-            FirstView()
-                .tabItem {
-                    VStack {
-                        Image("first")
-                        Text("First")
-                    }
+        NavigationView {
+            MainMenu()
+            VStack {
+                Text("Bienvenue").font(.title)
+                if horizontalSizeClass == .compact {
+                    Text("Swipe à partir du bord gauche de l'écran pour afficher le menu sur iPad portrait (pas trouvé le moyen pour l'afficher tout le temps)").font(.caption)
                 }
-                .tag(0)
-            Text("Second View")
-                .font(.title)
-                .tabItem {
-                    HStack {
-                        Image("second")
-                        Text("Le deuz")
-                    }
-                }
-                .tag(1)
-        }
+            }
+        }.navigationViewStyle(DoubleColumnNavigationViewStyle())
+            .accentColor(.orange)//change la couleurs de tous les boutons :)
     }
 }
 

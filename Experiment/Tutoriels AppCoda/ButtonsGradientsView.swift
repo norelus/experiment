@@ -10,7 +10,14 @@ import SwiftUI
 
 struct ButtonsGradientsView: View {
     var body: some View {
-        Text("Buttons and gradients")
+        VStack {
+            Text("Buttons and gradients")
+            Button( action: {
+                print("clicked")
+            }) {
+                Text("Bonjour")
+            }
+        }
     }
 }
 
