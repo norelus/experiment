@@ -32,6 +32,10 @@ struct MainMenu: View {
             Section(header:Text("Tutoriels AppCoda"), content: {
                 MainMenuRow(title: "Chapitre 6: Boutons, labels, gradients", destination:
                     ButtonsGradientsView().transition(.scale))
+                MainMenuRow(title: "Chapitre 7: States et Bindings", destination:
+                    StateBindingsView().transition(.scale))
+                MainMenuRow(title: "Chapitre 17: Gestures", destination:
+                    GesturesView().transition(.scale))
             })
             /*
             Section(header:Text("Composants"), content: {

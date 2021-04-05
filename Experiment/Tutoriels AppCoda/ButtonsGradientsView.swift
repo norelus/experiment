@@ -9,15 +9,61 @@
 import SwiftUI
 
 struct ButtonsGradientsView: View {
+       
+    @State var rotated: Bool = false
+    
+    struct GradientBackgroundStyle: ButtonStyle {
+        
+        let superGradient = LinearGradient(gradient: Gradient(colors: [.red, .blue]), startPoint: .leading, endPoint: .trailing)
+     
+        func makeBody(configuration: Self.Configuration) -> some View {
+            configuration.label
+                .frame(minWidth: 0, maxWidth: .infinity)
+                .foregroundColor(.white)
+                .padding()
+                .background(superGradient)
+                .cornerRadius(40)
+                .padding(2)
+                .background(Color.white)
+                .padding(2)
+                .overlay(RoundedRectangle(cornerRadius: 40)
+                            .stroke(Color.purple, lineWidth: 3))
+        }
+    }
+    
     var body: some View {
         VStack {
-            Text("Buttons and gradients")
             Button( action: {
                 print("clicked")
             }) {
-                Text("Bonjour")
+                Label(
+                    title: {
+                        Text("Supprimer")
+                            .font(.title)
+                    },
+                    icon: {
+                        Image(systemName: "trash")
+                            .font(.title)
+                    })
+                    .font(.system(.title2, design: .rounded))
+                    
             }
-        }
+            .buttonStyle(GradientBackgroundStyle())
+            .padding()
+            
+            Button(action: {
+                rotated.toggle()
+            }, label: {
+                Image(systemName: "plus")
+                    .font(.title)
+                    .frame(width: 20, height: 20, alignment: .center)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.blue)
+                    .cornerRadius(30)
+                    .rotationEffect(.init(degrees: rotated ? 45 : 0))
+            })
+        }.navigationTitle("Bouton et gradients")
     }
 }
 

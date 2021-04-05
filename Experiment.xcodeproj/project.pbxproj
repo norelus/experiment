@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739374261B1CBE00318692 /* StateBindingsView.swift */; };
+		1273937A261B1DC100318692 /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739379261B1DC100318692 /* GesturesView.swift */; };
 		12CB8F7A2619F9E700C6A367 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F782619F9E700C6A367 /* MainMenu.swift */; };
 		12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F792619F9E700C6A367 /* MainMenuRow.swift */; };
 		12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */; };
@@ -39,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		12739374261B1CBE00318692 /* StateBindingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBindingsView.swift; sourceTree = "<group>"; };
+		12739379261B1DC100318692 /* GesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesView.swift; sourceTree = "<group>"; };
 		12CB8F782619F9E700C6A367 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		12CB8F792619F9E700C6A367 /* MainMenuRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuRow.swift; sourceTree = "<group>"; };
 		12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsGradientsView.swift; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */,
+				12739374261B1CBE00318692 /* StateBindingsView.swift */,
+				12739379261B1DC100318692 /* GesturesView.swift */,
 			);
 			path = "Tutoriels AppCoda";
 			sourceTree = "<group>";
@@ -315,7 +321,9 @@
 				F26357A523D0861C00C8F30C /* AppDelegate.swift in Sources */,
 				F26357D623D0883600C8F30C /* FirstView.swift in Sources */,
 				F26357A723D0861C00C8F30C /* SceneDelegate.swift in Sources */,
+				12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */,
 				12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */,
+				1273937A261B1DC100318692 /* GesturesView.swift in Sources */,
 				12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */,
 				F26357A923D0861C00C8F30C /* ContentView.swift in Sources */,
 			);
