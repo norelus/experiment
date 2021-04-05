@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739374261B1CBE00318692 /* StateBindingsView.swift */; };
 		1273937A261B1DC100318692 /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739379261B1DC100318692 /* GesturesView.swift */; };
+		12739380261B310300318692 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1273937F261B310300318692 /* DraggableView.swift */; };
+		1273938B261B353300318692 /* GesturesExerciseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1273938A261B353300318692 /* GesturesExerciseView.swift */; };
+		12739390261B357300318692 /* ResizableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1273938F261B357300318692 /* ResizableView.swift */; };
+		12739395261B3CE400318692 /* ExpandableBottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739394261B3CE400318692 /* ExpandableBottomSheetView.swift */; };
+		1273939C261B407600318692 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1273939B261B407600318692 /* Restaurant.swift */; };
 		12CB8F7A2619F9E700C6A367 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F782619F9E700C6A367 /* MainMenu.swift */; };
 		12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F792619F9E700C6A367 /* MainMenuRow.swift */; };
 		12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */; };
@@ -43,6 +48,11 @@
 /* Begin PBXFileReference section */
 		12739374261B1CBE00318692 /* StateBindingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBindingsView.swift; sourceTree = "<group>"; };
 		12739379261B1DC100318692 /* GesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesView.swift; sourceTree = "<group>"; };
+		1273937F261B310300318692 /* DraggableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
+		1273938A261B353300318692 /* GesturesExerciseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesExerciseView.swift; sourceTree = "<group>"; };
+		1273938F261B357300318692 /* ResizableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableView.swift; sourceTree = "<group>"; };
+		12739394261B3CE400318692 /* ExpandableBottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableBottomSheetView.swift; sourceTree = "<group>"; };
+		1273939B261B407600318692 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		12CB8F782619F9E700C6A367 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		12CB8F792619F9E700C6A367 /* MainMenuRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuRow.swift; sourceTree = "<group>"; };
 		12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsGradientsView.swift; sourceTree = "<group>"; };
@@ -88,6 +98,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1273937E261B30F400318692 /* Gestures */ = {
+			isa = PBXGroup;
+			children = (
+				1273937F261B310300318692 /* DraggableView.swift */,
+				1273938F261B357300318692 /* ResizableView.swift */,
+			);
+			path = Gestures;
+			sourceTree = "<group>";
+		};
+		1273939A261B407600318692 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1273939B261B407600318692 /* Restaurant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		127393A0261B408500318692 /* BottomSheet */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BottomSheet;
+			sourceTree = "<group>";
+		};
 		12CB8F772619F9E700C6A367 /* MainMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -100,9 +134,14 @@
 		12CB8F7F2619F9FC00C6A367 /* Tutoriels AppCoda */ = {
 			isa = PBXGroup;
 			children = (
+				127393A0261B408500318692 /* BottomSheet */,
+				1273939A261B407600318692 /* Model */,
+				1273937E261B30F400318692 /* Gestures */,
 				12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */,
 				12739374261B1CBE00318692 /* StateBindingsView.swift */,
 				12739379261B1DC100318692 /* GesturesView.swift */,
+				1273938A261B353300318692 /* GesturesExerciseView.swift */,
+				12739394261B3CE400318692 /* ExpandableBottomSheetView.swift */,
 			);
 			path = "Tutoriels AppCoda";
 			sourceTree = "<group>";
@@ -319,13 +358,18 @@
 			files = (
 				12CB8F7A2619F9E700C6A367 /* MainMenu.swift in Sources */,
 				F26357A523D0861C00C8F30C /* AppDelegate.swift in Sources */,
+				12739390261B357300318692 /* ResizableView.swift in Sources */,
 				F26357D623D0883600C8F30C /* FirstView.swift in Sources */,
 				F26357A723D0861C00C8F30C /* SceneDelegate.swift in Sources */,
 				12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */,
 				12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */,
 				1273937A261B1DC100318692 /* GesturesView.swift in Sources */,
 				12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */,
+				12739395261B3CE400318692 /* ExpandableBottomSheetView.swift in Sources */,
+				1273939C261B407600318692 /* Restaurant.swift in Sources */,
+				12739380261B310300318692 /* DraggableView.swift in Sources */,
 				F26357A923D0861C00C8F30C /* ContentView.swift in Sources */,
+				1273938B261B353300318692 /* GesturesExerciseView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

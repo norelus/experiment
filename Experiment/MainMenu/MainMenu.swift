@@ -36,6 +36,10 @@ struct MainMenu: View {
                     StateBindingsView().transition(.scale))
                 MainMenuRow(title: "Chapitre 17: Gestures", destination:
                     GesturesView().transition(.scale))
+                MainMenuRow(title: "Chapitre 17: Gestures - Exercice", destination:
+                    GesturesExerciseView().transition(.scale))
+                MainMenuRow(title: "Chapitre 18: Bottom Sheet", destination:
+                    ExpandableBottomSheetView().transition(.scale))
             })
             /*
             Section(header:Text("Composants"), content: {

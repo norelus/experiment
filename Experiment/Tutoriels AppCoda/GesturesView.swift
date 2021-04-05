@@ -32,26 +32,37 @@ enum DragState {
         }
     }
     
+    var isDragging: Bool {
+        switch self {
+        case .dragging:
+            return true
+        default:
+            return false
+        }
+    }
+    
 }
 
 struct GesturesView: View {
     
     @State var isPressed = false
     
-    @GestureState var longPressTap = false
-    @GestureState var dragOffsetGreen = CGSize.zero
-    
-    //@GestureState private var dragStateGreen: DragState = .inactive
-    
-    @State private var positionGreen = CGSize(width: 0, height: -150)
-    
+
     @GestureState var dragOffsetRed = CGSize.zero
-    @State private var positionRed = CGSize(width: 0, height: 150)
+    @State private var positionRed = CGSize(width: 0, height: 200)
     
     var body: some View {
         ZStack {
             redCircle
             greenCircle
+        }
+    }
+    
+    var greenCircle: some View {
+        DraggableView {
+        Image(systemName: "star.circle.fill")
+            .foregroundColor(.green)
+            .font(.system(size: 200))
         }
     }
     
@@ -74,48 +85,6 @@ struct GesturesView: View {
             )
     }
     
-    var greenCircle: some View {
-        Image(systemName: "star.circle.fill")
-            .font(.system(size: 200))
-            .scaleEffect(isPressed ? 0.5 : 1.0)
-            .offset(x: positionGreen.width + dragOffsetGreen.width,
-                    y: positionGreen.height + dragOffsetGreen.height)
-            .animation(.easeInOut)
-            .opacity(longPressTap ? 0.5 : 1.0)
-            .animation(nil)
-            .foregroundColor(.green)
-            .gesture(
-                LongPressGesture(minimumDuration: 0.5)
-                    .updating($longPressTap, body: { (currentState, state, transaction) in
-                        state = currentState
-                    })
-                    .onEnded({value in
-                        print("long press ended")
-                        isPressed = true
-                    })
-                    .sequenced(before: DragGesture())
-                    .updating($dragOffsetGreen, body: { value, state, transaction in
-                        switch value {
-                        case .first(true):
-                            print("Tapping")
-                        case .second(true, let drag):
-                            state = drag?.translation ?? .zero
-                        default:
-                            break;
-                        }
-                        
-                    })
-                    .onEnded({ value in
-                        print("drag ended")
-                        isPressed = false
-                        guard case .second(true, let drag?) = value else {
-                            return
-                        }
-                        self.positionGreen.height += drag.translation.height
-                        self.positionGreen.width += drag.translation.width
-                    })
-            )
-    }
     
 }
 
