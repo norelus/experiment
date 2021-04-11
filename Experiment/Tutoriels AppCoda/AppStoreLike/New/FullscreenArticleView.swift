@@ -29,17 +29,14 @@ struct FullscreenArticleView: View {
                                           image: image,
                                           geometry: geometry,
                                           isShowContent:$isShowContent)
-                        HStack {
-                            Spacer()
-                            
-                            Button(action: {
-                                self.isShowContent = false
-                            }) {
-                                Image(systemName: "xmark.circle.fill")
-                                    .font(.system(size: 26))
-                                    .foregroundColor(Color(.gray))
-                                    .opacity(0.9)
-                            }
+                        
+                        Button(action: {
+                            self.isShowContent = false
+                        }) {
+                            Image(systemName: "xmark.circle.fill")
+                                .font(.system(size: 26))
+                                .foregroundColor(Color(.gray))
+                                .opacity(0.9)
                         }
                         .padding(.top, 50)
                         .padding(.trailing)
