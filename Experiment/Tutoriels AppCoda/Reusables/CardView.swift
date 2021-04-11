@@ -30,8 +30,8 @@ struct CardView: View, Identifiable {
             .font(.system(.headline, design: .rounded))
             .fontWeight(.bold)
             .padding(8)
-            .foregroundColor(.black)
-            .background(Color.white)
+            .foregroundColor(.primary)
+            .background(Color(.systemBackground))
             .cornerRadius(5)
             .padding()
     }

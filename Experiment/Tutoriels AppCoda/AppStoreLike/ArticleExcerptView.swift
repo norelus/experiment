@@ -42,7 +42,7 @@ struct ArticleExcerptView: View {
                             
                             if !self.isShowContent {
                                 Text(self.subHeadline)
-                                    .font(.subheadline)
+                                    .font(.body)
                                     .foregroundColor(.secondary)
                                     .minimumScaleFactor(0.1)
                                     .lineLimit(3)
@@ -54,7 +54,7 @@ struct ArticleExcerptView: View {
                     }
                 )
         }
-        .foregroundColor(.white)
+        .foregroundColor(Color("cardBackground"))
     }
 }
 

@@ -46,7 +46,7 @@ struct ExpandableBottomSheetShowCase: View {
             ForEach(restaurants) { restaurant in
                 BasicImageRow(restaurant: restaurant)
                     .frame(maxWidth: .infinity)
-                    .background(Color.white)
+                    .background(Color(.systemBackground))
                     .onTapGesture {
                         self.showDetail = true
                         self.selectedRestaurant = restaurant

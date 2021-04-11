@@ -175,13 +175,17 @@ struct TopBarMenu: View {
         HStack {
             Image(systemName: "line.horizontal.3")
                 .font(.system(size: 30))
+                .foregroundColor(.black)
             Spacer()
             Image(systemName: "mappin.and.ellipse")
+                .foregroundColor(.black)
             Spacer()
             Image(systemName: "heart.circle.fill")
                 .font(.system(size: 30))
+                .foregroundColor(.black)
         }
         .padding()
+        .background(Color.white)
     }
     
 }
@@ -212,6 +216,8 @@ struct BottomBarMenu: View {
                 .font(.system(size: 30))
                 .foregroundColor(.black)
         }
+        .frame(maxWidth: .infinity)
+        .background(Color.white)
         
     }
     

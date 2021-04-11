@@ -45,7 +45,7 @@ struct ArticleCardView: View {
                         //Content
                         if self.isShowContent {
                             Text(self.content)
-                                .foregroundColor(Color(.darkGray))
+                                .foregroundColor(.secondary)
                                 .font(.system(.body, design: .rounded))
                                 .padding(.horizontal)
                                 .transition(.move(edge: .top))
@@ -67,14 +67,16 @@ struct ArticleCardView: View {
                         }) {
                             Image(systemName: "xmark.circle.fill")
                                 .font(.system(size: 26))
-                                .foregroundColor(.white)
-                                .opacity(0.7)
+                                .foregroundColor(Color(.systemGray5))
+                                .opacity(0.9)
                         }
                     }
                     .padding(.top, 50)
                     .padding(.trailing)
                 }
-            }.shadow(radius: self.isShowContent ? 0 : 15)
+            }
+            .background(Color("cardBackground"))
+            .shadow(radius: self.isShowContent ? 0 : 15)
         }
     }
 }

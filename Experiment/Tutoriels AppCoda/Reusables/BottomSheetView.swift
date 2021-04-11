@@ -80,7 +80,7 @@ struct BottomSheetView<Content>: View where Content:View {
                     .offset(y: -self.scrollOffset)
                     .animation(nil)
                 }
-                .background(Color.white)
+                .background(Color("cardBackground"))
                 .cornerRadius(10, antialiased: true)
                 .disabled(self.viewState == .half)
                 .coordinateSpace(name: "scrollview")
