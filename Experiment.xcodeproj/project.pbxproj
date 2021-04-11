@@ -15,14 +15,20 @@
 		12739395261B3CE400318692 /* ExpandableBottomSheetShowCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739394261B3CE400318692 /* ExpandableBottomSheetShowCase.swift */; };
 		1273939C261B407600318692 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1273939B261B407600318692 /* Restaurant.swift */; };
 		127393AA261B428000318692 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127393A9261B428000318692 /* RestaurantDetailView.swift */; };
+		128AF1FF26238E7900FE04BB /* ArticleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AF1FE26238E7900FE04BB /* ArticleTitleView.swift */; };
+		128AF2192623989F00FE04BB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AF20E2623975700FE04BB /* CardView.swift */; };
 		129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */; };
 		12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */; };
 		12AB8F2826222DA5007F956F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2726222DA5007F956F /* Trip.swift */; };
-		12AB8F2D26222E10007F956F /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2C26222E10007F956F /* CardView.swift */; };
+		12AB8F2D26222E10007F956F /* TripCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2C26222E10007F956F /* TripCardView.swift */; };
 		12AB8F342622F813007F956F /* AppStoreLike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F332622F813007F956F /* AppStoreLike.swift */; };
 		12AB8F3A2622F9CC007F956F /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F392622F9CC007F956F /* Article.swift */; };
 		12AB8F402622FD4B007F956F /* ArticleExcerptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F3F2622FD4B007F956F /* ArticleExcerptView.swift */; };
 		12AB8F452622FFD1007F956F /* ArticleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F442622FFD1007F956F /* ArticleCardView.swift */; };
+		12AB8F4B262387DA007F956F /* AppStoreLike2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F4A262387DA007F956F /* AppStoreLike2.swift */; };
+		12AB8F5A262388BC007F956F /* AppStoreTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F59262388BC007F956F /* AppStoreTopBar.swift */; };
+		12AB8F6226238950007F956F /* FullscreenArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F6126238950007F956F /* FullscreenArticleView.swift */; };
+		12AB8F67262389A8007F956F /* ArticleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F66262389A8007F956F /* ArticleHeaderView.swift */; };
 		12CB8F7A2619F9E700C6A367 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F782619F9E700C6A367 /* MainMenu.swift */; };
 		12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F792619F9E700C6A367 /* MainMenuRow.swift */; };
 		12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */; };
@@ -63,14 +69,20 @@
 		12739394261B3CE400318692 /* ExpandableBottomSheetShowCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableBottomSheetShowCase.swift; sourceTree = "<group>"; };
 		1273939B261B407600318692 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		127393A9261B428000318692 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
+		128AF1FE26238E7900FE04BB /* ArticleTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTitleView.swift; sourceTree = "<group>"; };
+		128AF20E2623975700FE04BB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderLikeSwipe.swift; sourceTree = "<group>"; };
 		12AB8F2726222DA5007F956F /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
-		12AB8F2C26222E10007F956F /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		12AB8F2C26222E10007F956F /* TripCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardView.swift; sourceTree = "<group>"; };
 		12AB8F332622F813007F956F /* AppStoreLike.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLike.swift; sourceTree = "<group>"; };
 		12AB8F392622F9CC007F956F /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		12AB8F3F2622FD4B007F956F /* ArticleExcerptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleExcerptView.swift; sourceTree = "<group>"; };
 		12AB8F442622FFD1007F956F /* ArticleCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleCardView.swift; sourceTree = "<group>"; };
+		12AB8F4A262387DA007F956F /* AppStoreLike2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLike2.swift; sourceTree = "<group>"; };
+		12AB8F59262388BC007F956F /* AppStoreTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreTopBar.swift; sourceTree = "<group>"; };
+		12AB8F6126238950007F956F /* FullscreenArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullscreenArticleView.swift; sourceTree = "<group>"; };
+		12AB8F66262389A8007F956F /* ArticleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleHeaderView.swift; sourceTree = "<group>"; };
 		12CB8F782619F9E700C6A367 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		12CB8F792619F9E700C6A367 /* MainMenuRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuRow.swift; sourceTree = "<group>"; };
 		12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsGradientsView.swift; sourceTree = "<group>"; };
@@ -147,7 +159,7 @@
 				1273937F261B310300318692 /* DraggableView.swift */,
 				1273938F261B357300318692 /* ResizableView.swift */,
 				129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */,
-				12AB8F2C26222E10007F956F /* CardView.swift */,
+				12AB8F2C26222E10007F956F /* TripCardView.swift */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -155,10 +167,31 @@
 		12AB8F3E2622FD32007F956F /* AppStoreLike */ = {
 			isa = PBXGroup;
 			children = (
-				12AB8F3F2622FD4B007F956F /* ArticleExcerptView.swift */,
+				12AB8F5326238817007F956F /* New */,
+				12AB8F522623880C007F956F /* Original */,
 				12AB8F442622FFD1007F956F /* ArticleCardView.swift */,
+				12AB8F59262388BC007F956F /* AppStoreTopBar.swift */,
 			);
 			path = AppStoreLike;
+			sourceTree = "<group>";
+		};
+		12AB8F522623880C007F956F /* Original */ = {
+			isa = PBXGroup;
+			children = (
+				12AB8F3F2622FD4B007F956F /* ArticleExcerptView.swift */,
+			);
+			path = Original;
+			sourceTree = "<group>";
+		};
+		12AB8F5326238817007F956F /* New */ = {
+			isa = PBXGroup;
+			children = (
+				12AB8F66262389A8007F956F /* ArticleHeaderView.swift */,
+				12AB8F6126238950007F956F /* FullscreenArticleView.swift */,
+				128AF1FE26238E7900FE04BB /* ArticleTitleView.swift */,
+				128AF20E2623975700FE04BB /* CardView.swift */,
+			);
+			path = New;
 			sourceTree = "<group>";
 		};
 		12CB8F772619F9E700C6A367 /* MainMenu */ = {
@@ -185,6 +218,7 @@
 				12739394261B3CE400318692 /* ExpandableBottomSheetShowCase.swift */,
 				12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */,
 				12AB8F332622F813007F956F /* AppStoreLike.swift */,
+				12AB8F4A262387DA007F956F /* AppStoreLike2.swift */,
 			);
 			path = "Tutoriels AppCoda";
 			sourceTree = "<group>";
@@ -406,18 +440,24 @@
 				F26357A723D0861C00C8F30C /* SceneDelegate.swift in Sources */,
 				12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */,
 				12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */,
-				12AB8F2D26222E10007F956F /* CardView.swift in Sources */,
+				12AB8F67262389A8007F956F /* ArticleHeaderView.swift in Sources */,
+				12AB8F5A262388BC007F956F /* AppStoreTopBar.swift in Sources */,
+				12AB8F2D26222E10007F956F /* TripCardView.swift in Sources */,
 				12AB8F342622F813007F956F /* AppStoreLike.swift in Sources */,
 				12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */,
 				1273937A261B1DC100318692 /* GesturesView.swift in Sources */,
 				12AB8F452622FFD1007F956F /* ArticleCardView.swift in Sources */,
 				12AB8F402622FD4B007F956F /* ArticleExcerptView.swift in Sources */,
+				128AF2192623989F00FE04BB /* CardView.swift in Sources */,
 				12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */,
 				129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */,
 				12739395261B3CE400318692 /* ExpandableBottomSheetShowCase.swift in Sources */,
 				12AB8F3A2622F9CC007F956F /* Article.swift in Sources */,
+				12AB8F6226238950007F956F /* FullscreenArticleView.swift in Sources */,
 				12AB8F2826222DA5007F956F /* Trip.swift in Sources */,
 				1273939C261B407600318692 /* Restaurant.swift in Sources */,
+				128AF1FF26238E7900FE04BB /* ArticleTitleView.swift in Sources */,
+				12AB8F4B262387DA007F956F /* AppStoreLike2.swift in Sources */,
 				127393AA261B428000318692 /* RestaurantDetailView.swift in Sources */,
 				12739380261B310300318692 /* DraggableView.swift in Sources */,
 				F26357A923D0861C00C8F30C /* ContentView.swift in Sources */,

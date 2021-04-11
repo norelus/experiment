@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct CardView: View, Identifiable {
+struct TripCardView: View, Identifiable {
     
     let id = UUID()
     var trip: Trip
@@ -38,8 +38,8 @@ struct CardView: View, Identifiable {
     
 }
 
-struct CardView_Previews: PreviewProvider {
+struct TripCardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(trip: trips[5])
+        TripCardView(trip: trips[5])
     }
 }

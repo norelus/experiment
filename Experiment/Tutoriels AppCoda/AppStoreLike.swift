@@ -26,7 +26,7 @@ struct AppStoreLike: View {
         GeometryReader { fullView in
             ScrollView {
                 VStack(spacing: 40) {
-                    TopBar()
+                    AppStoreTopBar()
                         .padding(.horizontal,20)
                         .opacity(self.contentMode == .content ? 0 : 1)
                     ForEach(sampleArticles.indices) { index in
@@ -60,53 +60,6 @@ struct AppStoreLike: View {
     
 }
 
-struct TopBar: View {
-    
-    @Environment(\.presentationMode) var presentationMode
-    
-    var body: some View {
-        HStack(alignment: .lastTextBaseline) {
-            Button(action: {
-                presentationMode.wrappedValue.dismiss()
-            }) {
-                Image(systemName: "chevron.backward")
-                    .font(.largeTitle)
-            }.padding(.trailing)
-            VStack(alignment: .leading) {
-                Text(getCurrentDate().uppercased())
-                    .font(.caption)
-                    .foregroundColor(.secondary)
-                Text("Today")
-                    .font(.largeTitle)
-                    .fontWeight(.heavy)
-            }
-            Spacer()
-            Avatar(image: "profile", width: 40, height: 40)
-        }
-    }
-    
-    func getCurrentDate(with format: String = "EEEE, MMM d") -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = format
-        return dateFormatter.string(from: Date())
-    }
-    
-}
-
-struct Avatar: View {
-    
-    var image: String
-    var width: CGFloat
-    var height: CGFloat
-    
-    var body: some View {
-        Image(image)
-            .resizable()
-            .frame(width: width, height: height)
-            .clipShape(Circle())
-            .overlay(Circle().stroke(Color.gray, lineWidth: 1))
-    }
-}
 
 struct AppStoreLike_Previews: PreviewProvider {
     static var previews: some View {

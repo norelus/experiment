@@ -50,10 +50,10 @@ struct TinderLikeSwipe: View {
     
     private let dragThreshold: CGFloat = 80.0
     
-    @State var cardViews: [CardView] = {
-        var views = [CardView]()
+    @State var cardViews: [TripCardView] = {
+        var views = [TripCardView]()
         for index in 0..<2 {
-            views.append(CardView(trip: trips[index]))
+            views.append(TripCardView(trip: trips[index]))
         }
         return views
     }()
@@ -134,7 +134,7 @@ struct TinderLikeSwipe: View {
         }
     }
     
-    private func isTopCard(cardView : CardView) -> Bool {
+    private func isTopCard(cardView : TripCardView) -> Bool {
         guard let index = cardViews.firstIndex(where: {$0.id == cardView.id}) else {
             return false
         }
@@ -147,7 +147,7 @@ struct TinderLikeSwipe: View {
         self.lastIndex += 1
         let trip = trips[lastIndex % trips.count]
         
-        let newCardView = CardView(trip: trip)
+        let newCardView = TripCardView(trip: trip)
         cardViews.append(newCardView)
     }
 }
