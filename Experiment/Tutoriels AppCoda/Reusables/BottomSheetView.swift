@@ -122,6 +122,17 @@ struct BottomSheetView<Content>: View where Content:View {
         }
     }
     
+    struct HandleBar: View {
+
+        var body: some View {
+            Rectangle()
+                .frame(width: 50, height: 5)
+                .foregroundColor(Color(.systemGray5))
+                .cornerRadius(10)
+        }
+    }
+
+    
 }
 
 struct BottomSheetView_Previews: PreviewProvider {

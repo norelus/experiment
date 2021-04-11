@@ -40,30 +40,11 @@ struct MainMenu: View {
                     GesturesExerciseView().transition(.scale))
                 MainMenuRow(title: "Chapitre 18: Bottom Sheet", destination:
                     ExpandableBottomSheetShowCase().transition(.scale))
+                MainMenuRow(title: "Chapitre 19: Tinder Like Swipe", destination:
+                    TinderLikeSwipe().transition(.scale))
+                MainMenuRow(title: "Chapitre 26: AppStore Like Cards", destination:
+                    AppStoreLike().transition(.scale))
             })
-            /*
-            Section(header:Text("Composants"), content: {
-                MainMenuRow(title: "Composants de base", destination: Components().transition(.scale))
-            })
-            Section(header:Text("Animations"), content: {
-                MainMenuRow(title: "Animations de base", destination: Animations())
-                MainMenuRow(title: "Composant Lottie", destination: LottieExample())
-            })
-            Section(header:Text("Interactions"), content: {
-                MainMenuRow(title: "Formulaire et EnvironmentObject", destination: UserPreferences())
-                MainMenuRow(title: "Networking & ViewModel", destination: Networking())
-            })
-            Section(header:Text("UIKit"), content: {
-                MainMenuRow(title: "Intégration d'UIKit", destination: UIKitContentView())
-                MainMenuRow(title: "Combine avec UIKit", destination: CombineUIKitContentView())
-            })
-            Section(header:Text("Ajouts iOS 14"), content: {
-                MainMenuRow(title: "Composants de base", destination: BasicsIOS14())
-                MainMenuRow(title: "Lazy VStack et ScrollTo", destination: LazyVStackView())
-                MainMenuRow(title: "Grid", destination: GridView())
-                MainMenuRow(title: "Piquage de couleur", destination: ColorPiqueur())
-                MainMenuRow(title: "Player video (device only)", destination: PlayerView())
-            })*/
         }.navigationBarTitle(Text("Expérimentations"))
     }
 }

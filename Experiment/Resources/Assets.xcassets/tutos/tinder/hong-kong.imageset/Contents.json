@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "hong-kong.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
