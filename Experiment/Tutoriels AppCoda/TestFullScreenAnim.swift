@@ -10,7 +10,7 @@ import SwiftUI
 
 extension Animation {
     
-    static let myWeirdSpring = Animation.interactiveSpring(response: 0.45, dampingFraction: 0.65, blendDuration: 0.1)
+    static let myWeirdSpring = Animation.interactiveSpring(response: 0.55, dampingFraction: 0.75, blendDuration: 0.1)
     
 }
 
@@ -38,65 +38,57 @@ struct TestFullScreenAnim: View {
     //let animation: Namespace.ID
     
     var body: some View {
-        ZStack {
-            ScrollView {
-                VStack(spacing: 40) {
-                    
-                    AppStoreTopBar()
-                        .padding(.horizontal,20)
-                    ForEach(sampleArticles.indices) { index in
-                        let article = sampleArticles[index]
-                        CardView {
-                            //Image(uiImage: article.image).resizable()
-                            GeometryReader { cardView in
-                                /*ArticleHeaderView(category: article.category,
-                                                  headline: article.headline,
-                                                  subHeadline: article.subHeadline,
-                                                  image: article.image,
-                                                  geometry: cardView,
-                                                  isShowContent: $showContents[index])*/
-                                TotoContenu(category: article.category, headLine: article.headline, content: article.content)
+        GeometryReader { fullView in
+            ZStack {
+                ScrollView {
+                    VStack(spacing: 40) {
+                        
+                        AppStoreTopBar()
+                            .padding(.horizontal,20)
+                        ForEach(sampleArticles.indices) { index in
+                            let article = sampleArticles[index]
+                            CardView {
+                                GeometryReader { cardView in
+                                    TotoContenu(geometry: cardView,
+                                                category: article.category,
+                                                headLine: article.headline,
+                                                image: article.image,
+                                                content: article.content)
+                                }
+                            }
+                            .matchedGeometryEffect(id: "card\(index)", in: animation)
+                            .frame(height: 300)
+                            .animation(.myWeirdSpring)
+                            .onTapGesture {
+                                self.showContents[index] = true
+                                self.lastShown = index
+                            }
+                            .zIndex(lastShown == index ? 1 : 0)
+                        }
+                    }.padding(.horizontal)
+                }.frame(width: fullView.size.width)
+                
+                
+                if let index = selectedArticleIndex {
+                    let article = sampleArticles[index]
+                    CardView {
+                        GeometryReader { cardView in
+                            ScrollView(.vertical) {
+                                TotoContenu(geometry: cardView,
+                                            category: article.category,
+                                            headLine: article.headline,
+                                            image: article.image,
+                                            content: article.content)
                             }
                         }
-                        .matchedGeometryEffect(id: "card\(index)", in: animation)
-                        .frame(height: 300)
-                        .animation(.myWeirdSpring)
-                        .onTapGesture {
-                            self.showContents[index] = true
-                            self.lastShown = index
-                        }
-                        .zIndex(lastShown == index ? 1 : 0)
-                        
                     }
-                }.padding(.horizontal)
-            }
-            
-            
-            if let index = selectedArticleIndex {
-                let article = sampleArticles[index]
-                CardView {
-                    GeometryReader { cardView in
-                        ScrollView(.vertical) {
-                        /*ArticleHeaderView(category: article.category,
-                         headline: article.headline,
-                         subHeadline: article.subHeadline,
-                         image: article.image,
-                         geometry: cardView,
-                         isShowContent: $showContents[index])*/
-                        //Image(uiImage: article.image)
-                            TotoContenu(category: article.category,
-                                        headLine: article.headline,
-                                        content: article.content)
-                        }
+                    .zIndex(1)
+                    .matchedGeometryEffect(id: "card\(index)", in: animation)
+                    .onTapGesture {
+                        self.showContents[index] = false
                     }
+                    .animation(.myWeirdSpring)
                 }
-                .zIndex(1)
-                .matchedGeometryEffect(id: "card\(index)", in: animation)
-                .onTapGesture {
-                    self.showContents[index] = false
-                }
-                .animation(.myWeirdSpring)
-                
             }
         }
     }
@@ -106,19 +98,30 @@ struct TestFullScreenAnim: View {
 
 struct TotoContenu: View {
     
+    var geometry: GeometryProxy
+    
     var category: String
     var headLine: String
-    
+    var image: UIImage
     var content: String?
     
     var body: some View {
         VStack {
             ZStack(alignment: .bottomLeading) {
-                Color.orange
+                Image(uiImage: image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width:geometry.size.width, height: 300)
+                    .clipped()
                 VStack(alignment: .leading) {
-                    Text(category.uppercased()).foregroundColor(.white)
-                    Text(headLine).font(.headline).foregroundColor(.white)
+                    Text(category.uppercased())
+                        .foregroundColor(.black)
+                    Text(headLine).font(.headline)
+                        .foregroundColor(.black)
                 }.padding()
+                .frame(maxWidth: .infinity)
+                .background(Color.white)
+                
             }
             .frame(maxWidth: .infinity)
             .frame(height: 300)
@@ -126,6 +129,7 @@ struct TotoContenu: View {
                 Text(content)
                     .font(.body)
                     .foregroundColor(Color(.secondaryLabel))
+                    .padding()
             }
             
         }
