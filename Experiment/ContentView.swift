@@ -27,6 +27,7 @@ struct ContentView: View {
     }
     
     var body: some View {
+        
         NavigationView {
             MainMenu()
             VStack {
@@ -36,7 +37,7 @@ struct ContentView: View {
                 }
             }
         }.navigationViewStyle(DoubleColumnNavigationViewStyle())
-            .accentColor(.orange)//change la couleurs de tous les boutons :)
+        .accentColor(.orange)//change la couleurs de tous les boutons :)
     }
 }
 

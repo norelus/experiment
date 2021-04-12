@@ -44,6 +44,8 @@ struct MainMenu: View {
                     TinderLikeSwipe().transition(.scale))
                 MainMenuRow(title: "Chapitre 26: AppStore Like Cards", destination:
                     AppStoreLike().transition(.scale))
+                MainMenuRow(title: "Chapitre 26 bis: AppStore New Version", destination:
+                    AppStoreLike2().transition(.scale))
             })
         }.navigationBarTitle(Text("Expérimentations"))
     }

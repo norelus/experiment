@@ -29,12 +29,7 @@ struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         CardView {
             GeometryReader { cardview in
-                ArticleHeaderView(category: sampleArticles[5].category,
-                                  headline: sampleArticles[5].headline,
-                                  subHeadline: sampleArticles[5].subHeadline,
-                                  image: sampleArticles[5].image,
-                                  geometry: cardview,
-                                  isShowContent: .constant(false))
+                Text("toto").padding()
             }
         }
     }

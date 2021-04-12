@@ -1,8 +1,8 @@
 //
-//  AppStoreLike2.swift
+//  TestFullScreenAnim.swift
 //  Experiment
 //
-//  Created by Aurélien Caille on 11/04/2021.
+//  Created by Aurélien Caille on 12/04/2021.
 //  Copyright © 2021 norelus. All rights reserved.
 //
 
@@ -10,16 +10,15 @@ import SwiftUI
 
 extension Animation {
     
-    static var mySpring = Animation.interactiveSpring(response: 0.65, dampingFraction: 0.75, blendDuration: 0.1)
+    static let myWeirdSpring = Animation.interactiveSpring(response: 0.50, dampingFraction: 0.75, blendDuration: 0.1)
     
 }
 
 struct AppStoreLike2: View {
     
+    @Namespace var animation
     @State private var showContents: [Bool] = Array(repeating: false, count: sampleArticles.count)
-    
-    @Namespace private var animation
-
+    @State private var lastShown = 0
     
     enum ContentMode {
         case list
@@ -36,121 +35,119 @@ struct AppStoreLike2: View {
                 iterator.element
             } . map { $0.offset }.first
     }
+    //let animation: Namespace.ID
     
     var body: some View {
-        GeometryReader { geometry in
-            AppStoreScrollView(geometry: geometry, showContents: $showContents, animation: animation)
-                .frame(width: geometry.size.width)//pas obligé, pour corriger les bugs d'animation au lancement de la vue
-                .animation(.linear(duration: 5.0))
-            if self.contentMode == .content,
-               let index = selectedArticleIndex {
-                VStack {
-                    let article = sampleArticles[index]
-                    FullscreenArticleView(animation: animation,
-                                          index: index,
-                                          category: article.category,
-                                          headline: article.headline,
-                                          subHeadline: article.subHeadline,
-                                          image: article.image,
-                                          content: article.content,
-                                          isShowContent: $showContents[index])
-                        .transition(.opacity)
-                        .animation(.linear(duration: 5.0))
+        GeometryReader { fullView in
+            ZStack {
+                ScrollView {
+                    VStack(spacing: 40) {
+                        AppStoreTopBar()
+                            .padding(.horizontal,20)
+                            .opacity(contentMode == .list ? 1 : 0.3)
+                            .animation(.linear)
+                        ForEach(sampleArticles.indices) { index in
+                            let article = sampleArticles[index]
+                            CardView {
+                                GeometryReader { cardView in
+                                    TotoContenu(geometry: cardView,
+                                                article: article)
+                                }
+                            }
+                            .matchedGeometryEffect(id: "card\(index)", in: animation)
+                            .frame(height: 400)
+                            .animation(.myWeirdSpring)
+                            .onTapGesture {
+                                self.showContents[index] = true
+                                self.lastShown = index
+                            }
+                            .opacity((contentMode == .list || showContents[index]) ? 1 : 0.3)
+                            .animation(.linear)
+                            .zIndex(lastShown == index ? 1 : 0)
+                        }
+                    }.padding(.horizontal)
                 }
+                .frame(width: fullView.size.width)
+                .disabled(contentMode == .content)
                 
-            }
-        }
-        
-        .navigationBarHidden(true)
-    }
-    
-    
-    
-    
-}
-
-struct AppStoreScrollView: View {
-    
-
-    var geometry: GeometryProxy
-    
-    @Binding var showContents: [Bool]
-    
-    let animation: Namespace.ID
-    
-    var body: some View {
-        ScrollView {
-            VStack(spacing: 40) {
                 
-                AppStoreTopBar()
-                    .padding(.horizontal,20)
-                ForEach(sampleArticles.indices) { index in
+                if let index = selectedArticleIndex {
                     let article = sampleArticles[index]
                     CardView {
-                        GeometryReader { cardview in
-                            ArticleHeaderView(category: article.category,
-                                              headline: article.headline,
-                                              subHeadline: article.subHeadline,
-                                              image: article.image,
-                                              geometry: cardview,
-                                              isShowContent: $showContents[index])
-                                
+                        GeometryReader { cardView in
+                            ScrollView(.vertical) {
+                                TotoContenu(geometry: cardView,
+                                            article: article)
+                            }
                         }
-                        
                     }
-                    .matchedGeometryEffect(id: "header\(index)", in: animation)
+                    .zIndex(1)
+                    .matchedGeometryEffect(id: "card\(index)", in: animation)
                     .onTapGesture {
-                        self.showContents[index] = true
+                        self.showContents[index] = false
                     }
-                    .padding(.horizontal)
-                    .frame(height: min(article.image.size.height / 3, 500))
-                    //.animation(.interactiveSpring(response: 0.65, dampingFraction: 0.75, blendDuration: 0.1))
+                    .animation(.myWeirdSpring)
                 }
             }
-        }
+            .background(Color(.systemBackground).ignoresSafeArea())
+            
+        }.navigationBarHidden(true)
     }
     
 }
 
 
-struct AppStoreSingleCard: View {
-
+struct TotoContenu: View {
+    
     var geometry: GeometryProxy
     
-    @Binding var showContents: [Bool]
-    
-    var animation: Namespace.ID
+    var article: Article
     
     var body: some View {
-        VStack(spacing: 40) {
-            AppStoreTopBar()
-                .padding(.horizontal,20)
-            let article = sampleArticles[0]
-            CardView {
-                GeometryReader { cardview in
-                    ArticleHeaderView(category: article.category,
-                                      headline: article.headline,
-                                      subHeadline: article.subHeadline,
-                                      image: article.image,
-                                      geometry: cardview,
-                                      isShowContent: $showContents[0])
-                }
+        VStack {
+            ZStack(alignment: .bottomLeading) {
+                Image(uiImage: article.image)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width:geometry.size.width, height: 400)
+                    .clipped()
+                leTexte.padding()
+                .frame(maxWidth: .infinity)
+                .background(Color("cardBackground"))
                 
-            }.onTapGesture {
-                withAnimation {
-                    self.showContents[0] = true
-                }
             }
-            .padding(.horizontal)
-            .frame(height: min(article.image.size.height / 3, 500))
-            //.animation(.interactiveSpring(response: 0.65, dampingFraction: 0.75, blendDuration: 0.1))
+            .frame(maxWidth: .infinity)
+            .frame(height: 400)
+            Text(article.content)
+                .foregroundColor(.secondary)
+                .padding()
+        }.background(Color("cardBackground"))
+        
+    }
+    
+    
+    var leTexte: some View {
+        VStack(alignment: .leading) {
+            Text(article.category.uppercased())
+                .font(.subheadline)
+                .fontWeight(.bold)
+                .foregroundColor(.secondary)
+            
+            Text(article.headline)
+                .font(.title)
+                .fontWeight(.bold)
+                .foregroundColor(.primary)
+                .minimumScaleFactor(0.1)
+                .lineLimit(2)
+                .padding(.bottom, 5)
+            
         }
     }
+    
 }
 
-
-struct AppStoreLike2_Previews: PreviewProvider {
+struct TestFullScreenAnim_Previews: PreviewProvider {
     static var previews: some View {
-        AppStoreLike2()
+        AppStoreLike2().environment(\.colorScheme, .light)
     }
 }
