@@ -17,6 +17,7 @@
 		127393AA261B428000318692 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127393A9261B428000318692 /* RestaurantDetailView.swift */; };
 		128AF1FF26238E7900FE04BB /* ArticleTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AF1FE26238E7900FE04BB /* ArticleTitleView.swift */; };
 		128AF2192623989F00FE04BB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AF20E2623975700FE04BB /* CardView.swift */; };
+		128B0CFA2624D58F00406BF7 /* TestFullScreenAnim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B0CF92624D58F00406BF7 /* TestFullScreenAnim.swift */; };
 		129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */; };
 		12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */; };
 		12AB8F2826222DA5007F956F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2726222DA5007F956F /* Trip.swift */; };
@@ -71,6 +72,7 @@
 		127393A9261B428000318692 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		128AF1FE26238E7900FE04BB /* ArticleTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTitleView.swift; sourceTree = "<group>"; };
 		128AF20E2623975700FE04BB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		128B0CF92624D58F00406BF7 /* TestFullScreenAnim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFullScreenAnim.swift; sourceTree = "<group>"; };
 		129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderLikeSwipe.swift; sourceTree = "<group>"; };
 		12AB8F2726222DA5007F956F /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */,
 				12AB8F332622F813007F956F /* AppStoreLike.swift */,
 				12AB8F4A262387DA007F956F /* AppStoreLike2.swift */,
+				128B0CF92624D58F00406BF7 /* TestFullScreenAnim.swift */,
 			);
 			path = "Tutoriels AppCoda";
 			sourceTree = "<group>";
@@ -448,6 +451,7 @@
 				1273937A261B1DC100318692 /* GesturesView.swift in Sources */,
 				12AB8F452622FFD1007F956F /* ArticleCardView.swift in Sources */,
 				12AB8F402622FD4B007F956F /* ArticleExcerptView.swift in Sources */,
+				128B0CFA2624D58F00406BF7 /* TestFullScreenAnim.swift in Sources */,
 				128AF2192623989F00FE04BB /* CardView.swift in Sources */,
 				12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */,
 				129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */,

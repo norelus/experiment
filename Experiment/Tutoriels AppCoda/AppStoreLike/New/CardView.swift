@@ -21,7 +21,7 @@ struct CardView<Content: View>: View {
             .background(Color("cardBackground"))
             .cornerRadius(16)
             .frame(maxWidth: .infinity)
-            .shadow(radius: 20)
+            .shadow(radius: 10)
     }
 }
 

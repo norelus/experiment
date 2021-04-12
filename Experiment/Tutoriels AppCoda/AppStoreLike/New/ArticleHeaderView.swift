@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ArticleHeaderView: View {
     
+    @Namespace private var animation
+    
     let category: String
     let headline: String
     let subHeadline: String
@@ -28,6 +30,7 @@ struct ArticleHeaderView: View {
                 .frame(width: geometry.size.width,
                        height: min(image.size.height/3, 500))
                 .clipped()
+                .matchedGeometryEffect(id: "image", in: animation)
             VStack {
                 Spacer()
                 ArticleTitleView(category: category,

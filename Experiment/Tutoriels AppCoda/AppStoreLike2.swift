@@ -8,10 +8,18 @@
 
 import SwiftUI
 
+extension Animation {
+    
+    static var mySpring = Animation.interactiveSpring(response: 0.65, dampingFraction: 0.75, blendDuration: 0.1)
+    
+}
+
 struct AppStoreLike2: View {
     
     @State private var showContents: [Bool] = Array(repeating: false, count: sampleArticles.count)
     
+    @Namespace private var animation
+
     
     enum ContentMode {
         case list
@@ -31,22 +39,29 @@ struct AppStoreLike2: View {
     
     var body: some View {
         GeometryReader { geometry in
-            switch self.contentMode {
-            case .list:
-                AppStoreScrollView(geometry: geometry, showContents: $showContents)
-                    .frame(width: geometry.size.width)//pas obligé, pour corriger les bugs d'animation au lancement de la vue
-            case .content:
-                if let index = selectedArticleIndex {
+            AppStoreScrollView(geometry: geometry, showContents: $showContents, animation: animation)
+                .frame(width: geometry.size.width)//pas obligé, pour corriger les bugs d'animation au lancement de la vue
+                .animation(.linear(duration: 5.0))
+            if self.contentMode == .content,
+               let index = selectedArticleIndex {
+                VStack {
                     let article = sampleArticles[index]
-                    FullscreenArticleView(category: article.category,
+                    FullscreenArticleView(animation: animation,
+                                          index: index,
+                                          category: article.category,
                                           headline: article.headline,
                                           subHeadline: article.subHeadline,
                                           image: article.image,
                                           content: article.content,
                                           isShowContent: $showContents[index])
+                        .transition(.opacity)
+                        .animation(.linear(duration: 5.0))
                 }
+                
             }
-        }.navigationBarHidden(true)
+        }
+        
+        .navigationBarHidden(true)
     }
     
     
@@ -56,13 +71,17 @@ struct AppStoreLike2: View {
 
 struct AppStoreScrollView: View {
     
+
     var geometry: GeometryProxy
     
     @Binding var showContents: [Bool]
     
+    let animation: Namespace.ID
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 40) {
+                
                 AppStoreTopBar()
                     .padding(.horizontal,20)
                 ForEach(sampleArticles.indices) { index in
@@ -75,14 +94,17 @@ struct AppStoreScrollView: View {
                                               image: article.image,
                                               geometry: cardview,
                                               isShowContent: $showContents[index])
+                                
                         }
                         
-                    }.onTapGesture {
+                    }
+                    .matchedGeometryEffect(id: "header\(index)", in: animation)
+                    .onTapGesture {
                         self.showContents[index] = true
                     }
                     .padding(.horizontal)
                     .frame(height: min(article.image.size.height / 3, 500))
-                    .animation(.interactiveSpring(response: 0.65, dampingFraction: 0.75, blendDuration: 0.1))
+                    //.animation(.interactiveSpring(response: 0.65, dampingFraction: 0.75, blendDuration: 0.1))
                 }
             }
         }
@@ -90,6 +112,41 @@ struct AppStoreScrollView: View {
     
 }
 
+
+struct AppStoreSingleCard: View {
+
+    var geometry: GeometryProxy
+    
+    @Binding var showContents: [Bool]
+    
+    var animation: Namespace.ID
+    
+    var body: some View {
+        VStack(spacing: 40) {
+            AppStoreTopBar()
+                .padding(.horizontal,20)
+            let article = sampleArticles[0]
+            CardView {
+                GeometryReader { cardview in
+                    ArticleHeaderView(category: article.category,
+                                      headline: article.headline,
+                                      subHeadline: article.subHeadline,
+                                      image: article.image,
+                                      geometry: cardview,
+                                      isShowContent: $showContents[0])
+                }
+                
+            }.onTapGesture {
+                withAnimation {
+                    self.showContents[0] = true
+                }
+            }
+            .padding(.horizontal)
+            .frame(height: min(article.image.size.height / 3, 500))
+            //.animation(.interactiveSpring(response: 0.65, dampingFraction: 0.75, blendDuration: 0.1))
+        }
+    }
+}
 
 
 struct AppStoreLike2_Previews: PreviewProvider {
