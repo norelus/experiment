@@ -27,6 +27,8 @@ struct NavigationBarBuilder: UIViewControllerRepresentable {
 
 struct MainMenu: View {
     
+    @Binding var showAppStore2: Bool
+    
     var body: some View {
         List{
             Section(header:Text("Tutoriels AppCoda"), content: {
@@ -44,17 +46,20 @@ struct MainMenu: View {
                     TinderLikeSwipe().transition(.scale))
                 MainMenuRow(title: "Chapitre 26: AppStore Like Cards", destination:
                     AppStoreLike().transition(.scale))
-                MainMenuRow(title: "Chapitre 26 bis: AppStore New Version", destination:
-                    AppStoreLike2().transition(.scale))
+                Text("Chapitre 26 bis: AppStore New Version")
+                    .onTapGesture {
+                        showAppStore2 = true
+                    }
             })
         }.navigationBarTitle(Text("Expérimentations"))
+        
     }
 }
 
 struct MainMenu_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView  {
-            MainMenu()
+            MainMenu(showAppStore2: .constant(false))
         }
     }
 }

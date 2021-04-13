@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AppStoreTopBar: View {
     
-    @Environment(\.presentationMode) var presentationMode
+    var onBackPressed: (() -> Void)
     
     struct Avatar: View {
         
@@ -30,7 +30,7 @@ struct AppStoreTopBar: View {
     var body: some View {
         HStack(alignment: .lastTextBaseline) {
             Button(action: {
-                presentationMode.wrappedValue.dismiss()
+                onBackPressed()
             }) {
                 Image(systemName: "chevron.backward")
                     .font(.largeTitle)
@@ -58,6 +58,6 @@ struct AppStoreTopBar: View {
 
 struct AppStoreTopBar_Previews: PreviewProvider {
     static var previews: some View {
-        AppStoreTopBar()
+        AppStoreTopBar(onBackPressed: {})
     }
 }

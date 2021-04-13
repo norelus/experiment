@@ -16,6 +16,8 @@ extension Animation {
 
 struct AppStoreLike2: View {
     
+    @Binding var isPresented: Bool
+    
     @Namespace var animation
     @State private var showContents: [Bool] = Array(repeating: false, count: sampleArticles.count)
     @State private var lastShown = 0
@@ -42,7 +44,9 @@ struct AppStoreLike2: View {
             ZStack {
                 ScrollView {
                     VStack(spacing: 40) {
-                        AppStoreTopBar()
+                        AppStoreTopBar(onBackPressed: {
+                            isPresented = false
+                        })
                             .padding(.horizontal,20)
                             .opacity(contentMode == .list ? 1 : 0.3)
                             .animation(.linear)
@@ -57,13 +61,13 @@ struct AppStoreLike2: View {
                             .matchedGeometryEffect(id: "card\(index)", in: animation)
                             .frame(height: 400)
                             .animation(.myWeirdSpring)
+                            .opacity((contentMode == .list || showContents[index]) ? 1 : 0.3)
+                            .animation(.linear)
+                            .zIndex(lastShown == index ? 1 : 0)
                             .onTapGesture {
                                 self.showContents[index] = true
                                 self.lastShown = index
                             }
-                            .opacity((contentMode == .list || showContents[index]) ? 1 : 0.3)
-                            .animation(.linear)
-                            .zIndex(lastShown == index ? 1 : 0)
                         }
                     }.padding(.horizontal)
                 }
@@ -148,6 +152,6 @@ struct TotoContenu: View {
 
 struct TestFullScreenAnim_Previews: PreviewProvider {
     static var previews: some View {
-        AppStoreLike2().environment(\.colorScheme, .light)
+        AppStoreLike2(isPresented: .constant(true)).environment(\.colorScheme, .light)
     }
 }

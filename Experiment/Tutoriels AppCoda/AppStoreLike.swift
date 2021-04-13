@@ -10,6 +10,8 @@ import SwiftUI
 
 struct AppStoreLike: View {
     
+    @Environment(\.presentationMode) var presentationMode
+
     @State private var showContents: [Bool] = Array(repeating: false, count: sampleArticles.count)
     
     
@@ -26,7 +28,9 @@ struct AppStoreLike: View {
         GeometryReader { fullView in
             ScrollView {
                 VStack(spacing: 40) {
-                    AppStoreTopBar()
+                    AppStoreTopBar(onBackPressed: {
+                        presentationMode.wrappedValue.dismiss()
+                    })
                         .padding(.horizontal,20)
                         .opacity(self.contentMode == .content ? 0 : 1)
                     ForEach(sampleArticles.indices) { index in

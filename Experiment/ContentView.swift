@@ -15,6 +15,8 @@ struct ContentView: View {
     
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
+    @State var showAppStore2 : Bool = false
+    
     init() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
@@ -28,16 +30,20 @@ struct ContentView: View {
     
     var body: some View {
         
-        NavigationView {
-            MainMenu()
-            VStack {
-                Text("Bienvenue").font(.title)
-                if horizontalSizeClass == .compact {
-                    Text("Swipe à partir du bord gauche de l'écran pour afficher le menu sur iPad portrait (pas trouvé le moyen pour l'afficher tout le temps)").font(.caption)
+        if showAppStore2 {
+            AppStoreLike2(isPresented: $showAppStore2)
+        } else {
+            NavigationView {
+                MainMenu(showAppStore2: $showAppStore2)
+                VStack {
+                    Text("Bienvenue").font(.title)
+                    if horizontalSizeClass == .compact {
+                        Text("Swipe à partir du bord gauche de l'écran pour afficher le menu sur iPad portrait (pas trouvé le moyen pour l'afficher tout le temps)").font(.caption)
+                    }
                 }
-            }
-        }.navigationViewStyle(DoubleColumnNavigationViewStyle())
-        .accentColor(.orange)//change la couleurs de tous les boutons :)
+            }.navigationViewStyle(DoubleColumnNavigationViewStyle())
+            .accentColor(.orange)//change la couleurs de tous les boutons :)
+        }
     }
 }
 
