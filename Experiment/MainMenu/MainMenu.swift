@@ -48,7 +48,9 @@ struct MainMenu: View {
                     AppStoreLike().transition(.scale))
                 Text("Chapitre 26 bis: AppStore New Version")
                     .onTapGesture {
-                        showAppStore2 = true
+                        withAnimation {
+                            showAppStore2 = true
+                        }
                     }
             })
         }.navigationBarTitle(Text("Expérimentations"))

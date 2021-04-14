@@ -20,6 +20,7 @@ struct CardView<Content: View>: View {
         content
             .background(Color("cardBackground"))
             .cornerRadius(16)
+            .contentShape(Rectangle()) //fixes a bug wih tap gesture detector xD
             .frame(maxWidth: .infinity)
             .shadow(radius: 10)
     }

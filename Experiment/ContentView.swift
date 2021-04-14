@@ -32,6 +32,7 @@ struct ContentView: View {
         
         if showAppStore2 {
             AppStoreLike2(isPresented: $showAppStore2)
+                .transition(.move(edge: .trailing))
         } else {
             NavigationView {
                 MainMenu(showAppStore2: $showAppStore2)

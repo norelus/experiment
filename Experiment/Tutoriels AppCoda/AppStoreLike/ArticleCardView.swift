@@ -10,8 +10,6 @@ import SwiftUI
 
 struct ArticleCardView: View {
     
-    
-    
     let category: String
     let headline: String
     let subHeadline: String
@@ -25,8 +23,6 @@ struct ArticleCardView: View {
             ZStack(alignment: .topTrailing) {
                 ScrollView {
                     VStack(alignment: .leading) {
-                        
-                        
                         Image(uiImage: self.image)
                             .resizable()
                             .scaledToFill()
@@ -52,11 +48,7 @@ struct ArticleCardView: View {
                                 .animation(.linear)
                                 .padding(.bottom)
                         }
-                        
-                        
-                        
                     }
-                    
                 }
                 if self.isShowContent {
                     HStack {

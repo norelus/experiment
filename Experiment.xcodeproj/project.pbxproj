@@ -17,6 +17,7 @@
 		127393AA261B428000318692 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127393A9261B428000318692 /* RestaurantDetailView.swift */; };
 		128AF2192623989F00FE04BB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AF20E2623975700FE04BB /* CardView.swift */; };
 		128B0CFA2624D58F00406BF7 /* AppStoreLike2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B0CF92624D58F00406BF7 /* AppStoreLike2.swift */; };
+		1297D876262770DF003C6E41 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1297D875262770DF003C6E41 /* ArticleView.swift */; };
 		129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */; };
 		12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */; };
 		12AB8F2826222DA5007F956F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2726222DA5007F956F /* Trip.swift */; };
@@ -68,6 +69,7 @@
 		127393A9261B428000318692 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		128AF20E2623975700FE04BB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		128B0CF92624D58F00406BF7 /* AppStoreLike2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLike2.swift; sourceTree = "<group>"; };
+		1297D875262770DF003C6E41 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderLikeSwipe.swift; sourceTree = "<group>"; };
 		12AB8F2726222DA5007F956F /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
@@ -147,6 +149,15 @@
 			path = BottomSheet;
 			sourceTree = "<group>";
 		};
+		1297D87D262771DC003C6E41 /* AppStoreLike2 */ = {
+			isa = PBXGroup;
+			children = (
+				128AF20E2623975700FE04BB /* CardView.swift */,
+				1297D875262770DF003C6E41 /* ArticleView.swift */,
+			);
+			path = AppStoreLike2;
+			sourceTree = "<group>";
+		};
 		129DA4F2261E59DC001E5AF0 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,28 +172,11 @@
 		12AB8F3E2622FD32007F956F /* AppStoreLike */ = {
 			isa = PBXGroup;
 			children = (
-				12AB8F5326238817007F956F /* New */,
-				12AB8F522623880C007F956F /* Original */,
 				12AB8F442622FFD1007F956F /* ArticleCardView.swift */,
 				12AB8F3F2622FD4B007F956F /* ArticleExcerptView.swift */,
 				12AB8F59262388BC007F956F /* AppStoreTopBar.swift */,
 			);
 			path = AppStoreLike;
-			sourceTree = "<group>";
-		};
-		12AB8F522623880C007F956F /* Original */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Original;
-			sourceTree = "<group>";
-		};
-		12AB8F5326238817007F956F /* New */ = {
-			isa = PBXGroup;
-			children = (
-				128AF20E2623975700FE04BB /* CardView.swift */,
-			);
-			path = New;
 			sourceTree = "<group>";
 		};
 		12CB8F772619F9E700C6A367 /* MainMenu */ = {
@@ -197,6 +191,7 @@
 		12CB8F7F2619F9FC00C6A367 /* Tutoriels AppCoda */ = {
 			isa = PBXGroup;
 			children = (
+				1297D87D262771DC003C6E41 /* AppStoreLike2 */,
 				12AB8F3E2622FD32007F956F /* AppStoreLike */,
 				129DA4F2261E59DC001E5AF0 /* Reusables */,
 				127393A0261B408500318692 /* BottomSheet */,
@@ -440,6 +435,7 @@
 				12AB8F402622FD4B007F956F /* ArticleExcerptView.swift in Sources */,
 				128B0CFA2624D58F00406BF7 /* AppStoreLike2.swift in Sources */,
 				128AF2192623989F00FE04BB /* CardView.swift in Sources */,
+				1297D876262770DF003C6E41 /* ArticleView.swift in Sources */,
 				12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */,
 				129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */,
 				12739395261B3CE400318692 /* ExpandableBottomSheetShowCase.swift in Sources */,

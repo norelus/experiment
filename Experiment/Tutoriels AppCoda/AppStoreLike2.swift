@@ -16,9 +16,10 @@ extension Animation {
 
 struct AppStoreLike2: View {
     
+    @Namespace var animation
+    
     @Binding var isPresented: Bool
     
-    @Namespace var animation
     @State private var showContents: [Bool] = Array(repeating: false, count: sampleArticles.count)
     @State private var lastShown = 0
     
@@ -37,51 +38,22 @@ struct AppStoreLike2: View {
                 iterator.element
             } . map { $0.offset }.first
     }
-    //let animation: Namespace.ID
     
     var body: some View {
         GeometryReader { fullView in
             ZStack {
-                ScrollView {
-                    VStack(spacing: 40) {
-                        AppStoreTopBar(onBackPressed: {
-                            isPresented = false
-                        })
-                            .padding(.horizontal,20)
-                            .opacity(contentMode == .list ? 1 : 0.3)
-                            .animation(.linear)
-                        ForEach(sampleArticles.indices) { index in
-                            let article = sampleArticles[index]
-                            CardView {
-                                GeometryReader { cardView in
-                                    TotoContenu(geometry: cardView,
-                                                article: article)
-                                }
-                            }
-                            .matchedGeometryEffect(id: "card\(index)", in: animation)
-                            .frame(height: 400)
-                            .animation(.myWeirdSpring)
-                            .opacity((contentMode == .list || showContents[index]) ? 1 : 0.3)
-                            .animation(.linear)
-                            .zIndex(lastShown == index ? 1 : 0)
-                            .onTapGesture {
-                                self.showContents[index] = true
-                                self.lastShown = index
-                            }
-                        }
-                    }.padding(.horizontal)
-                }
-                .frame(width: fullView.size.width)
-                .disabled(contentMode == .content)
-                
+                cardList
+                    .frame(width: fullView.size.width)
+                    .disabled(contentMode == .content)
                 
                 if let index = selectedArticleIndex {
                     let article = sampleArticles[index]
                     CardView {
                         GeometryReader { cardView in
                             ScrollView(.vertical) {
-                                TotoContenu(geometry: cardView,
-                                            article: article)
+                                ArticleView(geometry: cardView,
+                                            article: article,
+                                            isFullScreen: $showContents[index])
                             }
                         }
                     }
@@ -98,57 +70,47 @@ struct AppStoreLike2: View {
         }.navigationBarHidden(true)
     }
     
-}
-
-
-struct TotoContenu: View {
-    
-    var geometry: GeometryProxy
-    
-    var article: Article
-    
-    var body: some View {
-        VStack {
-            ZStack(alignment: .bottomLeading) {
-                Image(uiImage: article.image)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width:geometry.size.width, height: 400)
-                    .clipped()
-                leTexte.padding()
-                .frame(maxWidth: .infinity)
-                .background(Color("cardBackground"))
-                
-            }
-            .frame(maxWidth: .infinity)
-            .frame(height: 400)
-            Text(article.content)
-                .foregroundColor(.secondary)
-                .padding()
-        }.background(Color("cardBackground"))
-        
-    }
-    
-    
-    var leTexte: some View {
-        VStack(alignment: .leading) {
-            Text(article.category.uppercased())
-                .font(.subheadline)
-                .fontWeight(.bold)
-                .foregroundColor(.secondary)
-            
-            Text(article.headline)
-                .font(.title)
-                .fontWeight(.bold)
-                .foregroundColor(.primary)
-                .minimumScaleFactor(0.1)
-                .lineLimit(2)
-                .padding(.bottom, 5)
-            
+    var cardList: some View {
+        ScrollView {
+            VStack(spacing: 40) {
+                AppStoreTopBar(onBackPressed: {
+                    print("tap back")
+                    withAnimation {
+                        isPresented = false
+                    }
+                })
+                    .padding(.horizontal,20)
+                    .opacity(contentMode == .list ? 1 : 0.3)
+                    .animation(.linear)
+                ForEach(sampleArticles.indices) { index in
+                    let article = sampleArticles[index]
+                    CardView {
+                        GeometryReader { cardView in
+                            ArticleView(geometry: cardView,
+                                        article: article,
+                                        isFullScreen: $showContents[index])
+                        }
+                    }
+                    .matchedGeometryEffect(id: "card\(index)", in: animation)
+                    .frame(height: 400)
+                    .onTapGesture {
+                        self.showContents[index] = true
+                        self.lastShown = index
+                    }
+                    .animation(.myWeirdSpring)
+                    .opacity((contentMode == .list || showContents[index]) ? 1 : 0.3)
+                    .animation(.linear)
+                    .zIndex(lastShown == index ? 1 : 0)
+                    
+                }
+                                            
+            }.padding(.horizontal)
         }
     }
     
 }
+
+
 
 struct TestFullScreenAnim_Previews: PreviewProvider {
     static var previews: some View {
