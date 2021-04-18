@@ -9,8 +9,7 @@
 import SwiftUI
 
 
-
-struct ScrollOffsetKey: PreferenceKey {
+struct BottomSheetScrollOffsetKey: PreferenceKey {
     
     typealias Value = CGFloat
     static var defaultValue: CGFloat = .zero
@@ -22,6 +21,10 @@ struct ScrollOffsetKey: PreferenceKey {
 }
 
 struct BottomSheetView<Content>: View where Content:View {
+    
+    
+
+
     
     @Binding var isShow: Bool
     
@@ -72,7 +75,7 @@ struct BottomSheetView<Content>: View where Content:View {
                 ScrollView(.vertical) {
                     GeometryReader { scrollViewProxy in
                         Color.clear.preference(
-                            key: ScrollOffsetKey.self,
+                            key: BottomSheetScrollOffsetKey.self,
                             value: scrollViewProxy.frame(in: .named("scrollview")).minY)
                     }
                     .frame(height: 0)
@@ -108,8 +111,8 @@ struct BottomSheetView<Content>: View where Content:View {
                             }
                             
                         })
-            .onPreferenceChange(ScrollOffsetKey.self) { value in
-                print("\(value)")
+            .onPreferenceChange(BottomSheetScrollOffsetKey.self) { value in
+                print("scrolloffset = \(value)")
                 if self.viewState == .full {
                     self.scrollOffset = value > 0 ? value : 0
                     if self.scrollOffset > 40 {

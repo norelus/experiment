@@ -8,42 +8,45 @@
 
 import SwiftUI
 
-enum DragState {
-    
-    case inactive
-    case pressing
-    case dragging(translation: CGSize)
-    
-    var translation: CGSize {
-        switch self {
-        case .inactive, .pressing:
-            return .zero
-        case .dragging(translation: let translation):
-            return translation
-        }
-    }
-    
-    var isPressing: Bool {
-        switch self {
-        case .pressing, .dragging:
-            return true
-        case .inactive:
-            return false
-        }
-    }
-    
-    var isDragging: Bool {
-        switch self {
-        case .dragging:
-            return true
-        default:
-            return false
-        }
-    }
-    
-}
+
 
 struct GesturesView: View {
+    
+    
+    enum DragState {
+        
+        case inactive
+        case pressing
+        case dragging(translation: CGSize)
+        
+        var translation: CGSize {
+            switch self {
+            case .inactive, .pressing:
+                return .zero
+            case .dragging(translation: let translation):
+                return translation
+            }
+        }
+        
+        var isPressing: Bool {
+            switch self {
+            case .pressing, .dragging:
+                return true
+            case .inactive:
+                return false
+            }
+        }
+        
+        var isDragging: Bool {
+            switch self {
+            case .dragging:
+                return true
+            default:
+                return false
+            }
+        }
+        
+    }
     
     @State var isPressed = false
     

@@ -86,6 +86,7 @@ struct AppStoreLike2: View {
                     .matchedGeometryEffect(id: "card\(index)", in: animation)
                     .frame(height: 400)
                     .onTapGesture {
+                        print("tap")
                         self.showContents[index] = true
                         self.lastShown = index
                     }

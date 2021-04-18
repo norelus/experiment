@@ -124,13 +124,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1273937E261B30F400318692 /* Gestures */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Gestures;
-			sourceTree = "<group>";
-		};
 		1273939A261B407600318692 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,7 +189,6 @@
 				129DA4F2261E59DC001E5AF0 /* Reusables */,
 				127393A0261B408500318692 /* BottomSheet */,
 				1273939A261B407600318692 /* Model */,
-				1273937E261B30F400318692 /* Gestures */,
 				12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */,
 				12739374261B1CBE00318692 /* StateBindingsView.swift */,
 				12739379261B1DC100318692 /* GesturesView.swift */,
