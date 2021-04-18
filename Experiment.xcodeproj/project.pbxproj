@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1219351F262C662D00365D0A /* ModalsAndAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219351E262C662D00365D0A /* ModalsAndAlerts.swift */; };
 		12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739374261B1CBE00318692 /* StateBindingsView.swift */; };
 		1273937A261B1DC100318692 /* GesturesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739379261B1DC100318692 /* GesturesView.swift */; };
 		12739380261B310300318692 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1273937F261B310300318692 /* DraggableView.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1219351E262C662D00365D0A /* ModalsAndAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalsAndAlerts.swift; sourceTree = "<group>"; };
 		12739374261B1CBE00318692 /* StateBindingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBindingsView.swift; sourceTree = "<group>"; };
 		12739379261B1DC100318692 /* GesturesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GesturesView.swift; sourceTree = "<group>"; };
 		1273937F261B310300318692 /* DraggableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DraggableView.swift; sourceTree = "<group>"; };
@@ -124,11 +126,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1273939A261B407600318692 /* Model */ = {
+		12193524262C69EB00365D0A /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				12AB8F392622F9CC007F956F /* Article.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		12193525262C69FF00365D0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				1273939B261B407600318692 /* Restaurant.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		12193526262C6A0A00365D0A /* TinderLike */ = {
+			isa = PBXGroup;
+			children = (
+				12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */,
+				1273939A261B407600318692 /* Model */,
+			);
+			path = TinderLike;
+			sourceTree = "<group>";
+		};
+		1273939A261B407600318692 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				12AB8F2726222DA5007F956F /* Trip.swift */,
 			);
 			path = Model;
@@ -137,7 +162,9 @@
 		127393A0261B408500318692 /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
+				12193525262C69FF00365D0A /* Model */,
 				127393A9261B428000318692 /* RestaurantDetailView.swift */,
+				12739394261B3CE400318692 /* ExpandableBottomSheetShowCase.swift */,
 			);
 			path = BottomSheet;
 			sourceTree = "<group>";
@@ -147,6 +174,7 @@
 			children = (
 				128AF20E2623975700FE04BB /* CardView.swift */,
 				1297D875262770DF003C6E41 /* ArticleView.swift */,
+				128B0CF92624D58F00406BF7 /* AppStoreLike2.swift */,
 			);
 			path = AppStoreLike2;
 			sourceTree = "<group>";
@@ -165,6 +193,8 @@
 		12AB8F3E2622FD32007F956F /* AppStoreLike */ = {
 			isa = PBXGroup;
 			children = (
+				12193524262C69EB00365D0A /* Model */,
+				12AB8F332622F813007F956F /* AppStoreLike.swift */,
 				12AB8F442622FFD1007F956F /* ArticleCardView.swift */,
 				12AB8F3F2622FD4B007F956F /* ArticleExcerptView.swift */,
 				12AB8F59262388BC007F956F /* AppStoreTopBar.swift */,
@@ -184,19 +214,16 @@
 		12CB8F7F2619F9FC00C6A367 /* Tutoriels AppCoda */ = {
 			isa = PBXGroup;
 			children = (
-				1297D87D262771DC003C6E41 /* AppStoreLike2 */,
 				12AB8F3E2622FD32007F956F /* AppStoreLike */,
-				129DA4F2261E59DC001E5AF0 /* Reusables */,
+				1297D87D262771DC003C6E41 /* AppStoreLike2 */,
 				127393A0261B408500318692 /* BottomSheet */,
-				1273939A261B407600318692 /* Model */,
+				129DA4F2261E59DC001E5AF0 /* Reusables */,
+				12193526262C6A0A00365D0A /* TinderLike */,
 				12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */,
-				12739374261B1CBE00318692 /* StateBindingsView.swift */,
-				12739379261B1DC100318692 /* GesturesView.swift */,
 				1273938A261B353300318692 /* GesturesExerciseView.swift */,
-				12739394261B3CE400318692 /* ExpandableBottomSheetShowCase.swift */,
-				12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */,
-				12AB8F332622F813007F956F /* AppStoreLike.swift */,
-				128B0CF92624D58F00406BF7 /* AppStoreLike2.swift */,
+				12739379261B1DC100318692 /* GesturesView.swift */,
+				1219351E262C662D00365D0A /* ModalsAndAlerts.swift */,
+				12739374261B1CBE00318692 /* StateBindingsView.swift */,
 			);
 			path = "Tutoriels AppCoda";
 			sourceTree = "<group>";
@@ -343,7 +370,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = norelus;
 				TargetAttributes = {
 					F26357A023D0861C00C8F30C = {
@@ -429,6 +456,7 @@
 				128AF2192623989F00FE04BB /* CardView.swift in Sources */,
 				1297D876262770DF003C6E41 /* ArticleView.swift in Sources */,
 				12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */,
+				1219351F262C662D00365D0A /* ModalsAndAlerts.swift in Sources */,
 				129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */,
 				12739395261B3CE400318692 /* ExpandableBottomSheetShowCase.swift in Sources */,
 				12AB8F3A2622F9CC007F956F /* Article.swift in Sources */,
@@ -510,6 +538,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -570,6 +599,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

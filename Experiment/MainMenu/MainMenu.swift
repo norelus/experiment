@@ -36,6 +36,8 @@ struct MainMenu: View {
                     ButtonsGradientsView().transition(.scale))
                 MainMenuRow(title: "Chapitre 7: States et Bindings", destination:
                     StateBindingsView().transition(.scale))
+                MainMenuRow(title: "Chapitre 7: Modals et Alertes", destination:
+                    ModalsAndAlerts().transition(.scale))
                 MainMenuRow(title: "Chapitre 17: Gestures", destination:
                     GesturesView().transition(.scale))
                 MainMenuRow(title: "Chapitre 17: Gestures - Exercice", destination:
