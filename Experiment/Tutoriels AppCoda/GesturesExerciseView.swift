@@ -11,6 +11,7 @@ import SwiftUI
 struct GesturesExerciseView: View {
     var body: some View {
         blueCircle
+            .navigationBarTitle("Gestures - Exercice")
     }
     
     var blueCircle: some View {

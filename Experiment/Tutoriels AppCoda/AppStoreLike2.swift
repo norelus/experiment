@@ -32,11 +32,12 @@ struct AppStoreLike2: View {
         self.showContents.contains(true) ? .content : .list
     }
     
+    //first index where show contents is true :)
     private var selectedArticleIndex: Int? {
-        return self.showContents.enumerated()
-            .filter { iterator in
-                iterator.element
-            } . map { $0.offset }.first
+        return self.showContents
+            .enumerated()
+            .first(where: { $0.element })?
+            .offset
     }
     
     var body: some View {
@@ -48,21 +49,12 @@ struct AppStoreLike2: View {
                 
                 if let index = selectedArticleIndex {
                     let article = sampleArticles[index]
-                    CardView {
-                        GeometryReader { cardView in
-                            ScrollView(.vertical) {
-                                ArticleView(geometry: cardView,
-                                            article: article,
-                                            isFullScreen: $showContents[index])
-                            }
+                    FullScreenArticleView(article: article, isPresented: $showContents[index])
+                        .matchedGeometryEffect(id: "card\(index)", in: animation)
+                        .onTapGesture {
+                            self.showContents[index] = false
                         }
-                    }
-                    .zIndex(1)
-                    .matchedGeometryEffect(id: "card\(index)", in: animation)
-                    .onTapGesture {
-                        self.showContents[index] = false
-                    }
-                    .animation(.myWeirdSpring)
+                        .animation(.myWeirdSpring)
                 }
             }
             .background(Color(.systemBackground).ignoresSafeArea())
@@ -79,9 +71,9 @@ struct AppStoreLike2: View {
                         isPresented = false
                     }
                 })
-                    .padding(.horizontal,20)
-                    .opacity(contentMode == .list ? 1 : 0.3)
-                    .animation(.linear)
+                .padding(.horizontal,20)
+                .opacity(contentMode == .list ? 1 : 0.3)
+                .animation(.linear)
                 ForEach(sampleArticles.indices) { index in
                     let article = sampleArticles[index]
                     CardView {
@@ -103,13 +95,34 @@ struct AppStoreLike2: View {
                     .zIndex(lastShown == index ? 1 : 0)
                     
                 }
-                                            
+                
             }.padding(.horizontal)
         }
     }
     
 }
 
+struct FullScreenArticleView : View {
+    
+    var article: Article
+    
+    @Binding var isPresented: Bool
+    
+    var body: some View {
+        
+        CardView {
+            GeometryReader { cardView in
+                ScrollView(.vertical) {
+                    ArticleView(geometry: cardView,
+                                article: article,
+                                isFullScreen: $isPresented)
+                }
+            }
+        }
+        .zIndex(1)
+    }
+    
+}
 
 
 struct TestFullScreenAnim_Previews: PreviewProvider {

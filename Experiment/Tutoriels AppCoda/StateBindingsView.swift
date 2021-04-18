@@ -9,6 +9,20 @@
 import SwiftUI
 
 
+struct StateBindingsView: View {
+    
+    @State var counter = 10
+    
+    var body: some View {
+        VStack {
+            CounterButton(counter: $counter, color: .red)
+            CounterButton(counter: $counter, color: .green)
+            CounterButton(counter: $counter, color: .blue)
+        }.navigationBarTitle("State et bindings")
+    }
+}
+
+
 struct CounterButton: View {
 
     @Binding var counter: Int
@@ -31,20 +45,6 @@ struct CounterButton: View {
     }
 }
 
-
-
-struct StateBindingsView: View {
-    
-    @State var counter = 10
-    
-    var body: some View {
-        VStack {
-            CounterButton(counter: $counter, color: .red)
-            CounterButton(counter: $counter, color: .green)
-            CounterButton(counter: $counter, color: .blue)
-        }
-    }
-}
 
 struct StateBindingsView_Previews: PreviewProvider {
     static var previews: some View {

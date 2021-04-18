@@ -63,7 +63,7 @@ struct ButtonsGradientsView: View {
                     .cornerRadius(30)
                     .rotationEffect(.init(degrees: rotated ? 45 : 0))
             })
-        }.navigationTitle("Bouton et gradients")
+        }.navigationTitle("Boutons et gradients")
     }
 }
 

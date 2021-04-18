@@ -131,7 +131,7 @@ struct TinderLikeSwipe: View {
             }
             Spacer(minLength: 20)
             BottomBarMenu()
-        }
+        }.navigationBarTitle("Tinder Like")
     }
     
     private func isTopCard(cardView : TripCardView) -> Bool {

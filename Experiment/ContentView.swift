@@ -17,15 +17,18 @@ struct ContentView: View {
     
     @State var showAppStore2 : Bool = false
     
+    //https://developer.apple.com/documentation/uikit/uinavigationbarappearance
     init() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = navBarBackgroundColor
-        appearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor: navBarTextColor]
-        appearance.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: navBarTextColor]
+        appearance.titleTextAttributes = [.foregroundColor: navBarTextColor]
+        appearance.largeTitleTextAttributes = [.foregroundColor: navBarTextColor,
+                                               .font: UIFont(name: "ArialRoundedMTBold", size: 35)!]
         
         UINavigationBar.appearance().standardAppearance = appearance
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
     }
     
     var body: some View {
@@ -42,7 +45,8 @@ struct ContentView: View {
                         Text("Swipe à partir du bord gauche de l'écran pour afficher le menu sur iPad portrait (pas trouvé le moyen pour l'afficher tout le temps)").font(.caption)
                     }
                 }
-            }.navigationViewStyle(DoubleColumnNavigationViewStyle())
+            }
+            .navigationViewStyle(DoubleColumnNavigationViewStyle())
             .accentColor(.orange)//change la couleurs de tous les boutons :)
         }
     }

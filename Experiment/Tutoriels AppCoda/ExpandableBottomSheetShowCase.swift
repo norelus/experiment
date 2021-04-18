@@ -36,9 +36,7 @@ struct ExpandableBottomSheetShowCase: View {
                     .transition(.move(edge: .bottom))
                 }
             }
-            
-
-        }
+        }.navigationBarTitle("Restaurants", displayMode: .inline)
     }
     
     var list: some View {
