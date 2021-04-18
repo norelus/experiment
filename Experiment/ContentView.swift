@@ -13,6 +13,8 @@ struct ContentView: View {
     let navBarTextColor = UIColor(white: 0.95, alpha: 1.0)
     let navBarBackgroundColor = UIColor(named:"navbar_background")
     
+    let persistenceController = PersistenceController.shared
+
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
     @State var showAppStore2 : Bool = false
@@ -49,6 +51,7 @@ struct ContentView: View {
             }
             .navigationViewStyle(DoubleColumnNavigationViewStyle())
             .accentColor(.orange)//change la couleurs de tous les boutons :)
+            .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

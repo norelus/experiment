@@ -10,9 +10,9 @@ import SwiftUI
 
 struct NavigationBarBuilder: UIViewControllerRepresentable {
     typealias UIViewControllerType = UIViewController
-        
+    
     var build: (UINavigationController) -> Void = {_ in }
-        
+    
     func makeUIViewController(context: UIViewControllerRepresentableContext<NavigationBarBuilder>) -> UIViewController {
         UIViewController()
     }
@@ -32,28 +32,36 @@ struct MainMenu: View {
     var body: some View {
         List{
             Section(header:Text("Tutoriels AppCoda"), content: {
-                MainMenuRow(title: "Chapitre 6: Boutons, labels, gradients", destination:
-                    ButtonsGradientsView().transition(.scale))
-                MainMenuRow(title: "Chapitre 7: States et Bindings", destination:
-                    StateBindingsView().transition(.scale))
-                MainMenuRow(title: "Chapitre 12: Modals et Alertes", destination:
-                    ModalsAndAlerts().transition(.scale))
-                MainMenuRow(title: "Chapitre 17: Gestures", destination:
-                    GesturesView().transition(.scale))
-                MainMenuRow(title: "Chapitre 17: Gestures - Exercice", destination:
-                    GesturesExerciseView().transition(.scale))
-                MainMenuRow(title: "Chapitres 16 & 18: Context Menu / Swipe to delete / Bottom Sheet", destination:
-                    ContextSwipeBottomsheet().transition(.scale))
-                MainMenuRow(title: "Chapitre 19: Tinder Like Swipe", destination:
-                    TinderLikeSwipe().transition(.scale))
-                MainMenuRow(title: "Chapitre 26: AppStore Like Cards", destination:
-                    AppStoreLike().transition(.scale))
-                Text("AppStore Like Custom Version")
-                    .onTapGesture {
-                        withAnimation {
-                            showAppStore2 = true
+                Group {
+                    MainMenuRow(title: "Chapitre 6: Boutons, labels, gradients", destination:
+                                    ButtonsGradientsView().transition(.scale))
+                    MainMenuRow(title: "Chapitre 7: States et Bindings", destination:
+                                    StateBindingsView().transition(.scale))
+                    MainMenuRow(title: "Chapitre 12: Modals et Alertes", destination:
+                                    ModalsAndAlerts().transition(.scale))
+                    MainMenuRow(title: "Chapitre 17: Gestures", destination:
+                                    GesturesView().transition(.scale))
+                    MainMenuRow(title: "Chapitre 17: Gestures - Exercice", destination:
+                                    GesturesExerciseView().transition(.scale))
+                    MainMenuRow(title: "Chapitres 16 & 18: Context Menu / Swipe to delete / Bottom Sheet", destination:
+                                    ContextSwipeBottomsheet().transition(.scale))
+                    MainMenuRow(title: "Chapitre 19: Tinder Like Swipe", destination:
+                                    TinderLikeSwipe().transition(.scale))
+                    MainMenuRow(title: "Chapitre 22: Todo List CoreData", destination:
+                                    TodoListCoreData().transition(.scale))
+                }
+                Group {
+                    MainMenuRow(title: "CoreData Test", destination:
+                                    CoreDataTest().transition(.scale))
+                    MainMenuRow(title: "Chapitre 26: AppStore Like Cards", destination:
+                                    AppStoreLike().transition(.scale))
+                    Text("AppStore Like Custom Version")
+                        .onTapGesture {
+                            withAnimation {
+                                showAppStore2 = true
+                            }
                         }
-                    }
+                }
             })
         }.navigationBarTitle("Expérimentations")
         

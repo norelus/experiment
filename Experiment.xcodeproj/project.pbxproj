@@ -21,6 +21,10 @@
 		128AF2192623989F00FE04BB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AF20E2623975700FE04BB /* CardView.swift */; };
 		128B0CFA2624D58F00406BF7 /* AppStoreLike2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B0CF92624D58F00406BF7 /* AppStoreLike2.swift */; };
 		1297D876262770DF003C6E41 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1297D875262770DF003C6E41 /* ArticleView.swift */; };
+		129B8A25262CCE31001C61BD /* TodoListCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A24262CCE31001C61BD /* TodoListCoreData.swift */; };
+		129B8A35262CCE8F001C61BD /* Experiment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A33262CCE8F001C61BD /* Experiment.xcdatamodeld */; };
+		129B8A3A262CCEC7001C61BD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A39262CCEC7001C61BD /* Persistence.swift */; };
+		129B8A3F262CCF7B001C61BD /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A3E262CCF7B001C61BD /* CoreDataTest.swift */; };
 		129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */; };
 		12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */; };
 		12AB8F2826222DA5007F956F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2726222DA5007F956F /* Trip.swift */; };
@@ -76,6 +80,10 @@
 		128AF20E2623975700FE04BB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		128B0CF92624D58F00406BF7 /* AppStoreLike2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLike2.swift; sourceTree = "<group>"; };
 		1297D875262770DF003C6E41 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		129B8A24262CCE31001C61BD /* TodoListCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCoreData.swift; sourceTree = "<group>"; };
+		129B8A34262CCE8F001C61BD /* Experiment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Experiment.xcdatamodel; sourceTree = "<group>"; };
+		129B8A39262CCEC7001C61BD /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		129B8A3E262CCF7B001C61BD /* CoreDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
 		129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderLikeSwipe.swift; sourceTree = "<group>"; };
 		12AB8F2726222DA5007F956F /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
@@ -201,6 +209,24 @@
 			path = AppStoreLike2;
 			sourceTree = "<group>";
 		};
+		129B8A23262CCE14001C61BD /* TodoListCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				129B8A24262CCE31001C61BD /* TodoListCoreData.swift */,
+				129B8A3E262CCF7B001C61BD /* CoreDataTest.swift */,
+			);
+			path = TodoListCoreData;
+			sourceTree = "<group>";
+		};
+		129B8A29262CCE3A001C61BD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				129B8A33262CCE8F001C61BD /* Experiment.xcdatamodeld */,
+				129B8A39262CCEC7001C61BD /* Persistence.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		129DA4F2261E59DC001E5AF0 /* Reusables */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,6 +262,7 @@
 		12CB8F7F2619F9FC00C6A367 /* Tutoriels AppCoda */ = {
 			isa = PBXGroup;
 			children = (
+				129B8A23262CCE14001C61BD /* TodoListCoreData */,
 				12731DBC262C6B89004EB556 /* ModalsAndAlerts */,
 				12AB8F3E2622FD32007F956F /* AppStoreLike */,
 				1297D87D262771DC003C6E41 /* AppStoreLike2 */,
@@ -281,6 +308,7 @@
 		F26357A323D0861C00C8F30C /* Experiment */ = {
 			isa = PBXGroup;
 			children = (
+				129B8A29262CCE3A001C61BD /* CoreData */,
 				12CB8F872619FC7F00C6A367 /* Resources */,
 				12CB8F7F2619F9FC00C6A367 /* Tutoriels AppCoda */,
 				12CB8F772619F9E700C6A367 /* MainMenu */,
@@ -460,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				129B8A3A262CCEC7001C61BD /* Persistence.swift in Sources */,
 				12CB8F7A2619F9E700C6A367 /* MainMenu.swift in Sources */,
 				F26357A523D0861C00C8F30C /* AppDelegate.swift in Sources */,
 				12739390261B357300318692 /* ResizableView.swift in Sources */,
@@ -470,17 +499,20 @@
 				12AB8F5A262388BC007F956F /* AppStoreTopBar.swift in Sources */,
 				12731DC4262C6BA8004EB556 /* ArticleForModalDetailView.swift in Sources */,
 				12AB8F2D26222E10007F956F /* TripCardView.swift in Sources */,
+				129B8A25262CCE31001C61BD /* TodoListCoreData.swift in Sources */,
 				12AB8F342622F813007F956F /* AppStoreLike.swift in Sources */,
 				12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */,
 				1273937A261B1DC100318692 /* GesturesView.swift in Sources */,
 				12AB8F452622FFD1007F956F /* ArticleCardView.swift in Sources */,
 				12AB8F402622FD4B007F956F /* ArticleExcerptView.swift in Sources */,
+				129B8A35262CCE8F001C61BD /* Experiment.xcdatamodeld in Sources */,
 				128B0CFA2624D58F00406BF7 /* AppStoreLike2.swift in Sources */,
 				128AF2192623989F00FE04BB /* CardView.swift in Sources */,
 				1297D876262770DF003C6E41 /* ArticleView.swift in Sources */,
 				12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */,
 				1219351F262C662D00365D0A /* ModalsAndAlerts.swift in Sources */,
 				12731DBF262C6BA2004EB556 /* ArticleForModal.swift in Sources */,
+				129B8A3F262CCF7B001C61BD /* CoreDataTest.swift in Sources */,
 				129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */,
 				12739395261B3CE400318692 /* ContextSwipeBottomsheet.swift in Sources */,
 				12AB8F3A2622F9CC007F956F /* Article.swift in Sources */,
@@ -818,6 +850,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		129B8A33262CCE8F001C61BD /* Experiment.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				129B8A34262CCE8F001C61BD /* Experiment.xcdatamodel */,
+			);
+			currentVersion = 129B8A34262CCE8F001C61BD /* Experiment.xcdatamodel */;
+			path = Experiment.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F263579923D0861C00C8F30C /* Project object */;
 }
