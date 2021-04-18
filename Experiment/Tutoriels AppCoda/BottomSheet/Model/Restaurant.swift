@@ -16,6 +16,7 @@ struct Restaurant: Identifiable {
     var description: String
     var image: String
     var isVisited: Bool
+    var isFavorite: Bool = false
     
     init(name: String, type: String, location: String, phone: String, description: String, image: String, isVisited: Bool) {
         self.name = name

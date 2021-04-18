@@ -36,14 +36,14 @@ struct MainMenu: View {
                     ButtonsGradientsView().transition(.scale))
                 MainMenuRow(title: "Chapitre 7: States et Bindings", destination:
                     StateBindingsView().transition(.scale))
-                MainMenuRow(title: "Chapitre 7: Modals et Alertes", destination:
+                MainMenuRow(title: "Chapitre 12: Modals et Alertes", destination:
                     ModalsAndAlerts().transition(.scale))
                 MainMenuRow(title: "Chapitre 17: Gestures", destination:
                     GesturesView().transition(.scale))
                 MainMenuRow(title: "Chapitre 17: Gestures - Exercice", destination:
                     GesturesExerciseView().transition(.scale))
-                MainMenuRow(title: "Chapitre 18: Bottom Sheet", destination:
-                    ExpandableBottomSheetShowCase().transition(.scale))
+                MainMenuRow(title: "Chapitres 16 & 18: Context Menu / Swipe to delete / Bottom Sheet", destination:
+                    ContextSwipeBottomsheet().transition(.scale))
                 MainMenuRow(title: "Chapitre 19: Tinder Like Swipe", destination:
                     TinderLikeSwipe().transition(.scale))
                 MainMenuRow(title: "Chapitre 26: AppStore Like Cards", destination:
