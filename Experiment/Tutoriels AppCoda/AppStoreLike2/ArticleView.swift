@@ -19,15 +19,23 @@ struct ArticleView: View {
     
     var body: some View {
         VStack {
-            ZStack(alignment: .bottomLeading) {
-                imageview
-                titleText
+            ZStack(alignment: .topTrailing) {
+                ZStack(alignment: .bottomLeading) {
+                    imageview
+                    titleText
+                }
+                if isFullScreen {
+                    closeButton
+                        .padding(.top, 40)
+                        .padding(.trailing)
+                }
             }
             .frame(maxWidth: .infinity)
             Text(article.content)
                 .foregroundColor(.secondary)
                 .padding()
-        }.background(Color("cardBackground"))
+        }
+        .background(Color("cardBackground"))
     }
     
     var imageview: some View {
@@ -53,9 +61,31 @@ struct ArticleView: View {
                 .lineLimit(2)
                 .padding(.bottom, 5)
             
-        }.padding()
+        }
+        .padding()
         .frame(maxWidth: .infinity)
         .background(Color("cardBackground"))
     }
     
+    var closeButton: some View {
+        Button(action: {
+            self.isFullScreen = false
+        }) {
+            Image(systemName: "xmark.circle.fill")
+                .font(.system(size: 26))
+                .foregroundColor(Color(.systemGray5))
+                .opacity(0.9)
+        }
+    }
+    
+}
+
+struct ArticleView_Previews: PreviewProvider {
+    static var previews: some View {
+        GeometryReader { geometry in
+            ArticleView(geometry: geometry,
+                        article: sampleArticles[0],
+                        isFullScreen: .constant(true))
+        }
+    }
 }

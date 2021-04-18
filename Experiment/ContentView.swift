@@ -19,16 +19,17 @@ struct ContentView: View {
     
     //https://developer.apple.com/documentation/uikit/uinavigationbarappearance
     init() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = navBarBackgroundColor
-        appearance.titleTextAttributes = [.foregroundColor: navBarTextColor]
-        appearance.largeTitleTextAttributes = [.foregroundColor: navBarTextColor,
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithOpaqueBackground()
+        navBarAppearance.backgroundColor = navBarBackgroundColor
+        navBarAppearance.titleTextAttributes = [.foregroundColor: navBarTextColor]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: navBarTextColor,
                                                .font: UIFont(name: "ArialRoundedMTBold", size: 35)!]
+       navBarAppearance.setBackIndicatorImage(UIImage(systemName: "arrow.turn.up.left"), transitionMaskImage: UIImage(systemName: "arrow.turn.up.left"))
         
-        UINavigationBar.appearance().standardAppearance = appearance
-        UINavigationBar.appearance().scrollEdgeAppearance = appearance
-        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().standardAppearance = navBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
+        UINavigationBar.appearance().compactAppearance = navBarAppearance
     }
     
     var body: some View {

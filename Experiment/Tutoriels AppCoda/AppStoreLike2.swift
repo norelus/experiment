@@ -46,20 +46,21 @@ struct AppStoreLike2: View {
                 cardList
                     .frame(width: fullView.size.width)
                     .disabled(contentMode == .content)
-                
                 if let index = selectedArticleIndex {
                     let article = sampleArticles[index]
                     FullScreenArticleView(article: article, isPresented: $showContents[index])
                         .matchedGeometryEffect(id: "card\(index)", in: animation)
+                        /*
                         .onTapGesture {
                             self.showContents[index] = false
-                        }
+                        }*/
                         .animation(.myWeirdSpring)
+                        .ignoresSafeArea()
                 }
             }
             .background(Color(.systemBackground).ignoresSafeArea())
-            
-        }.navigationBarHidden(true)
+        }
+        .navigationBarHidden(true)
     }
     
     var cardList: some View {
@@ -76,7 +77,7 @@ struct AppStoreLike2: View {
                 .animation(.linear)
                 ForEach(sampleArticles.indices) { index in
                     let article = sampleArticles[index]
-                    CardView {
+                    CardView(cornered: true) {
                         GeometryReader { cardView in
                             ArticleView(geometry: cardView,
                                         article: article,
@@ -110,7 +111,7 @@ struct FullScreenArticleView : View {
     
     var body: some View {
         
-        CardView {
+        CardView(cornered: false) {
             GeometryReader { cardView in
                 ScrollView(.vertical) {
                     ArticleView(geometry: cardView,
