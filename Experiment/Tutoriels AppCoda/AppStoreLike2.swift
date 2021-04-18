@@ -50,10 +50,9 @@ struct AppStoreLike2: View {
                     let article = sampleArticles[index]
                     FullScreenArticleView(article: article, isPresented: $showContents[index])
                         .matchedGeometryEffect(id: "card\(index)", in: animation)
-                        /*
                         .onTapGesture {
                             self.showContents[index] = false
-                        }*/
+                        }
                         .animation(.myWeirdSpring)
                         .ignoresSafeArea()
                 }
