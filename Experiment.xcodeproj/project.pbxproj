@@ -25,6 +25,9 @@
 		129B8A35262CCE8F001C61BD /* Experiment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A33262CCE8F001C61BD /* Experiment.xcdatamodeld */; };
 		129B8A3A262CCEC7001C61BD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A39262CCEC7001C61BD /* Persistence.swift */; };
 		129B8A3F262CCF7B001C61BD /* CoreDataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A3E262CCF7B001C61BD /* CoreDataTest.swift */; };
+		129B8A53262CD294001C61BD /* CheckBoxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A52262CD293001C61BD /* CheckBoxStyle.swift */; };
+		129B8A58262CD299001C61BD /* NewToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A57262CD299001C61BD /* NewToDoView.swift */; };
+		129B8A5E262CD2A0001C61BD /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A5D262CD2A0001C61BD /* ToDoItem.swift */; };
 		129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */; };
 		12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */; };
 		12AB8F2826222DA5007F956F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2726222DA5007F956F /* Trip.swift */; };
@@ -84,6 +87,9 @@
 		129B8A34262CCE8F001C61BD /* Experiment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Experiment.xcdatamodel; sourceTree = "<group>"; };
 		129B8A39262CCEC7001C61BD /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		129B8A3E262CCF7B001C61BD /* CoreDataTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataTest.swift; sourceTree = "<group>"; };
+		129B8A52262CD293001C61BD /* CheckBoxStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBoxStyle.swift; sourceTree = "<group>"; };
+		129B8A57262CD299001C61BD /* NewToDoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewToDoView.swift; sourceTree = "<group>"; };
+		129B8A5D262CD2A0001C61BD /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderLikeSwipe.swift; sourceTree = "<group>"; };
 		12AB8F2726222DA5007F956F /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
@@ -212,7 +218,10 @@
 		129B8A23262CCE14001C61BD /* TodoListCoreData */ = {
 			isa = PBXGroup;
 			children = (
+				129B8A5C262CD2A0001C61BD /* Model */,
 				129B8A24262CCE31001C61BD /* TodoListCoreData.swift */,
+				129B8A52262CD293001C61BD /* CheckBoxStyle.swift */,
+				129B8A57262CD299001C61BD /* NewToDoView.swift */,
 				129B8A3E262CCF7B001C61BD /* CoreDataTest.swift */,
 			);
 			path = TodoListCoreData;
@@ -225,6 +234,14 @@
 				129B8A39262CCEC7001C61BD /* Persistence.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		129B8A5C262CD2A0001C61BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				129B8A5D262CD2A0001C61BD /* ToDoItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		129DA4F2261E59DC001E5AF0 /* Reusables */ = {
@@ -488,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				129B8A5E262CD2A0001C61BD /* ToDoItem.swift in Sources */,
 				129B8A3A262CCEC7001C61BD /* Persistence.swift in Sources */,
 				12CB8F7A2619F9E700C6A367 /* MainMenu.swift in Sources */,
 				F26357A523D0861C00C8F30C /* AppDelegate.swift in Sources */,
@@ -513,7 +531,9 @@
 				1219351F262C662D00365D0A /* ModalsAndAlerts.swift in Sources */,
 				12731DBF262C6BA2004EB556 /* ArticleForModal.swift in Sources */,
 				129B8A3F262CCF7B001C61BD /* CoreDataTest.swift in Sources */,
+				129B8A53262CD294001C61BD /* CheckBoxStyle.swift in Sources */,
 				129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */,
+				129B8A58262CD299001C61BD /* NewToDoView.swift in Sources */,
 				12739395261B3CE400318692 /* ContextSwipeBottomsheet.swift in Sources */,
 				12AB8F3A2622F9CC007F956F /* Article.swift in Sources */,
 				12AB8F2826222DA5007F956F /* Trip.swift in Sources */,

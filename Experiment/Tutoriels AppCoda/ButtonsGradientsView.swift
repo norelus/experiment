@@ -11,7 +11,7 @@ import SwiftUI
 struct ButtonsGradientsView: View {
        
     @State var rotated: Bool = false
-    @Environment(\.presentationMode) var mode
+    
     
     struct GradientBackgroundStyle: ButtonStyle {
         
@@ -65,14 +65,6 @@ struct ButtonsGradientsView: View {
                     .rotationEffect(.init(degrees: rotated ? 45 : 0))
             })
         }
-        .navigationBarBackButtonHidden(true)
-        .navigationBarItems(leading: Button(action : {
-            // action
-            mode.wrappedValue.dismiss()
-        }){
-            Text("\(Image(systemName: "chevron.left")) \("On s'en va")")
-                .foregroundColor(.red)
-        })
         .navigationTitle("Boutons et gradients")
     }
 }

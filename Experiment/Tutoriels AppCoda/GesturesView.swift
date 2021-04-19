@@ -58,7 +58,8 @@ struct GesturesView: View {
         ZStack {
             redCircle
             greenCircle
-        }.navigationBarTitle("Gestures")
+        }
+        .navigationBarTitle("Gestures")
     }
     
     var greenCircle: some View {

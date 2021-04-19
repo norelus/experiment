@@ -29,41 +29,63 @@ struct MainMenu: View {
     
     @Binding var showAppStore2: Bool
     
+    struct Option : Identifiable {
+        var id = UUID()
+        
+        var title: String
+        var destination: AnyView
+        
+        init<Destination: View>(title: String, destination: Destination) {
+            self.title = title
+            self.destination = AnyView(destination)
+        }
+    }
+    
+    var options = [
+        Option(title: "Chapitre 6: Boutons, labels, gradients",
+               destination: ButtonsGradientsView()),
+        Option(title: "Chapitre 7: States et Bindings",
+               destination: StateBindingsView()),
+        Option(title: "Chapitre 12: Modals et Alertes",
+               destination: ModalsAndAlerts()),
+        Option(title: "Chapitre 17: Gestures",
+               destination: GesturesView()),
+        Option(title: "Chapitre 17: Gestures - Exercice",
+               destination: GesturesExerciseView()),
+        Option(title: "Chapitres 16 & 18: Context Menu / Swipe to delete / Bottom Sheet",
+               destination: ContextSwipeBottomsheet()),
+        Option(title: "Chapitre 19: Tinder Like Swipe",
+               destination: TinderLikeSwipe()),
+        Option(title: "Chapitre 22: Todo List CoreData",
+               destination: TodoListCoreData()),
+        Option(title: "CoreData Test",
+               destination: CoreDataTest()),
+        Option(title: "Chapitre 26: AppStore Like Cards",
+               destination: AppStoreLike()),
+    ]
+    
     var body: some View {
         List{
-            Section(header:Text("Tutoriels AppCoda"), content: {
-                Group {
-                    MainMenuRow(title: "Chapitre 6: Boutons, labels, gradients", destination:
-                                    ButtonsGradientsView().transition(.scale))
-                    MainMenuRow(title: "Chapitre 7: States et Bindings", destination:
-                                    StateBindingsView().transition(.scale))
-                    MainMenuRow(title: "Chapitre 12: Modals et Alertes", destination:
-                                    ModalsAndAlerts().transition(.scale))
-                    MainMenuRow(title: "Chapitre 17: Gestures", destination:
-                                    GesturesView().transition(.scale))
-                    MainMenuRow(title: "Chapitre 17: Gestures - Exercice", destination:
-                                    GesturesExerciseView().transition(.scale))
-                    MainMenuRow(title: "Chapitres 16 & 18: Context Menu / Swipe to delete / Bottom Sheet", destination:
-                                    ContextSwipeBottomsheet().transition(.scale))
-                    MainMenuRow(title: "Chapitre 19: Tinder Like Swipe", destination:
-                                    TinderLikeSwipe().transition(.scale))
-                    MainMenuRow(title: "Chapitre 22: Todo List CoreData", destination:
-                                    TodoListCoreData().transition(.scale))
+            Section(header:
+                        Text("Tutoriels AppCoda")
+                        .padding(8)
+                        .background(Color.black.opacity(0.6))
+                        .cornerRadius(16)
+                    , content: {
+                
+                ForEach(options) { option in
+                    MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
                 }
-                Group {
-                    MainMenuRow(title: "CoreData Test", destination:
-                                    CoreDataTest().transition(.scale))
-                    MainMenuRow(title: "Chapitre 26: AppStore Like Cards", destination:
-                                    AppStoreLike().transition(.scale))
-                    Text("AppStore Like Custom Version")
-                        .onTapGesture {
-                            withAnimation {
-                                showAppStore2 = true
-                            }
+                Text("AppStore Like Custom Version")
+                    .onTapGesture {
+                        withAnimation {
+                            showAppStore2 = true
                         }
-                }
+                    }
+                    .listRowBackground(Color(.systemGray4))
             })
-        }.navigationBarTitle("Expérimentations")
+        }.background(Color.clear)
+        .navigationBarTitle("Menu")
         
     }
 }
@@ -72,6 +94,11 @@ struct MainMenu_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView  {
             MainMenu(showAppStore2: .constant(false))
+            VStack {
+                Text("Bienvenue").font(.title)
+            }
         }
+        .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        .accentColor(.orange)//change la couleurs de tous les boutons :)
     }
 }
