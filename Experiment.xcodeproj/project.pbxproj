@@ -40,6 +40,7 @@
 		12CB8F7A2619F9E700C6A367 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F782619F9E700C6A367 /* MainMenu.swift */; };
 		12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F792619F9E700C6A367 /* MainMenuRow.swift */; };
 		12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */; };
+		12E73C032635794F00CBCED8 /* CombineForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E73C022635794F00CBCED8 /* CombineForm.swift */; };
 		F26357A523D0861C00C8F30C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26357A423D0861C00C8F30C /* AppDelegate.swift */; };
 		F26357A723D0861C00C8F30C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26357A623D0861C00C8F30C /* SceneDelegate.swift */; };
 		F26357A923D0861C00C8F30C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26357A823D0861C00C8F30C /* ContentView.swift */; };
@@ -102,6 +103,7 @@
 		12CB8F782619F9E700C6A367 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		12CB8F792619F9E700C6A367 /* MainMenuRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuRow.swift; sourceTree = "<group>"; };
 		12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsGradientsView.swift; sourceTree = "<group>"; };
+		12E73C022635794F00CBCED8 /* CombineForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineForm.swift; sourceTree = "<group>"; };
 		F26357A123D0861C00C8F30C /* Experiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Experiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26357A423D0861C00C8F30C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F26357A623D0861C00C8F30C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -279,6 +281,7 @@
 		12CB8F7F2619F9FC00C6A367 /* Tutoriels AppCoda */ = {
 			isa = PBXGroup;
 			children = (
+				12E73BFE2635790F00CBCED8 /* CombineForm */,
 				129B8A23262CCE14001C61BD /* TodoListCoreData */,
 				12731DBC262C6B89004EB556 /* ModalsAndAlerts */,
 				12AB8F3E2622FD32007F956F /* AppStoreLike */,
@@ -300,6 +303,14 @@
 				F26357AA23D0861D00C8F30C /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		12E73BFE2635790F00CBCED8 /* CombineForm */ = {
+			isa = PBXGroup;
+			children = (
+				12E73C022635794F00CBCED8 /* CombineForm.swift */,
+			);
+			path = CombineForm;
 			sourceTree = "<group>";
 		};
 		F263579823D0861C00C8F30C = {
@@ -514,6 +525,7 @@
 				F26357A723D0861C00C8F30C /* SceneDelegate.swift in Sources */,
 				12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */,
 				12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */,
+				12E73C032635794F00CBCED8 /* CombineForm.swift in Sources */,
 				12AB8F5A262388BC007F956F /* AppStoreTopBar.swift in Sources */,
 				12731DC4262C6BA8004EB556 /* ArticleForModalDetailView.swift in Sources */,
 				12AB8F2D26222E10007F956F /* TripCardView.swift in Sources */,

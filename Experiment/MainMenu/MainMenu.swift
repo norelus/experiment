@@ -48,6 +48,8 @@ struct MainMenu: View {
                destination: StateBindingsView()),
         Option(title: "Chapitre 12: Modals et Alertes",
                destination: ModalsAndAlerts()),
+        Option(title: "Chapitre 15: Formulaire avec Combine et ViewModel",
+               destination: CombineForm()),
         Option(title: "Chapitre 17: Gestures",
                destination: GesturesView()),
         Option(title: "Chapitre 17: Gestures - Exercice",
