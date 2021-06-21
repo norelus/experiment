@@ -41,7 +41,11 @@ struct MainMenu: View {
         }
     }
     
-    var options = [
+    var iOSQuinzeOptions = [
+        Option(title: "Basiques", destination: BasicIOS15())
+    ]
+    
+    var appCodaOptions = [
         Option(title: "Chapitre 6: Boutons, labels, gradients",
                destination: ButtonsGradientsView()),
         Option(title: "Chapitre 7: States et Bindings",
@@ -69,13 +73,24 @@ struct MainMenu: View {
     var body: some View {
         List{
             Section(header:
-                        Text("Tutoriels AppCoda")
+                        Text("iOS 15")
                         .padding(8)
-                        .background(Color.black.opacity(0.6))
+                        .background(Color.white.opacity(0.6))
                         .cornerRadius(16)
                     , content: {
                 
-                ForEach(options) { option in
+                ForEach(iOSQuinzeOptions) { option in
+                    MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
+                }
+            })
+            Section(header:
+                        Text("Tutoriels AppCoda")
+                        .padding(8)
+                        .background(Color.white.opacity(0.6))
+                        .cornerRadius(16)
+                    , content: {
+                
+                ForEach(appCodaOptions) { option in
                     MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
                 }
                 Text("AppStore Like Custom Version")
