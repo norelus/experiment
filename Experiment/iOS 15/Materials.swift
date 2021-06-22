@@ -18,7 +18,7 @@ struct Materials: View {
                     Text("Bottom view using safe area insets")
                     Spacer()
                     Text("Super").foregroundStyle(.secondary)
-                }.padding(.vertical, 64)
+                }.padding(.vertical, 32)
                 .padding(.horizontal, 16)
                 .background(.thinMaterial)
             }
@@ -32,7 +32,9 @@ struct Materials: View {
                 Spacer()
                 VStack(spacing: 32) {
                     VStack {
-                        Text("Regular material").font(.headline)
+                        Text("Regular material")
+                            .font(.headline)
+                            .padding(.bottom, 8)
                         Text("Primary")
                             .foregroundStyle(.primary)
                         Text("Secondary")
@@ -47,6 +49,7 @@ struct Materials: View {
                     .cornerRadius(16)
                     VStack {
                         Text("Thin material").font(.headline)
+                            .padding(.bottom, 8)
                         Text("Multiple \(Text("styles").foregroundColor(.red)) \(Text("in").bold()) \(Text("one").italic()) \(Text("Text element").font(.caption))")
                     }
                     .padding(32)
@@ -54,14 +57,27 @@ struct Materials: View {
                     .cornerRadius(16)
                     VStack {
                         Text("Thick material").font(.headline)
-                        
+                            .padding(.bottom, 8)
+                        Text("Text Styles in Markdown")
+                        Text("* This is **bold** text, this is *italic* text, and this is ***bold, italic*** text.")
+                        Text("~~A strikethrough example~~")
+                        Text("`Monospaced works too`")
+                        Text("Visit Apple: [click here](https://apple.com)")
                     }
                     .padding(32)
                     .background(.thickMaterial)
                     .cornerRadius(16)
                     VStack{
                         Text("Ultrathin material").font(.headline)
-                        
+                            Text("Text with gradient")
+                            .font(.title.bold())
+                            .foregroundStyle(
+                                .linearGradient(
+                                    colors: [.blue, .pink],
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                )
+                            )
                     }
                     .padding(32)
                     .background(.ultraThinMaterial)

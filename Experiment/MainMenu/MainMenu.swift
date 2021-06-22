@@ -42,7 +42,11 @@ struct MainMenu: View {
     }
     
     var iOSQuinzeOptions = [
-        Option(title: "Basiques", destination: BasicIOS15())
+        Option(title: "Basiques", destination: BasicIOS15()),
+        Option(title: "Matériaux et styles de texte", destination: Materials()),
+        Option(title: "Async Images", destination: AsyncImagesIOS15()),
+        Option(title: "Listes new stuff", destination: ListIOS15()),
+        Option(title: "Refreshable / Searchable", destination: RefreshableSearchable())
     ]
     
     var appCodaOptions = [

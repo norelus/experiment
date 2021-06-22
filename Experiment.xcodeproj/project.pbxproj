@@ -20,6 +20,9 @@
 		12739395261B3CE400318692 /* ContextSwipeBottomsheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739394261B3CE400318692 /* ContextSwipeBottomsheet.swift */; };
 		1273939C261B407600318692 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1273939B261B407600318692 /* Restaurant.swift */; };
 		127393AA261B428000318692 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127393A9261B428000318692 /* RestaurantDetailView.swift */; };
+		1282442626821AEC00EFAF41 /* RefreshableSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1282442526821AEC00EFAF41 /* RefreshableSearchable.swift */; };
+		128578BA26812AB700B32E4E /* AsyncImagesIOS15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128578B926812AB700B32E4E /* AsyncImagesIOS15.swift */; };
+		128578BC268135B400B32E4E /* ListIOS15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128578BB268135B400B32E4E /* ListIOS15.swift */; };
 		128AF2192623989F00FE04BB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AF20E2623975700FE04BB /* CardView.swift */; };
 		128B0CFA2624D58F00406BF7 /* AppStoreLike2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B0CF92624D58F00406BF7 /* AppStoreLike2.swift */; };
 		1297D876262770DF003C6E41 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1297D875262770DF003C6E41 /* ArticleView.swift */; };
@@ -85,6 +88,9 @@
 		12739394261B3CE400318692 /* ContextSwipeBottomsheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextSwipeBottomsheet.swift; sourceTree = "<group>"; };
 		1273939B261B407600318692 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		127393A9261B428000318692 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
+		1282442526821AEC00EFAF41 /* RefreshableSearchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableSearchable.swift; sourceTree = "<group>"; };
+		128578B926812AB700B32E4E /* AsyncImagesIOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImagesIOS15.swift; sourceTree = "<group>"; };
+		128578BB268135B400B32E4E /* ListIOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListIOS15.swift; sourceTree = "<group>"; };
 		128AF20E2623975700FE04BB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		128B0CF92624D58F00406BF7 /* AppStoreLike2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLike2.swift; sourceTree = "<group>"; };
 		1297D875262770DF003C6E41 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
@@ -180,6 +186,9 @@
 			children = (
 				123B3DCA2674E6B5000CE01A /* BasicIOS15.swift */,
 				123B3DCC2674E988000CE01A /* Materials.swift */,
+				128578B926812AB700B32E4E /* AsyncImagesIOS15.swift */,
+				128578BB268135B400B32E4E /* ListIOS15.swift */,
+				1282442526821AEC00EFAF41 /* RefreshableSearchable.swift */,
 			);
 			path = "iOS 15";
 			sourceTree = "<group>";
@@ -539,11 +548,13 @@
 				F26357A723D0861C00C8F30C /* SceneDelegate.swift in Sources */,
 				12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */,
 				12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */,
+				128578BA26812AB700B32E4E /* AsyncImagesIOS15.swift in Sources */,
 				12E73C032635794F00CBCED8 /* CombineForm.swift in Sources */,
 				12AB8F5A262388BC007F956F /* AppStoreTopBar.swift in Sources */,
 				12731DC4262C6BA8004EB556 /* ArticleForModalDetailView.swift in Sources */,
 				12AB8F2D26222E10007F956F /* TripCardView.swift in Sources */,
 				129B8A25262CCE31001C61BD /* TodoListCoreData.swift in Sources */,
+				128578BC268135B400B32E4E /* ListIOS15.swift in Sources */,
 				12AB8F342622F813007F956F /* AppStoreLike.swift in Sources */,
 				12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */,
 				1273937A261B1DC100318692 /* GesturesView.swift in Sources */,
@@ -570,6 +581,7 @@
 				12739380261B310300318692 /* DraggableView.swift in Sources */,
 				F26357A923D0861C00C8F30C /* ContentView.swift in Sources */,
 				1273938B261B353300318692 /* GesturesExerciseView.swift in Sources */,
+				1282442626821AEC00EFAF41 /* RefreshableSearchable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
