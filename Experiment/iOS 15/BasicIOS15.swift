@@ -14,32 +14,63 @@ struct BasicIOS15: View {
     
     @State private var agrandi = false
     
+    @State private var name: String = "Jeanine"
+    
+    @FocusState private var focused: Bool
+    
     var body: some View {
-        VStack(spacing: 32) {
-            Text("Bonjour Monde!")
-                .font(.largeTitle.bold())
-                .scaleEffect(agrandi ? 1.5 : 1)
-                .animation(.linear, value: agrandi) //anime que la valeur en question
-            HStack {
-                Button(action: {
-                    agrandi.toggle()
-                }) {
-                    Text("Taille")
+        print("Dernier changement : \(Self._printChanges())")
+        return ScrollView(.vertical) {
+            VStack {
+                Text("Bonjour \(name)!")
+                    .font(.largeTitle.bold())
+                    .scaleEffect(agrandi ? 1.5 : 1)
+                    .animation(.linear, value: agrandi) //anime que la valeur en question
+                Toggle("Agrandir", isOn: $agrandi)
+                    .toggleStyle(.button)
+                    .tint(.mint)
+#if os(iOS)
+                Text("Sur iOS")
+#else
+                Text("Sur MacOS")
+#endif
+                TextField("Mon nom", text: $name)
+                    .focused($focused)
+                    .submitLabel(.done)
+                    .textFieldStyle(.roundedBorder)
+                    .border(focused ? .green : .orange)
+                    .toolbar {
+                        ToolbarItemGroup(placement: .keyboard) {
+                            Button("Cliquez-moi!") {
+                                print("cliqué")
+                                name = "Cliqueur"
+                            }
+                        }
+                    }.padding()
+                HStack {
+                    Button(action: {
+                        dismiss()
+                    }) {
+                        Text("Quitter")
+                    }
+                    .buttonStyle(.bordered)
+                    .controlProminence(.increased)
+                    
                 }
-                Button(action: {
-                    dismiss()
-                }) {
-                    Text("Quitter")
-                }
-                
+                Spacer()
             }
-        }
+        }.navigationTitle("Basiques iOS 15")
     }
 }
 
 struct BasicIOS15_Previews: PreviewProvider {
     static var previews: some View {
-        BasicIOS15()
+        Group {
+            BasicIOS15()
+                .previewInterfaceOrientation(.landscapeLeft)
+            BasicIOS15()
+                .previewInterfaceOrientation(.portrait)
+        }
     }
 }
 
