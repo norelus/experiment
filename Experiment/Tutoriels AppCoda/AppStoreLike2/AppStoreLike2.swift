@@ -29,15 +29,16 @@ struct AppStoreLike2: View {
                 cardList
                     .frame(width: fullView.size.width)
                     .disabled(selectedIndex != nil)
+                    .allowsHitTesting(selectedIndex == nil)
                 if let index = selectedIndex {
                     let article = sampleArticles[index]
                     FullScreenArticleView(article: article, displayedIndex: $selectedIndex)
-                        .matchedGeometryEffect(id: "card\(index)", in: animation)
+                        .matchedGeometryEffect(id: "cardz\(lastShown)", in: animation)
                         .onTapGesture {
                             print("tip")
                             self.hideArticle()
                         }
-                        .animation(.myWeirdSpring)
+                        .animation(.easeInOut)
                         .ignoresSafeArea()
                 }
                 
@@ -60,24 +61,32 @@ struct AppStoreLike2: View {
                 .opacity((selectedIndex == nil) ? 1 : 0.3)
                 .animation(.linear)
                 ForEach(sampleArticles.indices) { index in
-                    let article = sampleArticles[index]
-                    CardView(cornered: true) {
-                        GeometryReader { cardView in
-                            ArticleView(geometry: cardView,
-                                        article: article,
-                                        displayedIndex: $selectedIndex)
-                        }
-                    }
-                    .matchedGeometryEffect(id: "card\(index)", in: animation)
-                    .frame(height: 400)
-                    .onTapGesture {
-                        print("tap")
-                        self.displayArticleAt(index: index)
-                    }
-                    .opacity((selectedIndex == nil || index == lastShown) ? 1 : 0.3)
-                    .animation(.myWeirdSpring)
-                    .zIndex(lastShown == index ? 1 : 0)
                     
+                    if index == selectedIndex {
+                        //empty view
+                        CardView(cornered: true) {
+                            Color.clear
+                        }.frame(height:400)
+                    } else {
+                        let article = sampleArticles[index]
+                        CardView(cornered: true) {
+                            GeometryReader { cardView in
+                                ArticleView(geometry: cardView,
+                                            article: article,
+                                            displayedIndex: $selectedIndex)
+                            }
+                        }
+                        .matchedGeometryEffect(id: "cardz\(index)", in: animation)
+                        .frame(height: 400)
+                        .onTapGesture {
+                            print("tap")
+                            self.displayArticleAt(index: index)
+                        }
+                        .animation(.easeInOut)
+                        .opacity((selectedIndex == nil || index == lastShown) ? 1 : 0.3)
+                        .animation(.linear)
+                        .zIndex(lastShown == index ? 1 : 0)
+                    }
                 }
                 
             }.padding(.horizontal)
@@ -86,15 +95,16 @@ struct AppStoreLike2: View {
     
     func displayArticleAt(index: Int) {
         print("display article at index \(index)")
-        self.selectedIndex = index
         self.lastShown = index
+        self.selectedIndex = index
+        
     }
     
     func hideArticle() {
         print("hide article, current article = \(selectedIndex)")
         self.selectedIndex = nil
     }
-        
+    
 }
 
 struct FullScreenArticleView : View {

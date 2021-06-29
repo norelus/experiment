@@ -62,10 +62,10 @@ struct ContentView: View {
         } else {
             NavigationView {
                 MainMenu(showAppStore2: $showAppStore2)
-                    .background(Image("space")
+                  /*  .background(Image("space")
                                     .resizable()
                                     .scaledToFill()
-                                    .ignoresSafeArea())
+                                    .ignoresSafeArea())*/
                 VStack {
                     Text("Bienvenue").font(.title)
                     if horizontalSizeClass == .compact {
