@@ -40,6 +40,7 @@
 		12CB8F7A2619F9E700C6A367 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F782619F9E700C6A367 /* MainMenu.swift */; };
 		12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F792619F9E700C6A367 /* MainMenuRow.swift */; };
 		12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */; };
+		12D3B7E0268B59E300299E60 /* AppStore2TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D3B7DF268B59E300299E60 /* AppStore2TopBar.swift */; };
 		12E73C032635794F00CBCED8 /* CombineForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E73C022635794F00CBCED8 /* CombineForm.swift */; };
 		F26357A523D0861C00C8F30C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26357A423D0861C00C8F30C /* AppDelegate.swift */; };
 		F26357A723D0861C00C8F30C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26357A623D0861C00C8F30C /* SceneDelegate.swift */; };
@@ -103,6 +104,7 @@
 		12CB8F782619F9E700C6A367 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
 		12CB8F792619F9E700C6A367 /* MainMenuRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuRow.swift; sourceTree = "<group>"; };
 		12CB8F802619FA2800C6A367 /* ButtonsGradientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsGradientsView.swift; sourceTree = "<group>"; };
+		12D3B7DF268B59E300299E60 /* AppStore2TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStore2TopBar.swift; sourceTree = "<group>"; };
 		12E73C022635794F00CBCED8 /* CombineForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineForm.swift; sourceTree = "<group>"; };
 		F26357A123D0861C00C8F30C /* Experiment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Experiment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F26357A423D0861C00C8F30C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -213,6 +215,7 @@
 				128AF20E2623975700FE04BB /* CardView.swift */,
 				1297D875262770DF003C6E41 /* ArticleView.swift */,
 				128B0CF92624D58F00406BF7 /* AppStoreLike2.swift */,
+				12D3B7DF268B59E300299E60 /* AppStore2TopBar.swift */,
 			);
 			path = AppStoreLike2;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				128AF2192623989F00FE04BB /* CardView.swift in Sources */,
 				1297D876262770DF003C6E41 /* ArticleView.swift in Sources */,
 				12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */,
+				12D3B7E0268B59E300299E60 /* AppStore2TopBar.swift in Sources */,
 				1219351F262C662D00365D0A /* ModalsAndAlerts.swift in Sources */,
 				12731DBF262C6BA2004EB556 /* ArticleForModal.swift in Sources */,
 				129B8A3F262CCF7B001C61BD /* CoreDataTest.swift in Sources */,

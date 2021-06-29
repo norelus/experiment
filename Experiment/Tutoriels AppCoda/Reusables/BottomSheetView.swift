@@ -22,10 +22,6 @@ struct BottomSheetScrollOffsetKey: PreferenceKey {
 
 struct BottomSheetView<Content>: View where Content:View {
     
-    
-
-
-    
     @Binding var isShow: Bool
     
     var content: () -> Content

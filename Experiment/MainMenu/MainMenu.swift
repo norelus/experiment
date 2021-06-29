@@ -64,6 +64,8 @@ struct MainMenu: View {
                destination: CoreDataTest()),
         Option(title: "Chapitre 26: AppStore Like Cards",
                destination: AppStoreLike()),
+        Option(title: "Oh yeah",
+               destination: AppStoreLike2(isPresented: .constant(true))),
     ]
     
     var body: some View {

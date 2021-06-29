@@ -29,15 +29,15 @@ struct ArticleCardView: View {
                             .frame(width: geometry.size.width,
                                    height: isShowContent ? geometry.size.height * 0.7 : min(self.image.size.height/3, 500))
                             .border(Color.gray.opacity(0.1))
-                            .cornerRadius(15)
                             .overlay(
                                 ArticleExcerptView(category: self.category,
                                                    headline: self.headline,
                                                    subHeadline: self.subHeadline,
                                                    isShowContent: self.$isShowContent)
-                                    .cornerRadius(self.isShowContent ? 0 : 15)
                             )
-                        
+                            .zIndex(1.0)
+                            
+                            
                         //Content
                         if self.isShowContent {
                             Text(self.content)
@@ -68,6 +68,7 @@ struct ArticleCardView: View {
                 }
             }
             .background(Color("cardBackground"))
+            .cornerRadius(15)
             .shadow(radius: self.isShowContent ? 0 : 15)
         }
     }

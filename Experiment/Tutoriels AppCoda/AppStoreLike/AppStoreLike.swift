@@ -43,9 +43,9 @@ struct AppStoreLike: View {
                                             content: article.content,
                                             isShowContent: $showContents[index])
                                 .onTapGesture {
-                                    self.showContents[index] = true
+                                    self.showContents[index].toggle()
                                 }
-                                .padding(.horizontal, self.showContents[index] ? 0 : 20)
+                                .padding(.horizontal, self.showContents[index] ? CGFloat(0) : 20.0)
                                 .offset(y: self.showContents[index] ? -inner.frame(in: .global).minY : 0)
                                 .opacity(self.contentMode == .list ||
                                             self.contentMode == .content && self.showContents[index] ? 1 : 0)
@@ -67,6 +67,8 @@ struct AppStoreLike: View {
 
 struct AppStoreLike_Previews: PreviewProvider {
     static var previews: some View {
-        AppStoreLike()
+        Group {
+            AppStoreLike()
+        }
     }
 }

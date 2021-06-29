@@ -19,43 +19,28 @@ struct AppStoreLike2: View {
     @Namespace var animation
     
     @Binding var isPresented: Bool
-    
-    @State private var showContents: [Bool] = Array(repeating: false, count: sampleArticles.count)
+
+    @State private var selectedIndex: Int?
     @State private var lastShown = 0
-    
-    enum ContentMode {
-        case list
-        case content
-    }
-    
-    private var contentMode: ContentMode {
-        self.showContents.contains(true) ? .content : .list
-    }
-    
-    //first index where show contents is true :)
-    private var selectedArticleIndex: Int? {
-        return self.showContents
-            .enumerated()
-            .first(where: { $0.element })?
-            .offset
-    }
-    
+       
     var body: some View {
         GeometryReader { fullView in
             ZStack {
                 cardList
                     .frame(width: fullView.size.width)
-                    .disabled(contentMode == .content)
-                if let index = selectedArticleIndex {
+                    .disabled(selectedIndex != nil)
+                if let index = selectedIndex {
                     let article = sampleArticles[index]
-                    FullScreenArticleView(article: article, isPresented: $showContents[index])
+                    FullScreenArticleView(article: article, displayedIndex: $selectedIndex)
                         .matchedGeometryEffect(id: "card\(index)", in: animation)
                         .onTapGesture {
-                            self.showContents[index] = false
+                            print("tip")
+                            self.hideArticle()
                         }
                         .animation(.myWeirdSpring)
                         .ignoresSafeArea()
                 }
+                
             }
             .background(Color(.systemBackground).ignoresSafeArea())
         }
@@ -65,14 +50,14 @@ struct AppStoreLike2: View {
     var cardList: some View {
         ScrollView {
             VStack(spacing: 40) {
-                AppStoreTopBar(onBackPressed: {
+                AppStore2TopBar(onBackPressed: {
                     print("tap back")
                     withAnimation {
                         isPresented = false
                     }
                 })
                 .padding(.horizontal,20)
-                .opacity(contentMode == .list ? 1 : 0.3)
+                .opacity((selectedIndex == nil) ? 1 : 0.3)
                 .animation(.linear)
                 ForEach(sampleArticles.indices) { index in
                     let article = sampleArticles[index]
@@ -80,19 +65,17 @@ struct AppStoreLike2: View {
                         GeometryReader { cardView in
                             ArticleView(geometry: cardView,
                                         article: article,
-                                        isFullScreen: $showContents[index])
+                                        displayedIndex: $selectedIndex)
                         }
                     }
                     .matchedGeometryEffect(id: "card\(index)", in: animation)
                     .frame(height: 400)
                     .onTapGesture {
                         print("tap")
-                        self.showContents[index] = true
-                        self.lastShown = index
+                        self.displayArticleAt(index: index)
                     }
+                    .opacity((selectedIndex == nil || index == lastShown) ? 1 : 0.3)
                     .animation(.myWeirdSpring)
-                    .opacity((contentMode == .list || showContents[index]) ? 1 : 0.3)
-                    .animation(.linear)
                     .zIndex(lastShown == index ? 1 : 0)
                     
                 }
@@ -101,13 +84,24 @@ struct AppStoreLike2: View {
         }
     }
     
+    func displayArticleAt(index: Int) {
+        print("display article at index \(index)")
+        self.selectedIndex = index
+        self.lastShown = index
+    }
+    
+    func hideArticle() {
+        print("hide article, current article = \(selectedIndex)")
+        self.selectedIndex = nil
+    }
+        
 }
 
 struct FullScreenArticleView : View {
     
     var article: Article
     
-    @Binding var isPresented: Bool
+    @Binding var displayedIndex: Int?
     
     var body: some View {
         
@@ -116,11 +110,10 @@ struct FullScreenArticleView : View {
                 ScrollView(.vertical) {
                     ArticleView(geometry: cardView,
                                 article: article,
-                                isFullScreen: $isPresented)
+                                displayedIndex: $displayedIndex)
                 }
             }
         }
-        .zIndex(1)
     }
     
 }
