@@ -74,18 +74,21 @@ struct MainMenu: View {
                         .background(Color.black.opacity(0.6))
                         .cornerRadius(16)
                     , content: {
-                
-                ForEach(options) { option in
-                    MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
-                }
-                Text("AppStore Like Custom Version")
-                    .onTapGesture {
-                        withAnimation {
-                            showAppStore2 = true
+                        
+                        ForEach(options) { option in
+                            MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
                         }
-                    }
-                    .listRowBackground(Color(.systemGray4))
-            })
+                        HStack {
+                            Text("AppStore Like Custom Version")
+                                .onTapGesture {
+                                    withAnimation {
+                                        showAppStore2 = true
+                                    }
+                                }
+                        }
+                        .listRowBackground(Color(.systemGray4))
+                        
+                    })
         }.background(Color.clear)
         .navigationBarTitle("Menu")
         
