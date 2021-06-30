@@ -17,7 +17,12 @@ struct BasicAppStoreContent: View {
     var body: some View {
         ZStack(alignment: .top) {
             color
-            Text(title).font(.largeTitle).frame(height: 250)
+            ScrollView(.vertical) {
+                VStack {
+                    Text(title).font(.largeTitle).frame(height: 200)
+                    Text("Lorem ipsum etc.").padding(.top)
+                }
+            }
         }
     }
     

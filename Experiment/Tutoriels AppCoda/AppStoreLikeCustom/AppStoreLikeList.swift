@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AppStoreLikeList<TopBar: View, ContentView: View>: View {
     
-    @Namespace var myanim
+    @Namespace var viewAnimation
     
     var topBar: TopBar
     var contents: [ContentView]
@@ -32,12 +32,14 @@ struct AppStoreLikeList<TopBar: View, ContentView: View>: View {
                         contents[displayed]
                     }
                     .ignoresSafeArea()
-                    .matchedGeometryEffect(id: "content_\(displayed)", in: myanim)
+                    .matchedGeometryEffect(id: "content_\(displayed)", in: viewAnimation)
                     .animation(.easeInOut)
                     HStack {
                         Spacer()
                         closeButton
                             .opacity((displayedIndex != nil) ? 1 : 0.3)
+                            .padding(.top, 16)
+                            .padding(.trailing)
                     }
                 }
                 
@@ -67,7 +69,8 @@ struct AppStoreLikeList<TopBar: View, ContentView: View>: View {
                         }
                         .opacity((displayedIndex == nil) ? 1 : 0.3)
                         .animation(.linear)
-                        .matchedGeometryEffect(id: "content_\(index)", in: myanim)
+                        .matchedGeometryEffect(id: "content_\(index)", in: viewAnimation)
+                        .animation(.easeInOut)
                         .frame(height: cellHeight)
                         .padding(16)
                         .zIndex(index == lastDisplayedIndex ? 1 : 0)
@@ -85,8 +88,7 @@ struct AppStoreLikeList<TopBar: View, ContentView: View>: View {
                 .font(.system(size: 26))
                 .foregroundColor(Color(.systemGray5))
                 .opacity(0.9)
-        }.padding(.top, 50)
-        .padding(.trailing)
+        }
     }
     
     func displayItemAt(index: Int) {

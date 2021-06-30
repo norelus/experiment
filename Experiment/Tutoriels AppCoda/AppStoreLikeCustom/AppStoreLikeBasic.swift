@@ -9,14 +9,20 @@
 import SwiftUI
 
 struct AppStoreLikeBasic: View {
+    
+
+    let contents: [BasicAppStoreContent] = [
+        .init(title: "Rose gencive", color: Color(red: 0.95, green: 0.4, blue: 0.45)),
+        .init(title: "Vert soupe de brocolis", color: Color(red: 0.45, green: 0.7, blue: 0.2)),
+        .init(title: "Gris caillou", color: .gray),
+        .init(title: "Orange orange", color: Color(red: 1.0, green: 0.55, blue: 0.1)),
+        .init(title: "Marron marron", color: Color(red: 0.5, green: 0.3, blue: 0.1))
+    ]
+    
     var body: some View {
-        let green = BasicAppStoreContent(title: "vert", color: .green)
-        let red = BasicAppStoreContent(title: "rouge", color: .red)
-        let blue = BasicAppStoreContent(title: "bleu", color: .blue)
-        let grey = BasicAppStoreContent(title: "gris", color: .gray)
-        let contents = [green, red, blue, grey]
-        AppStoreLikeList(topBar:Text("Bonjour"), contents: contents, cellHeight: 250)
+        AppStoreLikeList(topBar:Text("Bonjour"), contents: contents, cellHeight: 200)
     }
+    
 }
 
 struct AppStoreLikeBasic_Previews: PreviewProvider {
