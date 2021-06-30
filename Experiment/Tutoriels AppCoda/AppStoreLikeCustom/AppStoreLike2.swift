@@ -8,13 +8,13 @@
 
 import SwiftUI
 
-struct AppStoreLike3: View {
+struct AppStoreLike2: View {
         
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
         let contents = sampleArticles.map { article in
-            NewArticleView(article: article)
+            ArticleView(article: article)
         }
         AppStoreLikeList(topBar: topBar, contents: contents, cellHeight: 400)
             .navigationBarHidden(true)
@@ -34,8 +34,8 @@ struct AppStoreLike3: View {
     
 }
 
-struct AppStoreLike3_Previews: PreviewProvider {
+struct AppStoreLike2_Previews: PreviewProvider {
     static var previews: some View {
-        AppStoreLike3()
+        AppStoreLike2()
     }
 }

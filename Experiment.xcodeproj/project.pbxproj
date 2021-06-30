@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		1219351F262C662D00365D0A /* ModalsAndAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219351E262C662D00365D0A /* ModalsAndAlerts.swift */; };
 		12622ACD268B8BC400EF9D1A /* AppStoreLikeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622ACC268B8BC400EF9D1A /* AppStoreLikeList.swift */; };
-		12622ACF268B8CC600EF9D1A /* AppStoreLike3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622ACE268B8CC600EF9D1A /* AppStoreLike3.swift */; };
-		12622AD1268B984F00EF9D1A /* NewArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622AD0268B984F00EF9D1A /* NewArticleView.swift */; };
+		12622ACF268B8CC600EF9D1A /* AppStoreLike2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622ACE268B8CC600EF9D1A /* AppStoreLike2.swift */; };
+		12622AD1268B984F00EF9D1A /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622AD0268B984F00EF9D1A /* ArticleView.swift */; };
 		12731DBF262C6BA2004EB556 /* ArticleForModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12731DBE262C6BA2004EB556 /* ArticleForModal.swift */; };
 		12731DC4262C6BA8004EB556 /* ArticleForModalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12731DC3262C6BA8004EB556 /* ArticleForModalDetailView.swift */; };
 		12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739374261B1CBE00318692 /* StateBindingsView.swift */; };
@@ -22,8 +22,6 @@
 		1273939C261B407600318692 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1273939B261B407600318692 /* Restaurant.swift */; };
 		127393AA261B428000318692 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127393A9261B428000318692 /* RestaurantDetailView.swift */; };
 		128AF2192623989F00FE04BB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AF20E2623975700FE04BB /* CardView.swift */; };
-		128B0CFA2624D58F00406BF7 /* AppStoreLike2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128B0CF92624D58F00406BF7 /* AppStoreLike2.swift */; };
-		1297D876262770DF003C6E41 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1297D875262770DF003C6E41 /* ArticleView.swift */; };
 		129B8A25262CCE31001C61BD /* TodoListCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A24262CCE31001C61BD /* TodoListCoreData.swift */; };
 		129B8A35262CCE8F001C61BD /* Experiment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A33262CCE8F001C61BD /* Experiment.xcdatamodeld */; };
 		129B8A3A262CCEC7001C61BD /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A39262CCEC7001C61BD /* Persistence.swift */; };
@@ -32,6 +30,8 @@
 		129B8A58262CD299001C61BD /* NewToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A57262CD299001C61BD /* NewToDoView.swift */; };
 		129B8A5E262CD2A0001C61BD /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A5D262CD2A0001C61BD /* ToDoItem.swift */; };
 		129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */; };
+		129E508D268C5F4E00A4424C /* BasicAppStoreContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129E508C268C5F4E00A4424C /* BasicAppStoreContent.swift */; };
+		129E508F268C60BC00A4424C /* AppStoreLikeBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129E508E268C60BC00A4424C /* AppStoreLikeBasic.swift */; };
 		12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */; };
 		12AB8F2826222DA5007F956F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2726222DA5007F956F /* Trip.swift */; };
 		12AB8F2D26222E10007F956F /* TripCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2C26222E10007F956F /* TripCardView.swift */; };
@@ -76,8 +76,8 @@
 /* Begin PBXFileReference section */
 		1219351E262C662D00365D0A /* ModalsAndAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalsAndAlerts.swift; sourceTree = "<group>"; };
 		12622ACC268B8BC400EF9D1A /* AppStoreLikeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLikeList.swift; sourceTree = "<group>"; };
-		12622ACE268B8CC600EF9D1A /* AppStoreLike3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLike3.swift; sourceTree = "<group>"; };
-		12622AD0268B984F00EF9D1A /* NewArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArticleView.swift; sourceTree = "<group>"; };
+		12622ACE268B8CC600EF9D1A /* AppStoreLike2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLike2.swift; sourceTree = "<group>"; };
+		12622AD0268B984F00EF9D1A /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		12731DBE262C6BA2004EB556 /* ArticleForModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleForModal.swift; sourceTree = "<group>"; };
 		12731DC3262C6BA8004EB556 /* ArticleForModalDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleForModalDetailView.swift; sourceTree = "<group>"; };
 		12739374261B1CBE00318692 /* StateBindingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBindingsView.swift; sourceTree = "<group>"; };
@@ -89,8 +89,6 @@
 		1273939B261B407600318692 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		127393A9261B428000318692 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		128AF20E2623975700FE04BB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		128B0CF92624D58F00406BF7 /* AppStoreLike2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLike2.swift; sourceTree = "<group>"; };
-		1297D875262770DF003C6E41 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 		129B8A24262CCE31001C61BD /* TodoListCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCoreData.swift; sourceTree = "<group>"; };
 		129B8A34262CCE8F001C61BD /* Experiment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Experiment.xcdatamodel; sourceTree = "<group>"; };
 		129B8A39262CCEC7001C61BD /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -99,6 +97,8 @@
 		129B8A57262CD299001C61BD /* NewToDoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewToDoView.swift; sourceTree = "<group>"; };
 		129B8A5D262CD2A0001C61BD /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 		129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		129E508C268C5F4E00A4424C /* BasicAppStoreContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAppStoreContent.swift; sourceTree = "<group>"; };
+		129E508E268C60BC00A4424C /* AppStoreLikeBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLikeBasic.swift; sourceTree = "<group>"; };
 		12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderLikeSwipe.swift; sourceTree = "<group>"; };
 		12AB8F2726222DA5007F956F /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		12AB8F2C26222E10007F956F /* TripCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardView.swift; sourceTree = "<group>"; };
@@ -215,18 +215,18 @@
 			path = BottomSheet;
 			sourceTree = "<group>";
 		};
-		1297D87D262771DC003C6E41 /* AppStoreLike2 */ = {
+		1297D87D262771DC003C6E41 /* AppStoreLikeCustom */ = {
 			isa = PBXGroup;
 			children = (
 				128AF20E2623975700FE04BB /* CardView.swift */,
-				1297D875262770DF003C6E41 /* ArticleView.swift */,
-				128B0CF92624D58F00406BF7 /* AppStoreLike2.swift */,
 				12D3B7DF268B59E300299E60 /* AppStore2TopBar.swift */,
 				12622ACC268B8BC400EF9D1A /* AppStoreLikeList.swift */,
-				12622ACE268B8CC600EF9D1A /* AppStoreLike3.swift */,
-				12622AD0268B984F00EF9D1A /* NewArticleView.swift */,
+				12622ACE268B8CC600EF9D1A /* AppStoreLike2.swift */,
+				12622AD0268B984F00EF9D1A /* ArticleView.swift */,
+				129E508C268C5F4E00A4424C /* BasicAppStoreContent.swift */,
+				129E508E268C60BC00A4424C /* AppStoreLikeBasic.swift */,
 			);
-			path = AppStoreLike2;
+			path = AppStoreLikeCustom;
 			sourceTree = "<group>";
 		};
 		129B8A23262CCE14001C61BD /* TodoListCoreData */ = {
@@ -297,7 +297,7 @@
 				129B8A23262CCE14001C61BD /* TodoListCoreData */,
 				12731DBC262C6B89004EB556 /* ModalsAndAlerts */,
 				12AB8F3E2622FD32007F956F /* AppStoreLike */,
-				1297D87D262771DC003C6E41 /* AppStoreLike2 */,
+				1297D87D262771DC003C6E41 /* AppStoreLikeCustom */,
 				127393A0261B408500318692 /* BottomSheet */,
 				129DA4F2261E59DC001E5AF0 /* Reusables */,
 				12193526262C6A0A00365D0A /* TinderLike */,
@@ -528,7 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12622ACF268B8CC600EF9D1A /* AppStoreLike3.swift in Sources */,
+				12622ACF268B8CC600EF9D1A /* AppStoreLike2.swift in Sources */,
 				129B8A5E262CD2A0001C61BD /* ToDoItem.swift in Sources */,
 				129B8A3A262CCEC7001C61BD /* Persistence.swift in Sources */,
 				12CB8F7A2619F9E700C6A367 /* MainMenu.swift in Sources */,
@@ -543,24 +543,24 @@
 				12731DC4262C6BA8004EB556 /* ArticleForModalDetailView.swift in Sources */,
 				12AB8F2D26222E10007F956F /* TripCardView.swift in Sources */,
 				129B8A25262CCE31001C61BD /* TodoListCoreData.swift in Sources */,
+				129E508D268C5F4E00A4424C /* BasicAppStoreContent.swift in Sources */,
 				12AB8F342622F813007F956F /* AppStoreLike.swift in Sources */,
 				12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */,
 				1273937A261B1DC100318692 /* GesturesView.swift in Sources */,
 				12AB8F452622FFD1007F956F /* ArticleCardView.swift in Sources */,
 				12AB8F402622FD4B007F956F /* ArticleExcerptView.swift in Sources */,
 				129B8A35262CCE8F001C61BD /* Experiment.xcdatamodeld in Sources */,
-				128B0CFA2624D58F00406BF7 /* AppStoreLike2.swift in Sources */,
 				128AF2192623989F00FE04BB /* CardView.swift in Sources */,
-				1297D876262770DF003C6E41 /* ArticleView.swift in Sources */,
 				12CB8F812619FA2800C6A367 /* ButtonsGradientsView.swift in Sources */,
 				12D3B7E0268B59E300299E60 /* AppStore2TopBar.swift in Sources */,
+				129E508F268C60BC00A4424C /* AppStoreLikeBasic.swift in Sources */,
 				1219351F262C662D00365D0A /* ModalsAndAlerts.swift in Sources */,
 				12731DBF262C6BA2004EB556 /* ArticleForModal.swift in Sources */,
 				129B8A3F262CCF7B001C61BD /* CoreDataTest.swift in Sources */,
 				129B8A53262CD294001C61BD /* CheckBoxStyle.swift in Sources */,
 				129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */,
 				129B8A58262CD299001C61BD /* NewToDoView.swift in Sources */,
-				12622AD1268B984F00EF9D1A /* NewArticleView.swift in Sources */,
+				12622AD1268B984F00EF9D1A /* ArticleView.swift in Sources */,
 				12739395261B3CE400318692 /* ContextSwipeBottomsheet.swift in Sources */,
 				12622ACD268B8BC400EF9D1A /* AppStoreLikeList.swift in Sources */,
 				12AB8F3A2622F9CC007F956F /* Article.swift in Sources */,

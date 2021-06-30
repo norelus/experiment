@@ -8,31 +8,6 @@
 
 import SwiftUI
 
-protocol AppStoreContent: View {
-    
-    func showFullScreen(_ fullScreen: Bool)
-        
-}
-
-struct BasicAppStoreContent: View {
-    
-    @State var isFullScreen: Bool = false
-    
-    var title: String
-    var color: Color
-    
-    var body: some View {
-        ZStack {
-            color
-            ScrollView {
-                Text(title).font(.largeTitle).frame(height: 250)
-            }
-        }
-    }
-    
-    
-}
-
 struct AppStoreLikeList<TopBar: View, ContentView: View>: View {
     
     @Namespace var myanim

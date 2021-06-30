@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-struct NewArticleView: View {
+struct ArticleView: View {
     
     //var geometry: GeometryProxy
     
@@ -77,11 +77,11 @@ struct NewArticleView: View {
     
 }
 
-struct NewArticleView_Previews: PreviewProvider {
+struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             CardView {
-                NewArticleView(article: sampleArticles[0])
+                ArticleView(article: sampleArticles[0])
             }.padding(32)
         }
     }

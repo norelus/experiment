@@ -64,10 +64,8 @@ struct MainMenu: View {
                destination: CoreDataTest()),
         Option(title: "Chapitre 26: AppStore Like Cards",
                destination: AppStoreLike()),
-        Option(title: "AppStore like 2 push",
-               destination: AppStoreLike2(isPresented: .constant(true))),
-        Option(title: "AppStore like 3",
-               destination: AppStoreLike3()),
+        Option(title: "AppStore like Custom",
+               destination: AppStoreLike2()),
     ]
     
     var body: some View {
@@ -82,15 +80,7 @@ struct MainMenu: View {
                         ForEach(options) { option in
                             MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
                         }
-                        HStack {
-                            Text("AppStore Like Custom Version")
-                                .onTapGesture {
-                                    withAnimation {
-                                        showAppStore2 = true
-                                    }
-                                }
-                        }
-                        .listRowBackground(Color(.systemGray4))
+                        //.listRowBackground(Color(.systemGray4))
                         
                     })
         }.background(Color.clear)

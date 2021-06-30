@@ -56,27 +56,23 @@ struct ContentView: View {
     
     var body: some View {
         
-        if showAppStore2 {
-            AppStoreLike2(isPresented: $showAppStore2)
-                .transition(.move(edge: .trailing))
-        } else {
-            NavigationView {
-                MainMenu(showAppStore2: $showAppStore2)
-                  /*  .background(Image("space")
-                                    .resizable()
-                                    .scaledToFill()
-                                    .ignoresSafeArea())*/
-                VStack {
-                    Text("Bienvenue").font(.title)
-                    if horizontalSizeClass == .compact {
-                        Text("Swipe à partir du bord gauche de l'écran pour afficher le menu sur iPad portrait (pas trouvé le moyen pour l'afficher tout le temps)").font(.caption)
-                    }
+        NavigationView {
+            MainMenu(showAppStore2: $showAppStore2)
+            /*  .background(Image("space")
+             .resizable()
+             .scaledToFill()
+             .ignoresSafeArea())*/
+            VStack {
+                Text("Bienvenue").font(.title)
+                if horizontalSizeClass == .compact {
+                    Text("Swipe à partir du bord gauche de l'écran pour afficher le menu sur iPad portrait (pas trouvé le moyen pour l'afficher tout le temps)").font(.caption)
                 }
             }
-            .navigationViewStyle(DoubleColumnNavigationViewStyle())
-            .accentColor(accentColor)//change la couleurs de tous les boutons :)
-            .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
+        .navigationViewStyle(DoubleColumnNavigationViewStyle())
+        .accentColor(accentColor)//change la couleurs de tous les boutons :)
+        .environment(\.managedObjectContext, persistenceController.container.viewContext)
+        
     }
 }
 
