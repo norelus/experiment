@@ -10,6 +10,7 @@
 		1219351F262C662D00365D0A /* ModalsAndAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219351E262C662D00365D0A /* ModalsAndAlerts.swift */; };
 		12622ACD268B8BC400EF9D1A /* AppStoreLikeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622ACC268B8BC400EF9D1A /* AppStoreLikeList.swift */; };
 		12622ACF268B8CC600EF9D1A /* AppStoreLike3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622ACE268B8CC600EF9D1A /* AppStoreLike3.swift */; };
+		12622AD1268B984F00EF9D1A /* NewArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622AD0268B984F00EF9D1A /* NewArticleView.swift */; };
 		12731DBF262C6BA2004EB556 /* ArticleForModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12731DBE262C6BA2004EB556 /* ArticleForModal.swift */; };
 		12731DC4262C6BA8004EB556 /* ArticleForModalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12731DC3262C6BA8004EB556 /* ArticleForModalDetailView.swift */; };
 		12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739374261B1CBE00318692 /* StateBindingsView.swift */; };
@@ -76,6 +77,7 @@
 		1219351E262C662D00365D0A /* ModalsAndAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalsAndAlerts.swift; sourceTree = "<group>"; };
 		12622ACC268B8BC400EF9D1A /* AppStoreLikeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLikeList.swift; sourceTree = "<group>"; };
 		12622ACE268B8CC600EF9D1A /* AppStoreLike3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLike3.swift; sourceTree = "<group>"; };
+		12622AD0268B984F00EF9D1A /* NewArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewArticleView.swift; sourceTree = "<group>"; };
 		12731DBE262C6BA2004EB556 /* ArticleForModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleForModal.swift; sourceTree = "<group>"; };
 		12731DC3262C6BA8004EB556 /* ArticleForModalDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleForModalDetailView.swift; sourceTree = "<group>"; };
 		12739374261B1CBE00318692 /* StateBindingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBindingsView.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				12D3B7DF268B59E300299E60 /* AppStore2TopBar.swift */,
 				12622ACC268B8BC400EF9D1A /* AppStoreLikeList.swift */,
 				12622ACE268B8CC600EF9D1A /* AppStoreLike3.swift */,
+				12622AD0268B984F00EF9D1A /* NewArticleView.swift */,
 			);
 			path = AppStoreLike2;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				129B8A53262CD294001C61BD /* CheckBoxStyle.swift in Sources */,
 				129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */,
 				129B8A58262CD299001C61BD /* NewToDoView.swift in Sources */,
+				12622AD1268B984F00EF9D1A /* NewArticleView.swift in Sources */,
 				12739395261B3CE400318692 /* ContextSwipeBottomsheet.swift in Sources */,
 				12622ACD268B8BC400EF9D1A /* AppStoreLikeList.swift in Sources */,
 				12AB8F3A2622F9CC007F956F /* Article.swift in Sources */,

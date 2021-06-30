@@ -9,14 +9,27 @@
 import SwiftUI
 
 struct AppStoreLike3: View {
+        
+    @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
-        let green = AppStoreContent(title: "vert", color: .green)
-        let red = AppStoreContent(title: "rouge", color: .red)
-        let blue = AppStoreContent(title: "bleu", color: .blue)
-        let grey = AppStoreContent(title: "gris", color: .gray)
-        let contents = [green, red, blue, grey]
-        return AppStoreLikeList(contents: contents)
+        let contents = sampleArticles.map { article in
+            NewArticleView(article: article)
+        }
+        AppStoreLikeList(topBar: topBar, contents: contents, cellHeight: 400)
+            .navigationBarHidden(true)
+        
+    }
+    
+    var topBar: some View {
+        AppStore2TopBar(onBackPressed: {
+            print("tap back")
+            withAnimation {
+                self.presentationMode.wrappedValue.dismiss()
+            }
+        })
+        .padding(.horizontal,20)
+        
     }
     
 }

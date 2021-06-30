@@ -43,7 +43,7 @@ struct AppStoreLike: View {
                                             content: article.content,
                                             isShowContent: $showContents[index])
                                 .onTapGesture {
-                                    self.showContents[index].toggle()
+                                    self.showContents[index] = true
                                 }
                                 .padding(.horizontal, self.showContents[index] ? CGFloat(0) : 20.0)
                                 .offset(y: self.showContents[index] ? -inner.frame(in: .global).minY : 0)

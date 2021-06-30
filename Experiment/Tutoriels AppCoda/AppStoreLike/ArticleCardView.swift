@@ -28,6 +28,7 @@ struct ArticleCardView: View {
                             .scaledToFill()
                             .frame(width: geometry.size.width,
                                    height: isShowContent ? geometry.size.height * 0.7 : min(self.image.size.height/3, 500))
+                            .clipped()
                             .border(Color.gray.opacity(0.1))
                             .overlay(
                                 ArticleExcerptView(category: self.category,
