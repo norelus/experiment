@@ -67,7 +67,6 @@ struct ProgressRingShowcase: View {
             }.padding()
              
         }.onChange(of: points, perform: { value in
-            
             progress = value / maxPoints
         }).onChange(of: progress, perform: { value in
             withAnimation(anim) {

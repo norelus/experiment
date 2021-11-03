@@ -15,20 +15,11 @@ struct LabelledProgressRingView: View {
     
     var body: some View {
         ZStack {
-            ProgressRingView(thickness: 10,
-                             backgroundThickness: 5,
-                             backgroundColor: .gray,
-                             width: 150.0,
-                             gradient: Gradient(colors: [.darkGreen, .lightGreen]),
-                             startAngle: -180,
-                             progress: $progress)
+            ProgressRingView(progress: $progress)
             VStack {
                 AnimatedNumberCounter(number: points,
-                                      foregroundColor: .green,
+                                      foregroundColor: .blue,
                                       font: .largeTitle)
-                Text("Points")
-                    .foregroundColor(.green)
-                    .font(.title)
             }
         }
     }
