@@ -11,6 +11,8 @@
 		12622ACD268B8BC400EF9D1A /* AppStoreLikeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622ACC268B8BC400EF9D1A /* AppStoreLikeList.swift */; };
 		12622ACF268B8CC600EF9D1A /* AppStoreLike2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622ACE268B8CC600EF9D1A /* AppStoreLike2.swift */; };
 		12622AD1268B984F00EF9D1A /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622AD0268B984F00EF9D1A /* ArticleView.swift */; };
+		123B3DCB2674E6B5000CE01A /* BasicIOS15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B3DCA2674E6B5000CE01A /* BasicIOS15.swift */; };
+		123B3DCD2674E988000CE01A /* Materials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B3DCC2674E988000CE01A /* Materials.swift */; };
 		12731DBF262C6BA2004EB556 /* ArticleForModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12731DBE262C6BA2004EB556 /* ArticleForModal.swift */; };
 		12731DC4262C6BA8004EB556 /* ArticleForModalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12731DC3262C6BA8004EB556 /* ArticleForModalDetailView.swift */; };
 		12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739374261B1CBE00318692 /* StateBindingsView.swift */; };
@@ -21,6 +23,9 @@
 		12739395261B3CE400318692 /* ContextSwipeBottomsheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739394261B3CE400318692 /* ContextSwipeBottomsheet.swift */; };
 		1273939C261B407600318692 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1273939B261B407600318692 /* Restaurant.swift */; };
 		127393AA261B428000318692 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127393A9261B428000318692 /* RestaurantDetailView.swift */; };
+		1282442626821AEC00EFAF41 /* RefreshableSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1282442526821AEC00EFAF41 /* RefreshableSearchable.swift */; };
+		128578BA26812AB700B32E4E /* AsyncImagesIOS15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128578B926812AB700B32E4E /* AsyncImagesIOS15.swift */; };
+		128578BC268135B400B32E4E /* ListIOS15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128578BB268135B400B32E4E /* ListIOS15.swift */; };
 		128AF2192623989F00FE04BB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AF20E2623975700FE04BB /* CardView.swift */; };
 		129B8A25262CCE31001C61BD /* TodoListCoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A24262CCE31001C61BD /* TodoListCoreData.swift */; };
 		129B8A35262CCE8F001C61BD /* Experiment.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 129B8A33262CCE8F001C61BD /* Experiment.xcdatamodeld */; };
@@ -78,6 +83,8 @@
 		12622ACC268B8BC400EF9D1A /* AppStoreLikeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLikeList.swift; sourceTree = "<group>"; };
 		12622ACE268B8CC600EF9D1A /* AppStoreLike2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLike2.swift; sourceTree = "<group>"; };
 		12622AD0268B984F00EF9D1A /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
+		123B3DCA2674E6B5000CE01A /* BasicIOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicIOS15.swift; sourceTree = "<group>"; };
+		123B3DCC2674E988000CE01A /* Materials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Materials.swift; sourceTree = "<group>"; };
 		12731DBE262C6BA2004EB556 /* ArticleForModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleForModal.swift; sourceTree = "<group>"; };
 		12731DC3262C6BA8004EB556 /* ArticleForModalDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleForModalDetailView.swift; sourceTree = "<group>"; };
 		12739374261B1CBE00318692 /* StateBindingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBindingsView.swift; sourceTree = "<group>"; };
@@ -88,6 +95,9 @@
 		12739394261B3CE400318692 /* ContextSwipeBottomsheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextSwipeBottomsheet.swift; sourceTree = "<group>"; };
 		1273939B261B407600318692 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		127393A9261B428000318692 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
+		1282442526821AEC00EFAF41 /* RefreshableSearchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableSearchable.swift; sourceTree = "<group>"; };
+		128578B926812AB700B32E4E /* AsyncImagesIOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImagesIOS15.swift; sourceTree = "<group>"; };
+		128578BB268135B400B32E4E /* ListIOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListIOS15.swift; sourceTree = "<group>"; };
 		128AF20E2623975700FE04BB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		129B8A24262CCE31001C61BD /* TodoListCoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListCoreData.swift; sourceTree = "<group>"; };
 		129B8A34262CCE8F001C61BD /* Experiment.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Experiment.xcdatamodel; sourceTree = "<group>"; };
@@ -177,6 +187,18 @@
 				1273939A261B407600318692 /* Model */,
 			);
 			path = TinderLike;
+			sourceTree = "<group>";
+		};
+		123B3DC92674E691000CE01A /* iOS 15 */ = {
+			isa = PBXGroup;
+			children = (
+				123B3DCA2674E6B5000CE01A /* BasicIOS15.swift */,
+				123B3DCC2674E988000CE01A /* Materials.swift */,
+				128578B926812AB700B32E4E /* AsyncImagesIOS15.swift */,
+				128578BB268135B400B32E4E /* ListIOS15.swift */,
+				1282442526821AEC00EFAF41 /* RefreshableSearchable.swift */,
+			);
+			path = "iOS 15";
 			sourceTree = "<group>";
 		};
 		12731DBC262C6B89004EB556 /* ModalsAndAlerts */ = {
@@ -348,6 +370,7 @@
 		F26357A323D0861C00C8F30C /* Experiment */ = {
 			isa = PBXGroup;
 			children = (
+				123B3DC92674E691000CE01A /* iOS 15 */,
 				129B8A29262CCE3A001C61BD /* CoreData */,
 				12CB8F872619FC7F00C6A367 /* Resources */,
 				12CB8F7F2619F9FC00C6A367 /* Tutoriels AppCoda */,
@@ -542,12 +565,14 @@
 				F26357A723D0861C00C8F30C /* SceneDelegate.swift in Sources */,
 				12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */,
 				12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */,
+				128578BA26812AB700B32E4E /* AsyncImagesIOS15.swift in Sources */,
 				12E73C032635794F00CBCED8 /* CombineForm.swift in Sources */,
 				12AB8F5A262388BC007F956F /* AppStoreTopBar.swift in Sources */,
 				12731DC4262C6BA8004EB556 /* ArticleForModalDetailView.swift in Sources */,
 				12AB8F2D26222E10007F956F /* TripCardView.swift in Sources */,
 				129B8A25262CCE31001C61BD /* TodoListCoreData.swift in Sources */,
 				129E508D268C5F4E00A4424C /* BasicAppStoreContent.swift in Sources */,
+				128578BC268135B400B32E4E /* ListIOS15.swift in Sources */,
 				12AB8F342622F813007F956F /* AppStoreLike.swift in Sources */,
 				12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */,
 				1273937A261B1DC100318692 /* GesturesView.swift in Sources */,
@@ -559,6 +584,7 @@
 				12D3B7E0268B59E300299E60 /* AppStore2TopBar.swift in Sources */,
 				129E508F268C60BC00A4424C /* AppStoreLikeBasic.swift in Sources */,
 				1219351F262C662D00365D0A /* ModalsAndAlerts.swift in Sources */,
+				123B3DCB2674E6B5000CE01A /* BasicIOS15.swift in Sources */,
 				12731DBF262C6BA2004EB556 /* ArticleForModal.swift in Sources */,
 				129B8A3F262CCF7B001C61BD /* CoreDataTest.swift in Sources */,
 				129B8A53262CD294001C61BD /* CheckBoxStyle.swift in Sources */,
@@ -571,9 +597,11 @@
 				12AB8F2826222DA5007F956F /* Trip.swift in Sources */,
 				1273939C261B407600318692 /* Restaurant.swift in Sources */,
 				127393AA261B428000318692 /* RestaurantDetailView.swift in Sources */,
+				123B3DCD2674E988000CE01A /* Materials.swift in Sources */,
 				12739380261B310300318692 /* DraggableView.swift in Sources */,
 				F26357A923D0861C00C8F30C /* ContentView.swift in Sources */,
 				1273938B261B353300318692 /* GesturesExerciseView.swift in Sources */,
+				1282442626821AEC00EFAF41 /* RefreshableSearchable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -671,7 +699,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -726,7 +754,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -746,7 +774,7 @@
 				DEVELOPMENT_TEAM = 6BD2U6KWR8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Experiment/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -769,7 +797,7 @@
 				DEVELOPMENT_TEAM = 6BD2U6KWR8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Experiment/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
