@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		1219351F262C662D00365D0A /* ModalsAndAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219351E262C662D00365D0A /* ModalsAndAlerts.swift */; };
+		123B3DCB2674E6B5000CE01A /* BasicIOS15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B3DCA2674E6B5000CE01A /* BasicIOS15.swift */; };
+		123B3DCD2674E988000CE01A /* Materials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B3DCC2674E988000CE01A /* Materials.swift */; };
+		125424BF27329E5500BAAC65 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125424BE27329E5500BAAC65 /* ColorExtensions.swift */; };
+		125424C127329F5F00BAAC65 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125424C027329F5F00BAAC65 /* ProgressRingView.swift */; };
+		125424C32732A7CC00BAAC65 /* ProgressRingShowcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125424C22732A7CC00BAAC65 /* ProgressRingShowcase.swift */; };
 		12622ACD268B8BC400EF9D1A /* AppStoreLikeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622ACC268B8BC400EF9D1A /* AppStoreLikeList.swift */; };
 		12622ACF268B8CC600EF9D1A /* AppStoreLike2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622ACE268B8CC600EF9D1A /* AppStoreLike2.swift */; };
 		12622AD1268B984F00EF9D1A /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622AD0268B984F00EF9D1A /* ArticleView.swift */; };
-		123B3DCB2674E6B5000CE01A /* BasicIOS15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B3DCA2674E6B5000CE01A /* BasicIOS15.swift */; };
-		123B3DCD2674E988000CE01A /* Materials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B3DCC2674E988000CE01A /* Materials.swift */; };
 		12731DBF262C6BA2004EB556 /* ArticleForModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12731DBE262C6BA2004EB556 /* ArticleForModal.swift */; };
 		12731DC4262C6BA8004EB556 /* ArticleForModalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12731DC3262C6BA8004EB556 /* ArticleForModalDetailView.swift */; };
 		12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12739374261B1CBE00318692 /* StateBindingsView.swift */; };
@@ -80,11 +83,14 @@
 
 /* Begin PBXFileReference section */
 		1219351E262C662D00365D0A /* ModalsAndAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalsAndAlerts.swift; sourceTree = "<group>"; };
+		123B3DCA2674E6B5000CE01A /* BasicIOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicIOS15.swift; sourceTree = "<group>"; };
+		123B3DCC2674E988000CE01A /* Materials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Materials.swift; sourceTree = "<group>"; };
+		125424BE27329E5500BAAC65 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		125424C027329F5F00BAAC65 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
+		125424C22732A7CC00BAAC65 /* ProgressRingShowcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingShowcase.swift; sourceTree = "<group>"; };
 		12622ACC268B8BC400EF9D1A /* AppStoreLikeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLikeList.swift; sourceTree = "<group>"; };
 		12622ACE268B8CC600EF9D1A /* AppStoreLike2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLike2.swift; sourceTree = "<group>"; };
 		12622AD0268B984F00EF9D1A /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
-		123B3DCA2674E6B5000CE01A /* BasicIOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicIOS15.swift; sourceTree = "<group>"; };
-		123B3DCC2674E988000CE01A /* Materials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Materials.swift; sourceTree = "<group>"; };
 		12731DBE262C6BA2004EB556 /* ArticleForModal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleForModal.swift; sourceTree = "<group>"; };
 		12731DC3262C6BA8004EB556 /* ArticleForModalDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleForModalDetailView.swift; sourceTree = "<group>"; };
 		12739374261B1CBE00318692 /* StateBindingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBindingsView.swift; sourceTree = "<group>"; };
@@ -201,6 +207,16 @@
 			path = "iOS 15";
 			sourceTree = "<group>";
 		};
+		125424BD27329BD300BAAC65 /* ActivityRing */ = {
+			isa = PBXGroup;
+			children = (
+				125424BE27329E5500BAAC65 /* ColorExtensions.swift */,
+				125424C027329F5F00BAAC65 /* ProgressRingView.swift */,
+				125424C22732A7CC00BAAC65 /* ProgressRingShowcase.swift */,
+			);
+			path = ActivityRing;
+			sourceTree = "<group>";
+		};
 		12731DBC262C6B89004EB556 /* ModalsAndAlerts */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +331,7 @@
 		12CB8F7F2619F9FC00C6A367 /* Tutoriels AppCoda */ = {
 			isa = PBXGroup;
 			children = (
+				125424BD27329BD300BAAC65 /* ActivityRing */,
 				12E73BFE2635790F00CBCED8 /* CombineForm */,
 				129B8A23262CCE14001C61BD /* TodoListCoreData */,
 				12731DBC262C6B89004EB556 /* ModalsAndAlerts */,
@@ -562,6 +579,7 @@
 				F26357A523D0861C00C8F30C /* AppDelegate.swift in Sources */,
 				12739390261B357300318692 /* ResizableView.swift in Sources */,
 				F26357D623D0883600C8F30C /* FirstView.swift in Sources */,
+				125424C32732A7CC00BAAC65 /* ProgressRingShowcase.swift in Sources */,
 				F26357A723D0861C00C8F30C /* SceneDelegate.swift in Sources */,
 				12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */,
 				12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */,
@@ -576,6 +594,7 @@
 				12AB8F342622F813007F956F /* AppStoreLike.swift in Sources */,
 				12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */,
 				1273937A261B1DC100318692 /* GesturesView.swift in Sources */,
+				125424C127329F5F00BAAC65 /* ProgressRingView.swift in Sources */,
 				12AB8F452622FFD1007F956F /* ArticleCardView.swift in Sources */,
 				12AB8F402622FD4B007F956F /* ArticleExcerptView.swift in Sources */,
 				129B8A35262CCE8F001C61BD /* Experiment.xcdatamodeld in Sources */,
@@ -602,6 +621,7 @@
 				F26357A923D0861C00C8F30C /* ContentView.swift in Sources */,
 				1273938B261B353300318692 /* GesturesExerciseView.swift in Sources */,
 				1282442626821AEC00EFAF41 /* RefreshableSearchable.swift in Sources */,
+				125424BF27329E5500BAAC65 /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,7 +838,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4J7JTDT5C;
 				INFOPLIST_FILE = ExperimentTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -840,7 +860,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T4J7JTDT5C;
 				INFOPLIST_FILE = ExperimentTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

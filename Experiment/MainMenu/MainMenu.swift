@@ -76,21 +76,12 @@ struct MainMenu: View {
                destination: AppStoreLikeBasic()),
         Option(title: "AppStore like avec articles",
                destination: AppStoreLike2()),
+        Option(title: "Chapitre 30: Activity Ring",
+               destination: ProgressRingShowcase())
     ]
     
     var body: some View {
         List{
-            Section(header:
-                        Text("iOS 15")
-                        .padding(8)
-                        .background(Color.white.opacity(0.6))
-                        .cornerRadius(16)
-                    , content: {
-                
-                ForEach(iOSQuinzeOptions) { option in
-                    MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
-                }
-            })
             Section(header:
                         Text("Tutoriels AppCoda")
                         .padding(8)
@@ -109,6 +100,18 @@ struct MainMenu: View {
                     }
                     .listRowBackground(Color(.systemGray4))
             })
+            Section(header:
+                        Text("iOS 15")
+                        .padding(8)
+                        .background(Color.white.opacity(0.6))
+                        .cornerRadius(16)
+                    , content: {
+                
+                ForEach(iOSQuinzeOptions) { option in
+                    MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
+                }
+            })
+            
         }.background(Color.clear)
         .navigationBarTitle("Menu")
         
