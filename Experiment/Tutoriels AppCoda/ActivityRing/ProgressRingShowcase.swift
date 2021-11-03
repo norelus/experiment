@@ -10,41 +10,73 @@ import SwiftUI
 
 struct ProgressRingShowcase: View {
     
-    @State var progress = 0.0
+    @State var progress: Double = 0.0
+    @State var points: Double = 0
+    
+    let maxPoints: Double = 2000
+    let anim = Animation.linear(duration: 1.0)
     
     var body: some View {
         
-        VStack {
-            ProgressRingView(progress: $progress)
-
+        VStack(spacing: 16) {
+            LabelledProgressRingView(points: $points, progress: $progress)
+            Slider(value: $points, in: 0...maxPoints)
+            
             HStack {
                 Group {
                     Text("0%")
-                        .font(.system(.headline, design: .rounded))
                         .onTapGesture {
-                            self.progress = 0.0
+                            withAnimation(anim) {
+                                self.progress = 0
+                            }
+                        }
+
+                    Text("25%")
+                        .onTapGesture {
+                            withAnimation(anim) {
+                                self.progress = 0.25
+                            }
                         }
 
                     Text("50%")
-                        .font(.system(.headline, design: .rounded))
                         .onTapGesture {
-                            self.progress = 0.5
+                            withAnimation(anim) {
+                                self.progress = 0.5
+                            }
+                        }
+
+                    Text("75%")
+                        .onTapGesture {
+                            withAnimation(anim) {
+                                self.progress = 0.75
+                            }
                         }
 
                     Text("100%")
-                        .font(.system(.headline, design: .rounded))
                         .onTapGesture {
-                            self.progress = 1.0
+                            withAnimation(anim) {
+                                self.progress = 1.0
+                            }
                         }
                 }
+                .font(.system(.headline, design: .rounded))
                 .padding()
                 .background(Color(.systemGray6))
-                .clipShape(RoundedRectangle(cornerRadius: 15.0, style: .continuous))
-                .padding()
+                .clipShape(RoundedRectangle(cornerRadius: 5.0, style: .continuous))
+                
+            }.padding()
+             
+        }.onChange(of: points, perform: { value in
+            
+            progress = value / maxPoints
+        }).onChange(of: progress, perform: { value in
+            withAnimation(anim) {
+                points = maxPoints * value
             }
-            .padding()
-        }
+        })
     }
+    
+    
 }
 
 struct ProgressRingShowcase_Previews: PreviewProvider {

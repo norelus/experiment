@@ -11,9 +11,14 @@ import SwiftUI
 struct ProgressRingView: View {
     
     var thickness: CGFloat = 30.0
+    
+    var backgroundThickness: CGFloat = 15.0
+    var backgroundColor: Color = Color(.systemGray6)
+    
     var width: CGFloat = 250.0
     var gradient = Gradient(colors: [.darkPurple, .lightYellow])
-    var startAngle: Double = -90
+    var startAngle: Double = -180
+    
     @Binding var progress: Double
     
     private var radius: Double {
@@ -30,20 +35,22 @@ struct ProgressRingView: View {
     var body: some View {
         ZStack {
             Circle()
-                .stroke(Color(.systemGray6), lineWidth: thickness)
+                .stroke(backgroundColor, lineWidth: backgroundThickness)
 
-            RingShape(progress: progress, thickness: thickness)
+            RingShape(progress: progress, thickness: thickness, startAngle: .degrees(startAngle))
                 .fill(AngularGradient(gradient: gradient,
                                       center: .center,
                                       startAngle: .degrees(startAngle),
                                       endAngle: .degrees(startAngle + 360 * progress)))
+            
             RingTip(progress: progress, startAngle: startAngle, ringRadius: radius)
                 .frame(width: thickness, height: thickness)
                 .foregroundColor(progress > 0.96 ? gradient.stops[1].color : Color.clear)
                 .shadow(color: progress > 0.96 ? Color.black.opacity(0.15) : Color.clear, radius: 2, x: ringTipShadowOffset.x, y: ringTipShadowOffset.y)
-         }
+            
+             
+        }
         .frame(width: width, height: width, alignment: .center)
-        .animation(Animation.linear(duration: 1.0))
     }
     
     private func ringTipPosition(progress: Double) -> CGPoint {
@@ -60,7 +67,7 @@ struct RingShape: Shape {
     
     var progress: Double = 0.0
     var thickness: CGFloat = 30.0
-    var startAngle: Angle = .degrees(-90)
+    var startAngle: Angle
     
     var animatableData: Double {
         get { progress }
@@ -84,7 +91,7 @@ struct RingShape: Shape {
 struct RingTip: Shape {
     
     var progress: Double = 0.0
-    var startAngle: Double = -90.0
+    var startAngle: Double
     var ringRadius: Double
     
     private var position: CGPoint {
@@ -114,6 +121,9 @@ struct RingTip: Shape {
     }
 
 }
+
+
+
 
 struct ProgressRingView_Previews: PreviewProvider {
     static var previews: some View {

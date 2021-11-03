@@ -13,6 +13,8 @@
 		125424BF27329E5500BAAC65 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125424BE27329E5500BAAC65 /* ColorExtensions.swift */; };
 		125424C127329F5F00BAAC65 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125424C027329F5F00BAAC65 /* ProgressRingView.swift */; };
 		125424C32732A7CC00BAAC65 /* ProgressRingShowcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125424C22732A7CC00BAAC65 /* ProgressRingShowcase.swift */; };
+		125424C52732D87100BAAC65 /* AnimatedNumberCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125424C42732D87100BAAC65 /* AnimatedNumberCounter.swift */; };
+		125424C72732D93800BAAC65 /* LabelledProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125424C62732D93700BAAC65 /* LabelledProgressRingView.swift */; };
 		12622ACD268B8BC400EF9D1A /* AppStoreLikeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622ACC268B8BC400EF9D1A /* AppStoreLikeList.swift */; };
 		12622ACF268B8CC600EF9D1A /* AppStoreLike2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622ACE268B8CC600EF9D1A /* AppStoreLike2.swift */; };
 		12622AD1268B984F00EF9D1A /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12622AD0268B984F00EF9D1A /* ArticleView.swift */; };
@@ -88,6 +90,8 @@
 		125424BE27329E5500BAAC65 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		125424C027329F5F00BAAC65 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
 		125424C22732A7CC00BAAC65 /* ProgressRingShowcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingShowcase.swift; sourceTree = "<group>"; };
+		125424C42732D87100BAAC65 /* AnimatedNumberCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedNumberCounter.swift; sourceTree = "<group>"; };
+		125424C62732D93700BAAC65 /* LabelledProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelledProgressRingView.swift; sourceTree = "<group>"; };
 		12622ACC268B8BC400EF9D1A /* AppStoreLikeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLikeList.swift; sourceTree = "<group>"; };
 		12622ACE268B8CC600EF9D1A /* AppStoreLike2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLike2.swift; sourceTree = "<group>"; };
 		12622AD0268B984F00EF9D1A /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
@@ -213,6 +217,8 @@
 				125424BE27329E5500BAAC65 /* ColorExtensions.swift */,
 				125424C027329F5F00BAAC65 /* ProgressRingView.swift */,
 				125424C22732A7CC00BAAC65 /* ProgressRingShowcase.swift */,
+				125424C42732D87100BAAC65 /* AnimatedNumberCounter.swift */,
+				125424C62732D93700BAAC65 /* LabelledProgressRingView.swift */,
 			);
 			path = ActivityRing;
 			sourceTree = "<group>";
@@ -588,6 +594,7 @@
 				12AB8F5A262388BC007F956F /* AppStoreTopBar.swift in Sources */,
 				12731DC4262C6BA8004EB556 /* ArticleForModalDetailView.swift in Sources */,
 				12AB8F2D26222E10007F956F /* TripCardView.swift in Sources */,
+				125424C52732D87100BAAC65 /* AnimatedNumberCounter.swift in Sources */,
 				129B8A25262CCE31001C61BD /* TodoListCoreData.swift in Sources */,
 				129E508D268C5F4E00A4424C /* BasicAppStoreContent.swift in Sources */,
 				128578BC268135B400B32E4E /* ListIOS15.swift in Sources */,
@@ -613,6 +620,7 @@
 				12739395261B3CE400318692 /* ContextSwipeBottomsheet.swift in Sources */,
 				12622ACD268B8BC400EF9D1A /* AppStoreLikeList.swift in Sources */,
 				12AB8F3A2622F9CC007F956F /* Article.swift in Sources */,
+				125424C72732D93800BAAC65 /* LabelledProgressRingView.swift in Sources */,
 				12AB8F2826222DA5007F956F /* Trip.swift in Sources */,
 				1273939C261B407600318692 /* Restaurant.swift in Sources */,
 				127393AA261B428000318692 /* RestaurantDetailView.swift in Sources */,
