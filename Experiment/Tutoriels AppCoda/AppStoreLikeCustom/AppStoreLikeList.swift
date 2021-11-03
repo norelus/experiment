@@ -8,6 +8,12 @@
 
 import SwiftUI
 
+extension Animation {
+    
+    static let mySpring = Animation.interactiveSpring(response: 0.50, dampingFraction: 0.75, blendDuration: 0.1)
+    
+}
+
 struct AppStoreLikeList<TopBar: View, ContentView: View>: View {
     
     @Namespace var viewAnimation
@@ -70,7 +76,7 @@ struct AppStoreLikeList<TopBar: View, ContentView: View>: View {
                         .opacity((displayedIndex == nil) ? 1 : 0.3)
                         .animation(.linear)
                         .matchedGeometryEffect(id: "content_\(index)", in: viewAnimation)
-                        .animation(.easeInOut)
+                        .animation(.mySpring)
                         .frame(height: cellHeight)
                         .padding(16)
                         .zIndex(index == lastDisplayedIndex ? 1 : 0)
@@ -109,6 +115,6 @@ struct AppStoreLikeList_Previews: PreviewProvider {
         let blue = BasicAppStoreContent(title: "bleu", color: .blue)
         let grey = BasicAppStoreContent(title: "gris", color: .gray)
         let contents = [green, red, blue, grey]
-        AppStoreLikeList(topBar:Text("Bonjour"), contents: contents, cellHeight: 250)
+        AppStoreLikeList(topBar:Text("Bonjour"), contents: contents, cellHeight: 200)
     }
 }

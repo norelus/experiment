@@ -413,6 +413,8 @@
 			dependencies = (
 			);
 			name = Experiment;
+			packageProductDependencies = (
+			);
 			productName = Experiment;
 			productReference = F26357A123D0861C00C8F30C /* Experiment.app */;
 			productType = "com.apple.product-type.application";
@@ -485,6 +487,8 @@
 				Base,
 			);
 			mainGroup = F263579823D0861C00C8F30C;
+			packageReferences = (
+			);
 			productRefGroup = F26357A223D0861C00C8F30C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

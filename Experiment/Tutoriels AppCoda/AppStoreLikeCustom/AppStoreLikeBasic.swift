@@ -10,7 +10,8 @@ import SwiftUI
 
 struct AppStoreLikeBasic: View {
     
-
+    @Environment(\.presentationMode) var presentationMode
+    
     let contents: [BasicAppStoreContent] = [
         .init(title: "Rose gencive", color: Color(red: 0.95, green: 0.4, blue: 0.45)),
         .init(title: "Vert soupe de brocolis", color: Color(red: 0.45, green: 0.7, blue: 0.2)),
@@ -19,8 +20,23 @@ struct AppStoreLikeBasic: View {
         .init(title: "Marron marron", color: Color(red: 0.5, green: 0.3, blue: 0.1))
     ]
     
+    var topBar: some View {
+        HStack {
+            Button(action: {
+                presentationMode.wrappedValue.dismiss()
+            }) {
+                Image(systemName: "chevron.backward")
+                    .font(.largeTitle)
+            }.padding()
+            Text("Bonjour")
+                .font(.largeTitle)
+            Spacer()
+        }
+    }
+    
     var body: some View {
-        AppStoreLikeList(topBar:Text("Bonjour"), contents: contents, cellHeight: 200)
+        AppStoreLikeList(topBar:topBar, contents: contents, cellHeight: 200)
+            .navigationBarHidden(true)
     }
     
 }

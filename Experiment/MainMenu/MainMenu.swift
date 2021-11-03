@@ -64,7 +64,9 @@ struct MainMenu: View {
                destination: CoreDataTest()),
         Option(title: "Chapitre 26: AppStore Like Cards",
                destination: AppStoreLike()),
-        Option(title: "AppStore like Custom",
+        Option(title: "AppStore like Basic",
+               destination: AppStoreLikeBasic()),
+        Option(title: "AppStore like avec articles",
                destination: AppStoreLike2()),
     ]
     
