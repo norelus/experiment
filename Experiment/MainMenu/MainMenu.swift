@@ -41,13 +41,22 @@ struct MainMenu: View {
         }
     }
     
+    var iosQuatorzeOptions = [
+        Option(title: "Basiques iOS 14", destination: BasicsIOS14()),
+        Option(title: "Lazy VStack et ScrollTo", destination: LazyVStackView()),
+        Option(title: "GridView", destination: GridView()),
+        Option(title: "Piquage de couleur", destination: ColorPiqueur()),
+        Option(title: "Player video (device only)", destination: PlayerView())
+    ]
+    
     var iOSQuinzeOptions = [
-        Option(title: "Basiques", destination: BasicIOS15()),
+        Option(title: "Basiques iOS 15", destination: BasicIOS15()),
         Option(title: "Matériaux et styles de texte", destination: Materials()),
         Option(title: "Async Images", destination: AsyncImagesIOS15()),
         Option(title: "Listes new stuff", destination: ListIOS15()),
         Option(title: "Refreshable / Searchable", destination: RefreshableSearchable())
     ]
+    
     
     var appCodaOptions = [
         Option(title: "Chapitre 6: Boutons, labels, gradients",
@@ -100,6 +109,19 @@ struct MainMenu: View {
                     }
                     .listRowBackground(Color(.systemGray4))
             })
+            
+            Section(header:
+                        Text("iOS 14")
+                        .padding(8)
+                        .background(Color.white.opacity(0.6))
+                        .cornerRadius(16)
+                    , content: {
+                
+                ForEach(iosQuatorzeOptions) { option in
+                    MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
+                }
+            })
+            
             Section(header:
                         Text("iOS 15")
                         .padding(8)
@@ -112,7 +134,8 @@ struct MainMenu: View {
                 }
             })
             
-        }.background(Color.clear)
+        }
+        .listStyle(.plain)
         .navigationBarTitle("Menu")
         
     }

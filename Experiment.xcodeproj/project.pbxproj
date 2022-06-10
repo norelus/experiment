@@ -29,6 +29,13 @@
 		1273939C261B407600318692 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1273939B261B407600318692 /* Restaurant.swift */; };
 		127393AA261B428000318692 /* RestaurantDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 127393A9261B428000318692 /* RestaurantDetailView.swift */; };
 		1282442626821AEC00EFAF41 /* RefreshableSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1282442526821AEC00EFAF41 /* RefreshableSearchable.swift */; };
+		12852783285396E10029245C /* LazyVStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285277D285396E10029245C /* LazyVStackView.swift */; };
+		12852784285396E10029245C /* ColorPiqueur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285277E285396E10029245C /* ColorPiqueur.swift */; };
+		12852785285396E10029245C /* BasicsIOS14.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285277F285396E10029245C /* BasicsIOS14.swift */; };
+		12852786285396E10029245C /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12852780285396E10029245C /* PlayerView.swift */; };
+		12852787285396E10029245C /* MapFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12852781285396E10029245C /* MapFunctions.swift */; };
+		12852788285396E10029245C /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12852782285396E10029245C /* GridView.swift */; };
+		1285278A28539BA30029245C /* Emojis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285278928539BA30029245C /* Emojis.swift */; };
 		128578BA26812AB700B32E4E /* AsyncImagesIOS15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128578B926812AB700B32E4E /* AsyncImagesIOS15.swift */; };
 		128578BC268135B400B32E4E /* ListIOS15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128578BB268135B400B32E4E /* ListIOS15.swift */; };
 		128AF2192623989F00FE04BB /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 128AF20E2623975700FE04BB /* CardView.swift */; };
@@ -106,6 +113,13 @@
 		1273939B261B407600318692 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		127393A9261B428000318692 /* RestaurantDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailView.swift; sourceTree = "<group>"; };
 		1282442526821AEC00EFAF41 /* RefreshableSearchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshableSearchable.swift; sourceTree = "<group>"; };
+		1285277D285396E10029245C /* LazyVStackView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyVStackView.swift; sourceTree = "<group>"; };
+		1285277E285396E10029245C /* ColorPiqueur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorPiqueur.swift; sourceTree = "<group>"; };
+		1285277F285396E10029245C /* BasicsIOS14.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicsIOS14.swift; sourceTree = "<group>"; };
+		12852780285396E10029245C /* PlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		12852781285396E10029245C /* MapFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapFunctions.swift; sourceTree = "<group>"; };
+		12852782285396E10029245C /* GridView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		1285278928539BA30029245C /* Emojis.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Emojis.swift; sourceTree = "<group>"; };
 		128578B926812AB700B32E4E /* AsyncImagesIOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImagesIOS15.swift; sourceTree = "<group>"; };
 		128578BB268135B400B32E4E /* ListIOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListIOS15.swift; sourceTree = "<group>"; };
 		128AF20E2623975700FE04BB /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -259,6 +273,19 @@
 			path = BottomSheet;
 			sourceTree = "<group>";
 		};
+		1285277C285396E10029245C /* iOS 14 */ = {
+			isa = PBXGroup;
+			children = (
+				1285277D285396E10029245C /* LazyVStackView.swift */,
+				1285277E285396E10029245C /* ColorPiqueur.swift */,
+				1285277F285396E10029245C /* BasicsIOS14.swift */,
+				12852780285396E10029245C /* PlayerView.swift */,
+				12852781285396E10029245C /* MapFunctions.swift */,
+				12852782285396E10029245C /* GridView.swift */,
+			);
+			path = "iOS 14";
+			sourceTree = "<group>";
+		};
 		1297D87D262771DC003C6E41 /* AppStoreLikeCustom */ = {
 			isa = PBXGroup;
 			children = (
@@ -357,6 +384,7 @@
 		12CB8F872619FC7F00C6A367 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1285278928539BA30029245C /* Emojis.swift */,
 				F26357AA23D0861D00C8F30C /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -393,6 +421,7 @@
 		F26357A323D0861C00C8F30C /* Experiment */ = {
 			isa = PBXGroup;
 			children = (
+				1285277C285396E10029245C /* iOS 14 */,
 				123B3DC92674E691000CE01A /* iOS 15 */,
 				129B8A29262CCE3A001C61BD /* CoreData */,
 				12CB8F872619FC7F00C6A367 /* Resources */,
@@ -589,6 +618,7 @@
 				F26357A723D0861C00C8F30C /* SceneDelegate.swift in Sources */,
 				12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */,
 				12739375261B1CBE00318692 /* StateBindingsView.swift in Sources */,
+				12852783285396E10029245C /* LazyVStackView.swift in Sources */,
 				128578BA26812AB700B32E4E /* AsyncImagesIOS15.swift in Sources */,
 				12E73C032635794F00CBCED8 /* CombineForm.swift in Sources */,
 				12AB8F5A262388BC007F956F /* AppStoreTopBar.swift in Sources */,
@@ -613,19 +643,25 @@
 				123B3DCB2674E6B5000CE01A /* BasicIOS15.swift in Sources */,
 				12731DBF262C6BA2004EB556 /* ArticleForModal.swift in Sources */,
 				129B8A3F262CCF7B001C61BD /* CoreDataTest.swift in Sources */,
+				12852785285396E10029245C /* BasicsIOS14.swift in Sources */,
 				129B8A53262CD294001C61BD /* CheckBoxStyle.swift in Sources */,
 				129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */,
 				129B8A58262CD299001C61BD /* NewToDoView.swift in Sources */,
 				12622AD1268B984F00EF9D1A /* ArticleView.swift in Sources */,
 				12739395261B3CE400318692 /* ContextSwipeBottomsheet.swift in Sources */,
+				12852788285396E10029245C /* GridView.swift in Sources */,
+				12852784285396E10029245C /* ColorPiqueur.swift in Sources */,
 				12622ACD268B8BC400EF9D1A /* AppStoreLikeList.swift in Sources */,
 				12AB8F3A2622F9CC007F956F /* Article.swift in Sources */,
+				12852787285396E10029245C /* MapFunctions.swift in Sources */,
 				125424C72732D93800BAAC65 /* LabelledProgressRingView.swift in Sources */,
 				12AB8F2826222DA5007F956F /* Trip.swift in Sources */,
 				1273939C261B407600318692 /* Restaurant.swift in Sources */,
 				127393AA261B428000318692 /* RestaurantDetailView.swift in Sources */,
 				123B3DCD2674E988000CE01A /* Materials.swift in Sources */,
 				12739380261B310300318692 /* DraggableView.swift in Sources */,
+				1285278A28539BA30029245C /* Emojis.swift in Sources */,
+				12852786285396E10029245C /* PlayerView.swift in Sources */,
 				F26357A923D0861C00C8F30C /* ContentView.swift in Sources */,
 				1273938B261B353300318692 /* GesturesExerciseView.swift in Sources */,
 				1282442626821AEC00EFAF41 /* RefreshableSearchable.swift in Sources */,
