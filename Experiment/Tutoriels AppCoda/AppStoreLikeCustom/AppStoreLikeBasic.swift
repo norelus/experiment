@@ -11,14 +11,15 @@ import SwiftUI
 struct AppStoreLikeBasic: View {
     
     @Environment(\.presentationMode) var presentationMode
+    @Namespace var viewAnimation
     
-    let contents: [BasicAppStoreContent] = [
-        .init(title: "Rose gencive", color: Color(red: 0.95, green: 0.4, blue: 0.45)),
-        .init(title: "Vert soupe de brocolis", color: Color(red: 0.45, green: 0.7, blue: 0.2)),
-        .init(title: "Gris caillou", color: .gray),
-        .init(title: "Orange orange", color: Color(red: 1.0, green: 0.55, blue: 0.1)),
-        .init(title: "Marron marron", color: Color(red: 0.5, green: 0.3, blue: 0.1))
-    ]
+    var contents: [BasicAppStoreContent] { [
+        .init(id: "0", title: "Rose gencive", color: Color(red: 0.95, green: 0.4, blue: 0.45), viewAnimation: viewAnimation),
+        .init(id: "1", title: "Vert soupe de brocolis", color: Color(red: 0.45, green: 0.7, blue: 0.2), viewAnimation: viewAnimation),
+        .init(id: "2", title: "Gris caillou", color: .gray, viewAnimation: viewAnimation),
+        .init(id: "3", title: "Orange orange", color: Color(red: 1.0, green: 0.55, blue: 0.1), viewAnimation: viewAnimation),
+        .init(id: "4", title: "Marron marron", color: Color(red: 0.5, green: 0.3, blue: 0.1), viewAnimation: viewAnimation)
+    ]}
     
     var topBar: some View {
         HStack {

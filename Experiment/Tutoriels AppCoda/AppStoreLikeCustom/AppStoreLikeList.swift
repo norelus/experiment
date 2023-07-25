@@ -16,7 +16,6 @@ extension Animation {
 
 struct AppStoreLikeList<TopBar: View, ContentView: View>: View {
     
-    @Namespace var viewAnimation
     
     var topBar: TopBar
     var contents: [ContentView]
@@ -38,8 +37,6 @@ struct AppStoreLikeList<TopBar: View, ContentView: View>: View {
                         contents[displayed]
                     }
                     .ignoresSafeArea()
-                    .matchedGeometryEffect(id: "content_\(displayed)", in: viewAnimation)
-                    .animation(.easeInOut)
                     HStack {
                         Spacer()
                         closeButton
@@ -59,8 +56,7 @@ struct AppStoreLikeList<TopBar: View, ContentView: View>: View {
             VStack {
                 topBar
                     .opacity((displayedIndex == nil) ? 1 : 0.3)
-                    .animation(.linear)
-
+                  
                 ForEach(contents.indices) { index in
                     if displayedIndex == index {
                         Color.clear
@@ -74,9 +70,6 @@ struct AppStoreLikeList<TopBar: View, ContentView: View>: View {
                             displayItemAt(index: index)
                         }
                         .opacity((displayedIndex == nil) ? 1 : 0.3)
-                        .animation(.linear)
-                        .matchedGeometryEffect(id: "content_\(index)", in: viewAnimation)
-                        .animation(.mySpring)
                         .frame(height: cellHeight)
                         .padding(16)
                         .zIndex(index == lastDisplayedIndex ? 1 : 0)
@@ -98,23 +91,28 @@ struct AppStoreLikeList<TopBar: View, ContentView: View>: View {
     }
     
     func displayItemAt(index: Int) {
-        displayedIndex = index
-        lastDisplayedIndex = index
+        withAnimation(.easeInOut) {
+            displayedIndex = index
+            lastDisplayedIndex = index
+        }
     }
     
     func hideItem() {
-        displayedIndex = nil
+        withAnimation(.easeInOut) {
+            displayedIndex = nil
+        }
     }
     
 }
-
+/*
 struct AppStoreLikeList_Previews: PreviewProvider {
     static var previews: some View {
-        let green = BasicAppStoreContent(title: "vert", color: .green)
-        let red = BasicAppStoreContent(title: "rouge", color: .red)
-        let blue = BasicAppStoreContent(title: "bleu", color: .blue)
-        let grey = BasicAppStoreContent(title: "gris", color: .gray)
+        let green = BasicAppStoreContent(id: "0", title: "vert", color: .green)
+        let red = BasicAppStoreContent(id: "1", title: "rouge", color: .red)
+        let blue = BasicAppStoreContent(id: "2", title: "bleu", color: .blue)
+        let grey = BasicAppStoreContent(id: "3", title: "gris", color: .gray)
         let contents = [green, red, blue, grey]
         AppStoreLikeList(topBar:Text("Bonjour"), contents: contents, cellHeight: 200)
     }
 }
+*/

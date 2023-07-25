@@ -11,18 +11,21 @@ import SwiftUI
 
 struct ArticleView: View {
     
-    //var geometry: GeometryProxy
-    
     var article: Article
+    var viewAnimation: Namespace.ID
     
     var body: some View {
         ScrollView {
             VStack {
                 header.frame(height: 400)
                 Text(article.content)
+                    .matchedGeometryEffect(id: "content_\(article.id)", in: viewAnimation)
                     .foregroundColor(.secondary)
                     .padding()
-            }.background(Color("cardBackground"))
+            }
+            .background(Color("cardBackground"))
+            .matchedGeometryEffect(id: "background_\(article.id)", in: viewAnimation)
+                
         }
     }
     
@@ -59,6 +62,7 @@ struct ArticleView: View {
             Spacer()
         }
         .padding()
+        .matchedGeometryEffect(id: "title_\(article.id)", in: viewAnimation)
         .frame(maxWidth: .infinity)
         .background(Color("cardBackground"))
     }
@@ -76,7 +80,7 @@ struct ArticleView: View {
     }
     
 }
-
+/*
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -86,3 +90,4 @@ struct ArticleView_Previews: PreviewProvider {
         }
     }
 }
+*/

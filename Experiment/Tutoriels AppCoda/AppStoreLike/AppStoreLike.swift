@@ -53,7 +53,7 @@ struct AppStoreLike: View {
                         .frame(height: self.showContents[index] ?
                                 fullView.size.height + fullView.safeAreaInsets.top + fullView.safeAreaInsets.bottom :
                                 min(article.image.size.height / 3, 500))
-                        .animation(.interactiveSpring(response: 0.65, dampingFraction: 0.75, blendDuration: 0.1))
+                        //.animation(.interactiveSpring(response: 0.65, dampingFraction: 0.75, blendDuration: 0.1))
                     }
                 }
                 .frame(width: fullView.size.width)//pas obligé, pour corriger les bugs d'animation au lancement de la vue

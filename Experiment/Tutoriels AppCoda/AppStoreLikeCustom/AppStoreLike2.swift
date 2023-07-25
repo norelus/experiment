@@ -11,10 +11,11 @@ import SwiftUI
 struct AppStoreLike2: View {
         
     @Environment(\.presentationMode) var presentationMode
+    @Namespace var viewAnimation
     
     var body: some View {
         let contents = sampleArticles.map { article in
-            ArticleView(article: article)
+            ArticleView(article: article, viewAnimation: viewAnimation)
         }
         AppStoreLikeList(topBar: topBar, contents: contents, cellHeight: 400)
             .navigationBarHidden(true)
