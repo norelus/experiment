@@ -16,24 +16,11 @@ struct TabViewUpdates: View {
         TabView {
             
             Tab("Pictures", systemImage: "photo", role: .none, content: {
-                NavigationView {
                     ScrollView {
                         GenericImageList()
                     }
                     .navigationTitle(Text("Pictures"))
-                    .toolbar {
-                        ToolbarSpacer(.flexible, placement: .topBarTrailing)
-                        
-                        ToolbarItem(placement: .topBarTrailing) {
-                            Button(action: {
-                                showSheet = true
-                            }, label: {
-                                Image(systemName: "plus")
-                            })
-                        }
-                        .matchedTransitionSource(id: "myId", in: namespace)
-                        
-                    }
+                    
                     .sheet(isPresented: $showSheet, content: {
                         ZStack(alignment: .center) {
                             
@@ -57,7 +44,7 @@ struct TabViewUpdates: View {
                         }
                             .navigationTransition(.zoom(sourceID: "myId", in: namespace))
                     })
-                }
+                
             })
             
             Tab("Info", systemImage: "info.circle.fill", role: .none, content: {
@@ -75,6 +62,7 @@ struct TabViewUpdates: View {
             Text("Tabview bottom accessory")
                 .padding()
         }
+        
     }
 }
 

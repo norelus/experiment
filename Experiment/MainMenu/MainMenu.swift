@@ -98,24 +98,7 @@ struct MainMenu: View {
     
     var body: some View {
         List{
-            Section(header:
-                        Text("Tutoriels AppCoda")
-                        .padding(8)
-                        .background(Color.white.opacity(0.6))
-                        .cornerRadius(16)
-                    , content: {
-                
-                ForEach(appCodaOptions) { option in
-                    MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
-                }
-                Text("AppStore Like Custom Version")
-                    .onTapGesture {
-                        withAnimation {
-                            showAppStore2 = true
-                        }
-                    }
-                    .listRowBackground(Color(.systemGray4))
-            })
+            
             
             
             Section(header:
@@ -154,6 +137,25 @@ struct MainMenu: View {
                 ForEach(iosQuatorzeOptions) { option in
                     MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
                 }
+            })
+            
+            Section(header:
+                        Text("AppCoda")
+                        .padding(8)
+                        .background(Color.white.opacity(0.6))
+                        .cornerRadius(16)
+                    , content: {
+                
+                ForEach(appCodaOptions) { option in
+                    MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
+                }
+                Text("AppStore Like Custom Version")
+                    .onTapGesture {
+                        withAnimation {
+                            showAppStore2 = true
+                        }
+                    }
+                    .listRowBackground(Color(.systemGray4))
             })
             
         }
