@@ -33,7 +33,7 @@ struct RichTextEditorView: View {
 }
 
 
-struct DraggablesView_Previews: PreviewProvider {
+struct RichTextEditorView_Previews: PreviewProvider {
     
     
     static var previews: some View {

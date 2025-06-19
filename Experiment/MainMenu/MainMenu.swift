@@ -60,7 +60,8 @@ struct MainMenu: View {
     var iosVingtSixOptions = [
         Option(title: "Toolbar items", destination: ToolbarItemsView()),
         Option(title: "WebView", destination: MyWebView()),
-        Option(title: "Draggables", destination: RichTextEditorView())
+        Option(title: "Rich Text Editor", destination: RichTextEditorView()),
+        Option(title: "Tab View updates", destination: TabViewUpdates())
     ]
     
     

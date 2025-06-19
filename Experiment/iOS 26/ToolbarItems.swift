@@ -18,18 +18,19 @@ struct ToolbarItemsView: View {
     var body: some View {
         ZStack(alignment: .bottomTrailing){
             ScrollView() {
-                Text("Toolbar items (top and bottom) with liquid glass effect and morph")
+                Text("Toolbar items and bottom buttons with liquid glass effect and morph")
                 NavigationLink(destination: SecondaryView(),
                                label: {
                     Text("Show secondary view")
                 })
+                .buttonStyle(.borderedProminent)
                 GenericImageList()
             }
             
             .safeAreaInset(edge: .bottom) {
                 HStack(alignment: .bottom) {
                     Spacer()
-                    GlassEffectContainer(spacing: 8, content: {
+                    GlassEffectContainer(spacing: 4, content: {
                         HStack(alignment: .bottom) {
                             
                             Image(systemName: "paintbrush")
@@ -38,7 +39,7 @@ struct ToolbarItemsView: View {
                                 .glassEffect(.regular.interactive())
                                 .glassEffectUnion(id: 1, namespace: namespace)
                             if isButtonsExpanded {
-                                Image(systemName: "pencil")
+                                Image(systemName: "star.fill")
                                     .font(.system(size: 28))
                                     .frame(width: 64, height: 64)
                                     .glassEffect(.regular.interactive())
@@ -106,7 +107,7 @@ struct ToolbarItemsView: View {
                 })
             }
             
-            ToolbarSpacer(.fixed, placement: .primaryAction)
+            ToolbarSpacer(.fixed, placement: .topBarTrailing)
             
             ToolbarItemGroup(placement: .primaryAction) {
                 Button(action: {}, label: {
@@ -116,11 +117,13 @@ struct ToolbarItemsView: View {
                 .tint(.purple)
             }
             
-            ToolbarSpacer(.fixed, placement: .primaryAction)
+            ToolbarSpacer(.fixed, placement: .topBarTrailing)
             
             ToolbarItemGroup(placement: .primaryAction) {
-                Button(action: {}, label: {
-                    Image(systemName: "ellipsis")
+                Menu("", systemImage: "ellipsis", content: {
+                    Button("Menu Action 1", action: {})
+                    Button("Menu Action 2", action: {})
+                    Button("Menu Action 3", action: {})
                 })
             }
             

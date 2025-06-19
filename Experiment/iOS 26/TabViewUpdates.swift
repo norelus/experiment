@@ -9,24 +9,75 @@
 import SwiftUI
 
 struct TabViewUpdates: View {
+    
+    @State private var showSheet = false
+    @Namespace private var namespace
     var body: some View {
         TabView {
-            GenericImageList()
+            NavigationView {
+                ScrollView {
+                    GenericImageList()
+                }
+                .navigationTitle(Text("Pictures"))
+                .toolbar {
+                    ToolbarSpacer(.flexible, placement: .topBarTrailing)
+                    
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button(action: {
+                            showSheet = true
+                        }, label: {
+                            Image(systemName: "plus")
+                        })
+                    }
+                    .matchedTransitionSource(id: "myId", in: namespace)
+                    
+                }
+                .sheet(isPresented: $showSheet, content: {
+                    ZStack(alignment: .center) {
+                        
+                        Color.lightPurple.ignoresSafeArea(.all)
+                        VStack {
+                            HStack {
+                                Spacer()
+                                Button(action: {
+                                    showSheet = false
+                                }, label: {
+                                    Image(systemName: "xmark")
+                                        .frame(width: 32, height: 32)
+                                })
+                                .buttonStyle(.glass)
+                                .padding()
+                            }
+                            Spacer()
+                            
+                        }
+                        Text("Sheet zoomed from button")
+                    }
+                        .navigationTransition(.zoom(sourceID: "myId", in: namespace))
+                })
+            }
                 .tabItem {
-                    Label("First", systemImage: "circle.fill")
+                    Label("Pictures", systemImage: "photo")
                 }
             
-            Text("Second tab")
+            Text("Information tab")
                 .tabItem {
-                    Label("Second", systemImage: "square.fill")
+                    Label("Info", systemImage: "info.circle.fill")
                 }
         }
         .tabBarMinimizeBehavior(.onScrollDown)
         .tabViewBottomAccessory {
             Text("Tabview bottom accessory")
                 .padding()
-                .glassEffect()
-                .padding()
         }
+    }
+}
+
+struct TabViewUpdates_Previews: PreviewProvider {
+    
+    
+    static var previews: some View {
+            TabViewUpdates()
+        
     }
 }
