@@ -57,6 +57,12 @@ struct MainMenu: View {
         Option(title: "Refreshable / Searchable", destination: RefreshableSearchable())
     ]
     
+    var iosVingtSixOptions = [
+        Option(title: "Toolbar items", destination: ToolbarItemsView()),
+        Option(title: "WebView", destination: MyWebView()),
+        Option(title: "Draggables", destination: RichTextEditorView())
+    ]
+    
     
     var appCodaOptions = [
         Option(title: "Chapitre 6: Boutons, labels, gradients",
@@ -110,17 +116,19 @@ struct MainMenu: View {
                     .listRowBackground(Color(.systemGray4))
             })
             
+            
             Section(header:
-                        Text("iOS 14")
+                        Text("iOS 26")
                         .padding(8)
                         .background(Color.white.opacity(0.6))
                         .cornerRadius(16)
                     , content: {
                 
-                ForEach(iosQuatorzeOptions) { option in
+                ForEach(iosVingtSixOptions) { option in
                     MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
                 }
             })
+            
             
             Section(header:
                         Text("iOS 15")
@@ -134,10 +142,69 @@ struct MainMenu: View {
                 }
             })
             
+            
+            Section(header:
+                        Text("iOS 14")
+                        .padding(8)
+                        .background(Color.white.opacity(0.6))
+                        .cornerRadius(16)
+                    , content: {
+                
+                ForEach(iosQuatorzeOptions) { option in
+                    MainMenuRow(title: option.title, destination: option.destination.transition(.scale))
+                }
+            })
+            
         }
         .listStyle(.plain)
         .navigationBarTitle("Menu")
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Button(action: {
+                    toggleAppearances()
+                }, label: {
+                    Image(systemName: "paintbrush")
+                })
+            }
+        }
         
+    }
+    
+    
+    //https://developer.apple.com/documentation/uikit/uinavigationbarappearance
+    let navBarTextColor = UIColor(white: 0.95, alpha: 1.0)
+    
+    let navBarBackgroundColor = UIColor(named:"navbar_background")
+    let navBarAlternateBackgroundColor = UIColor(named:"navbar_background_2")
+    
+    var largeNavBarAppearance: UINavigationBarAppearance {
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithTransparentBackground()
+        navBarAppearance.backgroundColor = navBarBackgroundColor
+        navBarAppearance.titleTextAttributes = [.foregroundColor: navBarTextColor]
+        navBarAppearance.setBackIndicatorImage(UIImage(systemName: "arrowshape.turn.up.left"),
+                                              transitionMaskImage: UIImage(systemName: "arrowshape.turn.up.left"))
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: navBarTextColor,
+                                               .font: UIFont(name: "ArialRoundedMTBold", size: 35)!]
+        return navBarAppearance
+    }
+    
+    var smallNavBarAppearance: UINavigationBarAppearance {
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithTransparentBackground()
+        navBarAppearance.backgroundColor = navBarAlternateBackgroundColor
+        navBarAppearance.titleTextAttributes = [.foregroundColor: navBarTextColor]
+        navBarAppearance.setBackIndicatorImage(UIImage(systemName: "arrowshape.turn.up.left"),
+                                              transitionMaskImage: UIImage(systemName: "arrowshape.turn.up.left"))
+        return navBarAppearance
+    }
+    
+    func toggleAppearances() {
+        UINavigationBar.appearance().standardAppearance = smallNavBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = largeNavBarAppearance
+        UINavigationBar.appearance().compactAppearance = smallNavBarAppearance
+        
+        UITableView.appearance().backgroundColor = UIColor.clear
     }
 }
 

@@ -91,7 +91,7 @@ struct PeopleList: View {
     }
     
     var body: some View {
-        List {
+        ScrollView(.vertical) {
             ForEach(people) { person in
                 Text("\(person.firstName) \(person.lastName)")
             }
@@ -110,7 +110,7 @@ struct PeopleList: View {
                 Spacer()
             }
             .padding(8)
-            .background(.thinMaterial)
+            .background(Color.red)
         }
     }
 }

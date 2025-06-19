@@ -10,6 +10,8 @@
 		1219351F262C662D00365D0A /* ModalsAndAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1219351E262C662D00365D0A /* ModalsAndAlerts.swift */; };
 		123B3DCB2674E6B5000CE01A /* BasicIOS15.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B3DCA2674E6B5000CE01A /* BasicIOS15.swift */; };
 		123B3DCD2674E988000CE01A /* Materials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123B3DCC2674E988000CE01A /* Materials.swift */; };
+		125033F92E043C7D00DAC3C8 /* TabViewUpdates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125033F82E043C7300DAC3C8 /* TabViewUpdates.swift */; };
+		125033FB2E043CB000DAC3C8 /* GenericImageList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125033FA2E043CAB00DAC3C8 /* GenericImageList.swift */; };
 		125424BF27329E5500BAAC65 /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125424BE27329E5500BAAC65 /* ColorExtensions.swift */; };
 		125424C127329F5F00BAAC65 /* ProgressRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125424C027329F5F00BAAC65 /* ProgressRingView.swift */; };
 		125424C32732A7CC00BAAC65 /* ProgressRingShowcase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125424C22732A7CC00BAAC65 /* ProgressRingShowcase.swift */; };
@@ -49,6 +51,9 @@
 		129DA4F4261E59F3001E5AF0 /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */; };
 		129E508D268C5F4E00A4424C /* BasicAppStoreContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129E508C268C5F4E00A4424C /* BasicAppStoreContent.swift */; };
 		129E508F268C60BC00A4424C /* AppStoreLikeBasic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129E508E268C60BC00A4424C /* AppStoreLikeBasic.swift */; };
+		129FFE312E02E23F00024423 /* ToolbarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129FFE302E02E23100024423 /* ToolbarItems.swift */; };
+		129FFE332E02F6E900024423 /* Webview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129FFE322E02F6E500024423 /* Webview.swift */; };
+		129FFE352E02FAB100024423 /* RichTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 129FFE342E02FAAB00024423 /* RichTextEditor.swift */; };
 		12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */; };
 		12AB8F2826222DA5007F956F /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2726222DA5007F956F /* Trip.swift */; };
 		12AB8F2D26222E10007F956F /* TripCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12AB8F2C26222E10007F956F /* TripCardView.swift */; };
@@ -94,6 +99,8 @@
 		1219351E262C662D00365D0A /* ModalsAndAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalsAndAlerts.swift; sourceTree = "<group>"; };
 		123B3DCA2674E6B5000CE01A /* BasicIOS15.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicIOS15.swift; sourceTree = "<group>"; };
 		123B3DCC2674E988000CE01A /* Materials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Materials.swift; sourceTree = "<group>"; };
+		125033F82E043C7300DAC3C8 /* TabViewUpdates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewUpdates.swift; sourceTree = "<group>"; };
+		125033FA2E043CAB00DAC3C8 /* GenericImageList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericImageList.swift; sourceTree = "<group>"; };
 		125424BE27329E5500BAAC65 /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 		125424C027329F5F00BAAC65 /* ProgressRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingView.swift; sourceTree = "<group>"; };
 		125424C22732A7CC00BAAC65 /* ProgressRingShowcase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressRingShowcase.swift; sourceTree = "<group>"; };
@@ -133,6 +140,9 @@
 		129DA4F3261E59F3001E5AF0 /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
 		129E508C268C5F4E00A4424C /* BasicAppStoreContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicAppStoreContent.swift; sourceTree = "<group>"; };
 		129E508E268C60BC00A4424C /* AppStoreLikeBasic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreLikeBasic.swift; sourceTree = "<group>"; };
+		129FFE302E02E23100024423 /* ToolbarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolbarItems.swift; sourceTree = "<group>"; };
+		129FFE322E02F6E500024423 /* Webview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webview.swift; sourceTree = "<group>"; };
+		129FFE342E02FAAB00024423 /* RichTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RichTextEditor.swift; sourceTree = "<group>"; };
 		12AB8F2126222CBA007F956F /* TinderLikeSwipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TinderLikeSwipe.swift; sourceTree = "<group>"; };
 		12AB8F2726222DA5007F956F /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
 		12AB8F2C26222E10007F956F /* TripCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCardView.swift; sourceTree = "<group>"; };
@@ -340,6 +350,18 @@
 			path = Reusables;
 			sourceTree = "<group>";
 		};
+		129FFE2F2E02E21D00024423 /* iOS 26 */ = {
+			isa = PBXGroup;
+			children = (
+				125033FA2E043CAB00DAC3C8 /* GenericImageList.swift */,
+				125033F82E043C7300DAC3C8 /* TabViewUpdates.swift */,
+				129FFE342E02FAAB00024423 /* RichTextEditor.swift */,
+				129FFE322E02F6E500024423 /* Webview.swift */,
+				129FFE302E02E23100024423 /* ToolbarItems.swift */,
+			);
+			path = "iOS 26";
+			sourceTree = "<group>";
+		};
 		12AB8F3E2622FD32007F956F /* AppStoreLike */ = {
 			isa = PBXGroup;
 			children = (
@@ -421,6 +443,7 @@
 		F26357A323D0861C00C8F30C /* Experiment */ = {
 			isa = PBXGroup;
 			children = (
+				129FFE2F2E02E21D00024423 /* iOS 26 */,
 				1285277C285396E10029245C /* iOS 14 */,
 				123B3DC92674E691000CE01A /* iOS 15 */,
 				129B8A29262CCE3A001C61BD /* CoreData */,
@@ -612,8 +635,10 @@
 				129B8A3A262CCEC7001C61BD /* Persistence.swift in Sources */,
 				12CB8F7A2619F9E700C6A367 /* MainMenu.swift in Sources */,
 				F26357A523D0861C00C8F30C /* AppDelegate.swift in Sources */,
+				125033F92E043C7D00DAC3C8 /* TabViewUpdates.swift in Sources */,
 				12739390261B357300318692 /* ResizableView.swift in Sources */,
 				F26357D623D0883600C8F30C /* FirstView.swift in Sources */,
+				129FFE352E02FAB100024423 /* RichTextEditor.swift in Sources */,
 				125424C32732A7CC00BAAC65 /* ProgressRingShowcase.swift in Sources */,
 				F26357A723D0861C00C8F30C /* SceneDelegate.swift in Sources */,
 				12AB8F2226222CBA007F956F /* TinderLikeSwipe.swift in Sources */,
@@ -627,6 +652,7 @@
 				125424C52732D87100BAAC65 /* AnimatedNumberCounter.swift in Sources */,
 				129B8A25262CCE31001C61BD /* TodoListCoreData.swift in Sources */,
 				129E508D268C5F4E00A4424C /* BasicAppStoreContent.swift in Sources */,
+				129FFE332E02F6E900024423 /* Webview.swift in Sources */,
 				128578BC268135B400B32E4E /* ListIOS15.swift in Sources */,
 				12AB8F342622F813007F956F /* AppStoreLike.swift in Sources */,
 				12CB8F7B2619F9E700C6A367 /* MainMenuRow.swift in Sources */,
@@ -649,6 +675,7 @@
 				129B8A58262CD299001C61BD /* NewToDoView.swift in Sources */,
 				12622AD1268B984F00EF9D1A /* ArticleView.swift in Sources */,
 				12739395261B3CE400318692 /* ContextSwipeBottomsheet.swift in Sources */,
+				125033FB2E043CB000DAC3C8 /* GenericImageList.swift in Sources */,
 				12852788285396E10029245C /* GridView.swift in Sources */,
 				12852784285396E10029245C /* ColorPiqueur.swift in Sources */,
 				12622ACD268B8BC400EF9D1A /* AppStoreLikeList.swift in Sources */,
@@ -665,6 +692,7 @@
 				F26357A923D0861C00C8F30C /* ContentView.swift in Sources */,
 				1273938B261B353300318692 /* GesturesExerciseView.swift in Sources */,
 				1282442626821AEC00EFAF41 /* RefreshableSearchable.swift in Sources */,
+				129FFE312E02E23F00024423 /* ToolbarItems.swift in Sources */,
 				125424BF27329E5500BAAC65 /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -838,7 +866,7 @@
 				DEVELOPMENT_TEAM = 6BD2U6KWR8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Experiment/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -861,7 +889,7 @@
 				DEVELOPMENT_TEAM = 6BD2U6KWR8;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Experiment/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
