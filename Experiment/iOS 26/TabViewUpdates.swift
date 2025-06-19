@@ -14,56 +14,61 @@ struct TabViewUpdates: View {
     @Namespace private var namespace
     var body: some View {
         TabView {
-            NavigationView {
-                ScrollView {
-                    GenericImageList()
-                }
-                .navigationTitle(Text("Pictures"))
-                .toolbar {
-                    ToolbarSpacer(.flexible, placement: .topBarTrailing)
-                    
-                    ToolbarItem(placement: .topBarTrailing) {
-                        Button(action: {
-                            showSheet = true
-                        }, label: {
-                            Image(systemName: "plus")
-                        })
-                    }
-                    .matchedTransitionSource(id: "myId", in: namespace)
-                    
-                }
-                .sheet(isPresented: $showSheet, content: {
-                    ZStack(alignment: .center) {
-                        
-                        Color.lightPurple.ignoresSafeArea(.all)
-                        VStack {
-                            HStack {
-                                Spacer()
-                                Button(action: {
-                                    showSheet = false
-                                }, label: {
-                                    Image(systemName: "xmark")
-                                        .frame(width: 32, height: 32)
-                                })
-                                .buttonStyle(.glass)
-                                .padding()
-                            }
-                            Spacer()
-                            
-                        }
-                        Text("Sheet zoomed from button")
-                    }
-                        .navigationTransition(.zoom(sourceID: "myId", in: namespace))
-                })
-            }
-                .tabItem {
-                    Label("Pictures", systemImage: "photo")
-                }
             
-            Text("Information tab")
-                .tabItem {
-                    Label("Info", systemImage: "info.circle.fill")
+            Tab("Pictures", systemImage: "photo", role: .none, content: {
+                NavigationView {
+                    ScrollView {
+                        GenericImageList()
+                    }
+                    .navigationTitle(Text("Pictures"))
+                    .toolbar {
+                        ToolbarSpacer(.flexible, placement: .topBarTrailing)
+                        
+                        ToolbarItem(placement: .topBarTrailing) {
+                            Button(action: {
+                                showSheet = true
+                            }, label: {
+                                Image(systemName: "plus")
+                            })
+                        }
+                        .matchedTransitionSource(id: "myId", in: namespace)
+                        
+                    }
+                    .sheet(isPresented: $showSheet, content: {
+                        ZStack(alignment: .center) {
+                            
+                            Color.lightPurple.ignoresSafeArea(.all)
+                            VStack {
+                                HStack {
+                                    Spacer()
+                                    Button(action: {
+                                        showSheet = false
+                                    }, label: {
+                                        Image(systemName: "xmark")
+                                            .frame(width: 32, height: 32)
+                                    })
+                                    .buttonStyle(.glass)
+                                    .padding()
+                                }
+                                Spacer()
+                                
+                            }
+                            Text("Sheet zoomed from button")
+                        }
+                            .navigationTransition(.zoom(sourceID: "myId", in: namespace))
+                    })
                 }
+            })
+            
+            Tab("Info", systemImage: "info.circle.fill", role: .none, content: {
+                Text("Information tab")
+            })
+            
+            Tab("Titlred", systemImage: "magnifyingglass", role: .search, content: {
+                Text("Search")
+            })
+            .tabPlacement(.automatic)
+            
         }
         .tabBarMinimizeBehavior(.onScrollDown)
         .tabViewBottomAccessory {

@@ -14,6 +14,7 @@ struct ToolbarItemsView: View {
     @Namespace var namespace
     @State private var isButtonsExpanded: Bool = false
     @State private var isBadgesExpanded: Bool = false
+    @State private var showConfirmation: Bool = false
     
     var body: some View {
         ZStack(alignment: .bottomTrailing){
@@ -26,7 +27,6 @@ struct ToolbarItemsView: View {
                 .buttonStyle(.borderedProminent)
                 GenericImageList()
             }
-            
             .safeAreaInset(edge: .bottom) {
                 HStack(alignment: .bottom) {
                     Spacer()
@@ -71,7 +71,7 @@ struct ToolbarItemsView: View {
                     })
                     
                     GlassEffectContainer(spacing: 8, content: {
-                    
+                        
                         VStack(alignment: .center) {
                             if isBadgesExpanded {
                                 BadgesView()
@@ -83,16 +83,16 @@ struct ToolbarItemsView: View {
                             }, label: {
                                 Image(systemName: isBadgesExpanded ? "xmark" : "circle.fill")
                             })
-                                .font(.system(size: 28))
-                                .frame(width: 64, height: 64)
-                                .glassEffect(.regular.interactive())
+                            .font(.system(size: 28))
+                            .frame(width: 64, height: 64)
+                            .glassEffect(.regular.interactive())
                         }
                         .padding(.trailing)
                     })
                     
                 }
-                    }
-
+            }
+            
             
             
             
@@ -110,12 +110,29 @@ struct ToolbarItemsView: View {
             ToolbarSpacer(.fixed, placement: .topBarTrailing)
             
             ToolbarItemGroup(placement: .primaryAction) {
-                Button(action: {}, label: {
+                Button(action: {
+                    showConfirmation = true
+                }, label: {
                     Image(systemName: "checkmark")
                 })
                 .buttonStyle(.borderedProminent)
                 .tint(.purple)
+                .confirmationDialog("Validation",
+                                    isPresented: $showConfirmation,
+                                    titleVisibility: .visible,
+                                    actions: {
+                    Button("Valider", role: .destructive) {
+                        
+                    }
+                    Button("Annuler") {
+                    }
+                }, message: {
+                    Text("Valider cette action?")
+                })
+                
             }
+            
+            
             
             ToolbarSpacer(.fixed, placement: .topBarTrailing)
             
@@ -154,8 +171,8 @@ fileprivate struct ShowsBadgesViewModifier: ViewModifier {
 extension View {
     
     func showsBadges() -> some View {
-            modifier(ShowsBadgesViewModifier())
-        }
+        modifier(ShowsBadgesViewModifier())
+    }
     
     
 }
@@ -163,41 +180,41 @@ extension View {
 struct BadgesView: View {
     
     @Namespace var namespace
-
+    
     
     var body: some View {
-            VStack {
-                Image(systemName: "triangle.fill")
-                    .font(.system(size: 28))
-                    .foregroundStyle(.red)
-                    .frame(width: 64, height: 64)
-                    .glassEffect(.regular, in: .rect(cornerRadius: 16))
-                    .glassEffectUnion(id: 2, namespace: namespace)
-                Image(systemName: "pentagon.fill")
-                    .font(.system(size: 28))
-                    .foregroundStyle(.blue)
-                    .frame(width: 64, height: 64)
-                    .glassEffect(.regular, in: .rect(cornerRadius: 16))
-                    .glassEffectUnion(id: 3, namespace: namespace)
-                Image(systemName: "square.fill")
-                    .font(.system(size: 28))
-                    .foregroundStyle(.green)
-                    .frame(width: 64, height: 64)
-                    .glassEffect(.regular, in: .rect(cornerRadius: 16))
-                    .glassEffectUnion(id: 4, namespace: namespace)
-                Image(systemName: "heart.fill")
-                    .font(.system(size: 28))
-                    .foregroundStyle(.purple)
-                    .frame(width: 64, height: 64)
-                    .glassEffect(.regular, in: .rect(cornerRadius: 16))
-                    .glassEffectUnion(id: 5, namespace: namespace)
-                Image(systemName: "seal.fill")
-                    .font(.system(size: 28))
-                    .foregroundStyle(.orange)
-                    .frame(width: 64, height: 64)
-                    .glassEffect(.regular, in: .rect(cornerRadius: 16))
-                    .glassEffectUnion(id: 7, namespace: namespace)
-            }
+        VStack {
+            Image(systemName: "triangle.fill")
+                .font(.system(size: 28))
+                .foregroundStyle(.red)
+                .frame(width: 64, height: 64)
+                .glassEffect(.regular, in: .rect(cornerRadius: 16))
+                .glassEffectUnion(id: 2, namespace: namespace)
+            Image(systemName: "pentagon.fill")
+                .font(.system(size: 28))
+                .foregroundStyle(.blue)
+                .frame(width: 64, height: 64)
+                .glassEffect(.regular, in: .rect(cornerRadius: 16))
+                .glassEffectUnion(id: 3, namespace: namespace)
+            Image(systemName: "square.fill")
+                .font(.system(size: 28))
+                .foregroundStyle(.green)
+                .frame(width: 64, height: 64)
+                .glassEffect(.regular, in: .rect(cornerRadius: 16))
+                .glassEffectUnion(id: 4, namespace: namespace)
+            Image(systemName: "heart.fill")
+                .font(.system(size: 28))
+                .foregroundStyle(.purple)
+                .frame(width: 64, height: 64)
+                .glassEffect(.regular, in: .rect(cornerRadius: 16))
+                .glassEffectUnion(id: 5, namespace: namespace)
+            Image(systemName: "seal.fill")
+                .font(.system(size: 28))
+                .foregroundStyle(.orange)
+                .frame(width: 64, height: 64)
+                .glassEffect(.regular, in: .rect(cornerRadius: 16))
+                .glassEffectUnion(id: 7, namespace: namespace)
+        }
         
     }
 }
