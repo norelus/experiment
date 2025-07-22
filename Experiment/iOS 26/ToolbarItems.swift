@@ -25,6 +25,7 @@ struct ToolbarItemsView: View {
                     Text("Show secondary view")
                 })
                 .buttonStyle(.borderedProminent)
+                .glassEffect()
                 GenericImageList()
             }
             .safeAreaInset(edge: .bottom) {
@@ -138,9 +139,17 @@ struct ToolbarItemsView: View {
             
             ToolbarItemGroup(placement: .primaryAction) {
                 Menu("", systemImage: "ellipsis", content: {
-                    Button("Menu Action 1", action: {})
-                    Button("Menu Action 2", action: {})
-                    Button("Menu Action 3", action: {})
+                    Section {
+                        Button("Undo", systemImage: "arrow.uturn.backward", action: {})
+                        Button("Redo", systemImage: "arrow.uturn.forward", action: {})
+                        
+                    }
+                    Section {
+                        Button("Cut", systemImage: "scissors", action: {})
+                        Button("Copy", systemImage: "document.on.document", action: {})
+                        Button("Paste", systemImage: "document.on.clipboard", action: {})
+                    }
+                    
                 })
             }
             

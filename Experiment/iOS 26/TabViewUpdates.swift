@@ -12,6 +12,8 @@ struct TabViewUpdates: View {
     
     @State private var showSheet = false
     @Namespace private var namespace
+    @State private var searchText = ""
+    
     var body: some View {
         TabView {
             
@@ -51,17 +53,21 @@ struct TabViewUpdates: View {
                 Text("Information tab")
             })
             
-            Tab("Titlred", systemImage: "magnifyingglass", role: .search, content: {
-                Text("Search")
+            Tab(role: .search, content: {
+                NavigationStack {
+                    Text("Search")
+                }
             })
             .tabPlacement(.automatic)
             
         }
+        .searchable(text: $searchText)
         .tabBarMinimizeBehavior(.onScrollDown)
         .tabViewBottomAccessory {
             Text("Tabview bottom accessory")
                 .padding()
         }
+        
         
     }
 }
