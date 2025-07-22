@@ -12,7 +12,7 @@ struct ContentView: View {
     //A
 
     let accentColor = Color("accent")
-    
+    //B
     let persistenceController = PersistenceController.shared
 
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
