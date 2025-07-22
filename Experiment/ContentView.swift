@@ -18,7 +18,7 @@ struct ContentView: View {
     @Environment(\.horizontalSizeClass) var horizontalSizeClass
     
     @State var showAppStore2 : Bool = false
-    
+    //master
     init() {
        
     }
